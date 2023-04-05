@@ -1,25 +1,119 @@
 header.header
     .header__content
-        .header__logo
-            a.logo(href="/")
-                img(src="/img/logo.png", alt="alt")
+        .header__row
 
-        .header__toggle
+            .header__col.header__col_logo
+                .logo
+                    a.logo__link(href="/")
+                        .logo__img
+                            img(src="/img/logo.png", alt="alt")
+                        .logo__img.logo__img_g
+                            img(src="/img/logo_g.png", alt="alt")
+                        .logo__label
+                            span IT-решения
 
-        .header__nav
-            nav.navbar#navbar
-                ul.menu
-                    li.menu-item.current-menu-item
-                        a(href="#") Новости
+            .header__col.header__col_phone
+                .phone
+                    a.phone__link(href="#")
+                        i.icon_phone
+                        span +7 (495) 222-34-69
+
+
+            .header__col.header__col_license
+                .license
+                    .license__list
+                        each item in [ {src: '2', label: 'ISO/IEC 27001'}, {src: '1', label: 'Лицензия ФСБ'}, {src: '3', label: 'Лицензия ФСТЭК'} ]
+
+                            a.license__link(href="#")
+                                .license__img.img
+                                    img(src="/img/license_"+item.src+".png", alt="license")
+                                .license__label
+                                    span=item.label
+
+
+            .header__col.header__col_toggle
+                .toggle
+                    .toggle__button
+                    .toggle__label
+                        span меню
+
+                ul.more
                     li.menu-item
-                        a(href="#") Объявления
-                    li.menu-item
-                        a(href="#") F.A.Q.
+                        a(href="#") Решения
                     li.menu-item
                         a(href="#") Контакты
-                    li.menu-item.menu-item-has-children
-                        a(href="#") Важное
-                        ul.sub-menu
-                            each item in [1, 2, 3, 4]
-                                li.menu-item
-                                    a(href="#") Важный пункт меню
+
+                .language
+                    label.language__label
+                        input(type="checkbox" id="themeCheckbox" name="themeCheckbox")
+                        span
+                            i.icon_polygon
+                        ul.language__submenu
+                            li.language__item.language_ru ru
+                            li.language__item.language_en en
+
+
+
+    .header__nav.bg
+        .navbar__content
+            .navbar__close
+                i.icon_close
+            .navbar__main
+                .container_center
+                    nav.navbar#navbar
+                        ul.menu
+                            li.menu-item.current-menu-item
+                                a(href="#") IT-решения
+                            li.menu-item
+                                a(href="#") Информационная безопасность
+                            li.menu-item
+                                a(href="#") Консалтинг
+                            li.menu-item
+                                a(href="#") Отраслевые решения
+                            li.menu-item
+                                a(href="#") Техническая поддержка
+
+
+                        ul.menu
+                            li.menu-item
+                                a(href="#") Оборудование
+                            li.menu-item
+                                a(href="#") Услуги
+                            li.menu-item
+                                a(href="#") О компании
+                            li.menu-item
+                                a(href="#") Медиа
+                            li.menu-item
+                                a(href="#") Контакты
+
+            .license.mobile 
+                .license__list
+                    each item in [ {src: '2', label: 'ISO/IEC 27001'}, {src: '1', label: 'Лицензия ФСБ'}, {src: '3', label: 'Лицензия ФСТЭК'} ]
+
+                        a.license__link(href="#")
+                            .license__img.img
+                                img(src="/img/license_"+item.src+".png", alt="license")
+                            .license__label
+                                span=item.label
+
+            .navbar__bottom
+                .container_center
+                    .navbar__row
+                        a.navbar__link(href="#") +7 (495) 222-34-69
+
+                        .messenger.desktop
+                            .messenger__list
+                                .messenger__item
+                                    a.messenger__link(href="#" target="_blank")
+                                        i.icon_facebook
+                                .messenger__item
+                                    a.messenger__link(href="#" target="_blank")
+                                        i.icon_vk
+                                .messenger__item
+                                    a.messenger__link(href="#" target="_blank")
+                                        i.icon_twitter
+                                .messenger__item
+                                    a.messenger__link(href="#" target="_blank")
+                                        i.icon_insta
+
+                        a.navbar__link(href="#") info@it2bsns.ru

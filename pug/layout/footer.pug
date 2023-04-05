@@ -1,4 +1,73 @@
 footer.footer
-    .footer__content
-        p <script type="text/javascript">document.write(new Date().getFullYear());</script>
 
+
+
+    .footer__row
+        .footer__content
+            .footer__col
+                .logo
+                    a.logo__link(href="/")
+                        .logo__img
+                            img(src="/img/logo_w.png", alt="alt")
+
+            .footer__col.desktop_lg
+                ul.menu
+                    li.menu-item.current-menu-item
+                        a(href="#") IT-решения
+                    li.menu-item
+                        a(href="#") Информационная безопасность
+                    li.menu-item
+                        a(href="#") Оборудование
+                    li.menu-item
+                        a(href="#") Услуги
+
+            .footer__col.desktop_lg
+                ul.menu
+                    li.menu-item
+                        a(href="#") Консалтинг
+                    li.menu-item
+                        a(href="#") О компании
+                    li.menu-item
+                        a(href="#") Контакты
+                    li.menu-item
+                        a(href="#") Медиа
+
+            .footer__col.desktop_lg
+                .license
+                    .license__list
+                        each item in [ {src: '2', label: 'ISO/IEC 27001'}, {src: '1', label: 'Лицензия ФСБ'}, {src: '3', label: 'Лицензия ФСТЭК'} ]
+
+                            a.license__link(href="#")
+                                .license__img.img
+                                    img(src="/img/license_"+item.src+".png", alt="license")
+                                .license__label
+                                    span=item.label
+            .footer__col
+                .messenger
+                    .messenger__label.desktop_lg
+                        span Мы в соц.сетях
+                    .messenger__list
+                        .messenger__item
+                            a.messenger__link(href="#" target="_blank")
+                                i.icon_facebook
+                        .messenger__item
+                            a.messenger__link(href="#" target="_blank")
+                                i.icon_vk
+                        .messenger__item
+                            a.messenger__link(href="#" target="_blank")
+                                i.icon_twitter
+                        .messenger__item
+                            a.messenger__link(href="#" target="_blank")
+                                i.icon_insta
+            .footer__col
+                .footer__phone
+                    a(href="#") +7 (495) 222-34-69
+                a.footer__link.footer__link_danger.desktop_lg(href="#") Провести аудит
+
+
+
+
+    .footer__row
+        .footer__content
+            a.footer__link(href="#") Политика конфендициальности
+            span All rights reserved © ООО «АЙТУБИ» 2010-<script type="text/javascript">document.write(new Date().getFullYear());</script>

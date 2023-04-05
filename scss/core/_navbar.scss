@@ -1,0 +1,214 @@
+.header {
+    &__nav {
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 10;
+        overflow: hidden;
+        transition: 0.3s;
+        visibility: hidden;
+        overflow-y: auto;
+        opacity: 0;
+
+        background-image: url("../img/nav_bg_m.jpg");
+        @media (min-width: 1366px) {
+            background-image: url("../img/nav_bg.jpg");
+        }
+
+        &.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .license {
+            border-top: 0.0625em solid rgba($color_white, 0.1);
+            padding-top: 1.25em;
+            padding-bottom: 1.5em;
+
+            .license__list {
+                justify-content: center;
+            }
+
+            .license__link {
+                flex-flow: column;
+                margin: 0 1.0625em;
+                color: #D3D3D3;
+            }
+
+            .license__img {
+                font-size: 0.8em;
+            }
+
+            .license__label {
+                span {
+                    font-size: 0.6875em;
+                }
+            }
+        }
+
+    }
+
+    .navbar {
+        position: relative;
+        @media (min-width: 1366px) {
+            display: flex;
+            justify-content: center;
+        }
+
+        &:before {
+            content: 'меню';
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-48%, -50%);
+            color: rgba($color_white, 0.05);
+            letter-spacing: 0.1em;
+            z-index: -1;
+            font-size: 9em;
+
+            @media (min-width: 1366px) {
+                position: absolute;
+                transform: translate(-50%, -50%);
+                font-size: 25em;
+            }
+
+        }
+
+        &__content {
+            position: relative;
+            padding-top: 6.25em;
+            padding-bottom: 6em;
+
+            @media (min-width: 1366px) {
+                padding-top: 10em;
+                padding-bottom: 0;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                font-size: 0.75em;
+            }
+
+            @media (min-width: 1920px) {
+                font-size: 1em;
+                padding-top: 13.375em;
+            }
+
+        }
+
+        &__close {
+            position: fixed;
+            color: $color_white;
+            cursor: pointer;
+            transition: 0.3s;
+            top: 1.5em;
+            right: 1.5em;
+            @media (min-width: 1366px) {
+                top: 2.5em;
+                right: 2.5em;
+
+            }
+
+            i {
+                font-size: 1.375em;
+                @media (min-width: 1366px) {
+                    font-size: 2.25em;
+                }
+            }
+
+            &:hover {
+                color: $color_warning;
+            }
+        }
+
+        &__main {
+            overflow: hidden;
+            @media (min-width: 768px) {
+                flex-grow: 1;
+            }
+        }
+
+        &__bottom {
+            border-top: 0.0625em solid rgba($color_white, 0.1);
+            padding: 1.382em 0;
+            @media (min-width: 1366px) {
+                padding: 3.6em 0;
+
+            }
+        }
+
+        &__row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .messenger {}
+
+        }
+
+        &__link {
+            font-weight: 300;
+            color: #FF620E;
+            text-transform: uppercase;
+            font-size: 0.875em;
+            @media (min-width: 1366px) {
+                font-size: 1.5em;
+
+            }
+
+            &:first-child {
+                text-decoration: none;
+            }
+
+        }
+
+        .menu {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-align: center;
+
+            @media (min-width: 1366px) {
+                text-align: left;
+
+                &:first-child {
+                    margin-right: 21.875em;
+                    margin-left: -11em;
+                }
+            }
+
+        }
+
+        .menu-item {
+            margin-bottom: 1.87em;
+
+            @media (min-width: 1366px) {
+                margin-bottom: 4.125em;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            a {
+                text-decoration: none;
+                color: $color_white;
+                font-size: 1.125em;
+                @media (min-width: 1366px) {
+                    font-size: 2.25em;
+
+                }
+            }
+
+            &.current-menu-item,
+            &:hover {
+                a {
+                    color: $color_warning;
+                }
+            }
+        }
+
+    }
+
+}

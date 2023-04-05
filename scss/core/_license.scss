@@ -1,0 +1,46 @@
+.license {
+    &__list {
+        display: flex;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        color: #D3D3D3;
+        text-decoration: none;
+        margin-right: 1.0625em;
+        @media (min-width: 1920px) {
+            margin-right: 2.1875em;
+
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:hover {
+            color: $color_white;
+        }
+
+    }
+
+    &__img {
+        width: 3.1875em;
+        height: 2.625em;
+        font-size: 0.8em;
+        @media (min-width: 1920px) {
+            font-size: 1em;
+
+        }
+    }
+
+    &__label {
+        span {
+            font-size: 0.8125em;
+            @media (min-width: 1920px) {
+                font-size: 0.9375em;
+            }
+        }
+    }
+
+}

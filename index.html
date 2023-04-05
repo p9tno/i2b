@@ -11,28 +11,99 @@
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
   </head>
   <body>
-    <div class="wrapper" id="wrapper">
+    <div class="wrapper wrapper_light" id="wrapper">
       <header class="header">
         <div class="header__content">
-          <div class="header__logo"><a class="logo" href="/"><img src="/img/logo.png" alt="alt"/></a></div>
-          <div class="header__toggle"></div>
-          <div class="header__nav">
-            <nav class="navbar" id="navbar">
-              <ul class="menu">
-                <li class="menu-item current-menu-item"><a href="#">Новости</a></li>
-                <li class="menu-item"><a href="#">Объявления</a></li>
-                <li class="menu-item"><a href="#">F.A.Q.</a></li>
+          <div class="header__row">
+            <div class="header__col header__col_logo">
+              <div class="logo"><a class="logo__link" href="/">
+                  <div class="logo__img"><img src="/img/logo.png" alt="alt"/></div>
+                  <div class="logo__img logo__img_g"><img src="/img/logo_g.png" alt="alt"/></div>
+                  <div class="logo__label"><span>IT-решения</span></div></a></div>
+            </div>
+            <div class="header__col header__col_phone">
+              <div class="phone"><a class="phone__link" href="#"><i class="icon_phone"></i><span>+7 (495) 222-34-69</span></a></div>
+            </div>
+            <div class="header__col header__col_license">
+              <div class="license">
+                <div class="license__list"><a class="license__link" href="#">
+                    <div class="license__img img"><img src="/img/license_2.png" alt="license"/></div>
+                    <div class="license__label"><span>ISO/IEC 27001</span></div></a><a class="license__link" href="#">
+                    <div class="license__img img"><img src="/img/license_1.png" alt="license"/></div>
+                    <div class="license__label"><span>Лицензия ФСБ</span></div></a><a class="license__link" href="#">
+                    <div class="license__img img"><img src="/img/license_3.png" alt="license"/></div>
+                    <div class="license__label"><span>Лицензия ФСТЭК</span></div></a>
+                </div>
+              </div>
+            </div>
+            <div class="header__col header__col_toggle">
+              <div class="toggle">
+                <div class="toggle__button"></div>
+                <div class="toggle__label"><span>меню</span></div>
+              </div>
+              <ul class="more">
+                <li class="menu-item"><a href="#">Решения</a></li>
                 <li class="menu-item"><a href="#">Контакты</a></li>
-                <li class="menu-item menu-item-has-children"><a href="#">Важное</a>
-                  <ul class="sub-menu">
-                    <li class="menu-item"><a href="#">Важный пункт меню</a></li>
-                    <li class="menu-item"><a href="#">Важный пункт меню</a></li>
-                    <li class="menu-item"><a href="#">Важный пункт меню</a></li>
-                    <li class="menu-item"><a href="#">Важный пункт меню</a></li>
-                  </ul>
-                </li>
               </ul>
-            </nav>
+              <div class="language">
+                <label class="language__label">
+                  <input type="checkbox" id="themeCheckbox" name="themeCheckbox"/><span><i class="icon_polygon"></i></span>
+                  <ul class="language__submenu">
+                    <li class="language__item language_ru">ru</li>
+                    <li class="language__item language_en">en</li>
+                  </ul>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__nav bg">
+          <div class="navbar__content">
+            <div class="navbar__close"><i class="icon_close"></i></div>
+            <div class="navbar__main">
+              <div class="container_center">
+                <nav class="navbar" id="navbar">
+                  <ul class="menu">
+                    <li class="menu-item current-menu-item"><a href="#">IT-решения</a></li>
+                    <li class="menu-item"><a href="#">Информационная безопасность</a></li>
+                    <li class="menu-item"><a href="#">Консалтинг</a></li>
+                    <li class="menu-item"><a href="#">Отраслевые решения</a></li>
+                    <li class="menu-item"><a href="#">Техническая поддержка</a></li>
+                  </ul>
+                  <ul class="menu">
+                    <li class="menu-item"><a href="#">Оборудование</a></li>
+                    <li class="menu-item"><a href="#">Услуги</a></li>
+                    <li class="menu-item"><a href="#">О компании</a></li>
+                    <li class="menu-item"><a href="#">Медиа</a></li>
+                    <li class="menu-item"><a href="#">Контакты</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="license mobile"> 
+              <div class="license__list"><a class="license__link" href="#">
+                  <div class="license__img img"><img src="/img/license_2.png" alt="license"/></div>
+                  <div class="license__label"><span>ISO/IEC 27001</span></div></a><a class="license__link" href="#">
+                  <div class="license__img img"><img src="/img/license_1.png" alt="license"/></div>
+                  <div class="license__label"><span>Лицензия ФСБ</span></div></a><a class="license__link" href="#">
+                  <div class="license__img img"><img src="/img/license_3.png" alt="license"/></div>
+                  <div class="license__label"><span>Лицензия ФСТЭК</span></div></a>
+              </div>
+            </div>
+            <div class="navbar__bottom">
+              <div class="container_center">
+                <div class="navbar__row"><a class="navbar__link" href="#">+7 (495) 222-34-69</a>
+                  <div class="messenger desktop">
+                    <div class="messenger__list">
+                      <div class="messenger__item"><a class="messenger__link" href="#" target="_blank"><i class="icon_facebook"></i></a></div>
+                      <div class="messenger__item"><a class="messenger__link" href="#" target="_blank"><i class="icon_vk"></i></a></div>
+                      <div class="messenger__item"><a class="messenger__link" href="#" target="_blank"><i class="icon_twitter"></i></a></div>
+                      <div class="messenger__item"><a class="messenger__link" href="#" target="_blank"><i class="icon_insta"></i></a></div>
+                    </div>
+                  </div><a class="navbar__link" href="#">info@it2bsns.ru</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </header>
@@ -43,15 +114,64 @@
             <h2 class="section__title"><span>Навигация по проекту</span></h2>
             <ul style="font-size:1.25em;">
               <li><a href="../pages/home/">Главная </a></li>
-              <li><a href="../pages/contacts/">Контакты </a></li>
             </ul>
           </div>
         </section>
         <!-- end projectNaw-->
       </main>
       <footer class="footer">
-        <div class="footer__content">
-          <p><script type="text/javascript">document.write(new Date().getFullYear());</script></p>
+        <div class="footer__row">
+          <div class="footer__content">
+            <div class="footer__col">
+              <div class="logo"><a class="logo__link" href="/">
+                  <div class="logo__img"><img src="/img/logo_w.png" alt="alt"/></div></a></div>
+            </div>
+            <div class="footer__col desktop_lg">
+              <ul class="menu">
+                <li class="menu-item current-menu-item"><a href="#">IT-решения</a></li>
+                <li class="menu-item"><a href="#">Информационная безопасность</a></li>
+                <li class="menu-item"><a href="#">Оборудование</a></li>
+                <li class="menu-item"><a href="#">Услуги</a></li>
+              </ul>
+            </div>
+            <div class="footer__col desktop_lg">
+              <ul class="menu">
+                <li class="menu-item"><a href="#">Консалтинг</a></li>
+                <li class="menu-item"><a href="#">О компании</a></li>
+                <li class="menu-item"><a href="#">Контакты</a></li>
+                <li class="menu-item"><a href="#">Медиа</a></li>
+              </ul>
+            </div>
+            <div class="footer__col desktop_lg">
+              <div class="license">
+                <div class="license__list"><a class="license__link" href="#">
+                    <div class="license__img img"><img src="/img/license_2.png" alt="license"/></div>
+                    <div class="license__label"><span>ISO/IEC 27001</span></div></a><a class="license__link" href="#">
+                    <div class="license__img img"><img src="/img/license_1.png" alt="license"/></div>
+                    <div class="license__label"><span>Лицензия ФСБ</span></div></a><a class="license__link" href="#">
+                    <div class="license__img img"><img src="/img/license_3.png" alt="license"/></div>
+                    <div class="license__label"><span>Лицензия ФСТЭК</span></div></a>
+                </div>
+              </div>
+            </div>
+            <div class="footer__col">
+              <div class="messenger">
+                <div class="messenger__label desktop_lg"><span>Мы в соц.сетях</span></div>
+                <div class="messenger__list">
+                  <div class="messenger__item"><a class="messenger__link" href="#" target="_blank"><i class="icon_facebook"></i></a></div>
+                  <div class="messenger__item"><a class="messenger__link" href="#" target="_blank"><i class="icon_vk"></i></a></div>
+                  <div class="messenger__item"><a class="messenger__link" href="#" target="_blank"><i class="icon_twitter"></i></a></div>
+                  <div class="messenger__item"><a class="messenger__link" href="#" target="_blank"><i class="icon_insta"></i></a></div>
+                </div>
+              </div>
+            </div>
+            <div class="footer__col">
+              <div class="footer__phone"><a href="#">+7 (495) 222-34-69</a></div><a class="footer__link footer__link_danger desktop_lg" href="#">Провести аудит</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__row">
+          <div class="footer__content"><a class="footer__link" href="#">Политика конфендициальности</a><span>All rights reserved © ООО «АЙТУБИ» 2010-<script type="text/javascript">document.write(new Date().getFullYear());</script></span></div>
         </div>
       </footer>
       <!-- Begin Modal modalVideo-->

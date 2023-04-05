@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icon';
-  src:  url('fonts/icon.eot?yeui38');
-  src:  url('fonts/icon.eot?yeui38#iefix') format('embedded-opentype'),
-    url('fonts/icon.ttf?yeui38') format('truetype'),
-    url('fonts/icon.woff?yeui38') format('woff'),
-    url('fonts/icon.svg?yeui38#icon') format('svg');
+  src:  url('fonts/icon.eot?2ezw7k');
+  src:  url('fonts/icon.eot?2ezw7k#iefix') format('embedded-opentype'),
+    url('fonts/icon.ttf?2ezw7k') format('truetype'),
+    url('fonts/icon.woff?2ezw7k') format('woff'),
+    url('fonts/icon.svg?2ezw7k#icon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -60,4 +60,7 @@
 }
 .icon_pdf:before {
   content: "\e90b";
+}
+.icon_polygon:before {
+  content: "\e90c";
 }

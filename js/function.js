@@ -54,23 +54,28 @@ window.onload = function () {
 $(document).ready(function() {
     console.log('ready');
 
-    function scrollPage () {
-        $(".toTop").on("click","a", function (event) {
-            event.preventDefault();
-            let id  = $(this).attr('href');
-            let top = $(id).offset().top;
-            $('body,html').animate({scrollTop: top}, 1500);
-        });
+    function toggleContent() {
+        $('.toggle').click(function() {
+            console.log('toggleContent');
 
-        $(window).scroll(function(){
-            if($(window).scrollTop()>500){
-                $('.toTop').fadeIn(900)
-            }else{
-                $('.toTop').fadeOut(700)
-            }
+            // let wrap = $(this);
+            let toggle = $('.toggle__button');
+            let content = $('.header__nav');
+            let close = $('.navbar__close');
+
+
+            $( 'body' ).addClass( 'nav-open' );
+            content.addClass('active');
+
+            close.click(function () {
+                content.removeClass('active');
+                $( 'body' ).removeClass( 'nav-open' );
+            })
+
         });
-    }
-    scrollPage();
+    };
+    toggleContent();
+
 
     function showModal() {
         $('.show_modal_js').on('click', function (e) {

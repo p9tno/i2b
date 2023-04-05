@@ -1,7 +1,7 @@
 block variable
     -var path = '';
     //- -var page = true;
-    //- -var pageClass = 'bg';
+    -var pageClass = 'wrapper_light';
 
 <!DOCTYPE html>
 html(lang="en")
@@ -32,13 +32,18 @@ html(lang="en")
         //-         <div></div>
         //- end preloader
 
-        .wrapper#wrapper
+        .wrapper#wrapper(class=""+pageClass+"")
             include header.pug
 
             main.main_content
                 block content
 
             include footer.pug
+
+            if condition
+                //- code
+            else
+                //- code
 
             //- begin toTop
             //- .toTop

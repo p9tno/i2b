@@ -5,6 +5,65 @@ block variable
 
 
 block content
+    // begin ourwork
+    section#ourwork.ourwork.section
+
+
+        .ourwork__top
+            .container_center
+                ul.ourwork__nav.list
+                    each item in ['Инфраструктурные решения', 'Информационная безопасность', 'Консалтинг' ]
+                        li
+                            a(href="#")
+                                span=item 
+                                i.icon_arrow_right 
+
+        .ourwork__main
+            .ourwork__img.img
+                img(src=path+"/img/ourwork.webp" alt="alt")
+            .container_center
+                .ourwork__content
+                    .ourwork__tag
+                        span >
+                        span \
+                    .ourwork__label
+                        span Просто о сложном
+                    .section__text
+                        span Предлагаем комплексные решения в области IT и информационной безопасности, консультируем в области соблюдения требований регуляторов и стандартов, а также оказываем техническую поддержку по всем представленным направлениям.
+
+
+        .ourwork__bottom
+            .container_center
+                .ourwork__content
+                    h1.section__title
+                        span Наша работа
+                    .section__text
+                        span Ключевыми направлениями нашей работы являются оказание услуг и поставка товаров как в области IT-технологий, так и в области информационной безопасности. Кроме того – это консалтинг в области соблюдения требований регуляторов и стандартов, а также техническая поддержка по всем представленным направлениям.
+
+                .ourwork__list
+                    .ourwork__label
+                        span Что мы можем для вас сделать:
+                    ul.list
+                        li
+                            .pulse( style="--i:0;")
+                            span Повысть эффективность IT инфраструктуры
+                        li
+                            .pulse( style="--i:1;")
+                            span Предотвратить хищение ваших денег и денег клиентов
+                        li
+                            .pulse( style="--i:2;")
+                            span Обеспечить конфендициальность данных
+                        li
+                            .pulse( style="--i:3;")
+                            span Привести в соответствие с законами РФ вашу работу
+                        li
+                            .pulse( style="--i:4;")
+                            span Увеличить вашу прибыль
+                        li
+                            .pulse( style="--i:5;")
+                            span Совместно опередить ваших конкурентов
+
+    // end ourwork
 
     //- // begin form
     //- section#form.form.section

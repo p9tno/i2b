@@ -89,24 +89,6 @@
 					@media (min-width: 1920px) {
 						margin-right: 2.875em;
 					}
-
-					@media (min-width: 768px) {
-						display: none;
-					}
-					@media (min-width: 1920px) {
-						display: block;
-					}
-
-					&_g {
-						display: none;
-						@media (min-width: 768px) {
-							display: block;
-						}
-						@media (min-width: 1920px) {
-							display: none;
-						}
-					}
-
 				}
 
 				&__label {

@@ -2678,63 +2678,65 @@ textarea input[type=checkbox]:disabled:indeterminate:before {
     font-size: 1em;
   }
 }
+.ourwork__wrap {
+  position: relative;
+  overflow: hidden;
+}
 .ourwork__video {
   position: relative;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-  max-width: 100%;
+  z-index: 1;
+  padding-bottom: 67.5em;
 }
 .ourwork__video .video {
-  display: block;
   width: 100%;
-  height: 100%;
-  max-width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
-.ourwork__caption {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1em 0;
+.ourwork__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
 }
-@media (min-width: 768px) {
-  .ourwork__caption {
-    padding: 2em 0 1em;
+.ourwork__main {
+  position: relative;
+}
+@media (max-width: 767px) {
+  .ourwork__main {
+    padding: 3.75em 0 4.375em;
+  }
+  .ourwork__main .container_center, .ourwork__main .lines__list, .ourwork__main .footer__content {
+    position: relative;
+    z-index: 1;
   }
 }
-.ourwork__title {
-  margin: 0;
-  font-size: 1.125em;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  line-height: 1;
-  margin-left: 2em;
-  transform: translateY(-0.5em);
-}
 @media (min-width: 768px) {
-  .ourwork__title {
-    transform: translateY(0);
+  .ourwork__main .container_center, .ourwork__main .lines__list, .ourwork__main .footer__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    margin-left: 8em;
   }
 }
-.ourwork__title span {
-  font-weight: 400;
-  font-size: 1.375em;
-}
 @media (min-width: 768px) {
-  .ourwork__title span {
-    font-size: 2.125em;
+  .ourwork__main {
+    height: 21.875em;
   }
 }
 @media (min-width: 1366px) {
-  .ourwork__title span {
-    font-size: 2.875em;
+  .ourwork__main {
+    height: 33.75em;
+    width: 50%;
+    background-color: #1A1A1A;
   }
 }
 @media (min-width: 1920px) {
-  .ourwork__title span {
-    font-size: 3.75em;
+  .ourwork__main {
+    height: 42.75em;
   }
 }
 .ourwork__tag {
@@ -2762,7 +2764,7 @@ textarea input[type=checkbox]:disabled:indeterminate:before {
 }
 .ourwork__tag span {
   line-height: 0.8;
-  font-size: 14em;
+  font-size: 17.125em;
   color: #202020;
   color: #FF620E;
   font-weight: 900;
@@ -2847,7 +2849,7 @@ textarea input[type=checkbox]:disabled:indeterminate:before {
 }
 @media (min-width: 1920px) {
   .ourwork__bottom {
-    padding-top: 9em;
+    padding-top: 12em;
     padding-bottom: 13.375em;
   }
 }

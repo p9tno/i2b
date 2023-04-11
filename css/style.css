@@ -2685,6 +2685,7 @@ textarea input[type=checkbox]:disabled:indeterminate:before {
 .ourwork__caption {
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 1em 0;
 }
 @media (min-width: 768px) {
@@ -2701,10 +2702,9 @@ textarea input[type=checkbox]:disabled:indeterminate:before {
   margin-left: 2em;
   transform: translateY(-0.5em);
 }
-@media (min-width: 1366px) {
+@media (min-width: 768px) {
   .ourwork__title {
-    margin-left: 6em;
-    transform: translateY(-1em);
+    transform: translateY(0);
   }
 }
 .ourwork__title span {
@@ -2751,7 +2751,7 @@ textarea input[type=checkbox]:disabled:indeterminate:before {
 }
 .ourwork__tag span {
   line-height: 0.8;
-  font-size: 17.125em;
+  font-size: 14em;
   color: #202020;
   color: #FF620E;
   font-weight: 900;

@@ -29,7 +29,7 @@ body {
 
 	font-size: $main_font_size;
 	overflow: hidden;
-	background-color: $main_color;
+	background-color: $color_dark_bg;
 
 	&_light {
 		background-color: #FCFAFA;
@@ -360,6 +360,15 @@ body {
 		animation-duration: 120s;
 		animation-iteration-count: infinite;
 		animation-timing-function: linear;
+
+		font-size: 0.375em;
+	}
+
+	@media (min-width: 1366px) {
+		font-size: 0.5em;
+	}
+	@media (min-width: 1920px) {
+		font-size: 1em;
 	}
 }
 

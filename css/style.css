@@ -825,6 +825,17 @@ body {
     animation-duration: 120s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+    font-size: 0.375em;
+  }
+}
+@media (min-width: 1366px) {
+  .rotation {
+    font-size: 0.5em;
+  }
+}
+@media (min-width: 1920px) {
+  .rotation {
+    font-size: 1em;
   }
 }
 
@@ -3148,7 +3159,6 @@ textarea input[type=checkbox]:disabled:indeterminate:before {
   .target .rotation {
     bottom: -23em;
     right: -23em;
-    font-size: 0.375em;
   }
   .target .rotation:before {
     content: "";
@@ -3160,16 +3170,6 @@ textarea input[type=checkbox]:disabled:indeterminate:before {
     height: 100%;
     border-radius: 100%;
     border: 4em solid rgba(246, 246, 246, 0.75);
-  }
-}
-@media (min-width: 1366px) {
-  .target .rotation {
-    font-size: 0.5em;
-  }
-}
-@media (min-width: 1920px) {
-  .target .rotation {
-    font-size: 1em;
   }
 }
 @media (min-width: 768px) {

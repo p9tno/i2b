@@ -121,6 +121,25 @@ block content
 
     // end target
 
+    // begin system
+    section#system.system.section
+        .container_center
+            .system__top
+                h2.section__title
+                    span системный интегратор<br> полного цикла
+                .system__list
+                    each item in [ {deley: '0', text: 'Проектирование'}, {deley: '1', text: 'Поставка решений'}, {deley: '2', text: 'Интеграция'}, {deley: '3', text: 'Тех. поддержка 24/7'},]
+                        .system__item
+                            .pulse( style="--i:"+deley.tetx+";")
+                            .system__text
+                                span=item.tetx
+            .system__bottom
+            .system__content
+                .system__left
+                .system__right
+
+    // end system
+
 
 
 

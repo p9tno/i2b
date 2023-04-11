@@ -1,0 +1,142 @@
+@media (min-width: 768px) {}
+@media (min-width: 1366px) {}
+@media (min-width: 1920px) {}
+
+.system {
+    padding-top: 0;
+    padding-bottom: 0;
+    @media (min-width: 768px) {}
+    @media (min-width: 1366px) {}
+    @media (min-width: 1920px) {}
+
+    &__top {
+        background-color: $color_dark_bg;
+        position: relative;
+        color: $color_white;
+        padding: 2.8125em 0 14.375em;
+        @media (min-width: 768px) {
+            padding: 3.75em 0 3em;
+        }
+        @media (min-width: 1366px) {
+            padding: 5.625em 0 2.625em;
+
+        }
+        @media (min-width: 1920px) {
+            padding: 7.5em 0 9em;
+        }
+    }
+
+    &__list {}
+
+    &__item {}
+
+    &__text {}
+
+    &__caption {}
+
+    &__bottom {
+        background-color: $color_light_bg;
+    }
+
+    &__slider {
+        @media (min-width: 768px) {}
+        @media (min-width: 1366px) {}
+        @media (min-width: 1920px) {
+            width: 33.875em;
+        }
+    }
+
+    &__border {
+        padding: 2.3125em 2.375em;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        border: 0.0625em solid rgba(171, 171, 171, 0.4);
+    }
+
+    &__img {
+        width: 28.75em;
+        height: 40.625em;
+
+        @media (min-width: 768px) {}
+        @media (min-width: 1366px) {}
+        @media (min-width: 1920px) {
+            width: 28.75em;
+            height: 40.625em;
+        }
+    }
+
+    &__content {}
+
+    &__nav {}
+
+    &__inner {}
+
+    &__fraction {}
+
+    &__label {
+        position: relative;
+        border: 1px solid red;
+        min-height: 3em;
+
+    }
+
+    &__el {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        visibility: hidden;
+
+        transition: 0.3s;
+        height: 0;
+
+        &.active {
+            opacity: 1;
+            visibility: visible;
+            height: auto;
+        }
+
+    }
+
+    &__arrows {}
+
+}
+
+.section {
+    &__title {}
+
+    &__text {}
+
+}
+
+.container_center {}
+
+.pulse {}
+
+.mobile {}
+
+.swiper {
+    &__dotted {}
+
+}
+
+.swiper_licenses_js {}
+
+.swiper-wrapper {}
+
+.swiper-slide {}
+
+.img {}
+
+.desktop {}
+
+.fraction_current_js {}
+
+.fraction_all_js {}
+
+.active {}
+
+.icon_arrow_left {}
+
+.icon_arrow_right {}

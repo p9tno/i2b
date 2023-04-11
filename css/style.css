@@ -3396,6 +3396,72 @@ textarea input[type=checkbox]:disabled:indeterminate:before {
   }
 }
 
+.system {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.system__top {
+  background-color: #1A1A1A;
+  position: relative;
+  color: #ffffff;
+  padding: 2.8125em 0 14.375em;
+}
+@media (min-width: 768px) {
+  .system__top {
+    padding: 3.75em 0 3em;
+  }
+}
+@media (min-width: 1366px) {
+  .system__top {
+    padding: 5.625em 0 2.625em;
+  }
+}
+@media (min-width: 1920px) {
+  .system__top {
+    padding: 7.5em 0 9em;
+  }
+}
+.system__bottom {
+  background-color: #F6F6F6;
+}
+@media (min-width: 1920px) {
+  .system__slider {
+    width: 33.875em;
+  }
+}
+.system__border {
+  padding: 2.3125em 2.375em;
+  border: 0.0625em solid rgba(171, 171, 171, 0.4);
+}
+.system__img {
+  width: 28.75em;
+  height: 40.625em;
+}
+@media (min-width: 1920px) {
+  .system__img {
+    width: 28.75em;
+    height: 40.625em;
+  }
+}
+.system__label {
+  position: relative;
+  border: 1px solid red;
+  min-height: 3em;
+}
+.system__el {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  height: 0;
+}
+.system__el.active {
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+}
 .modal {
   display: none;
   overflow: auto;

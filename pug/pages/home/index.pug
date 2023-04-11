@@ -144,8 +144,9 @@ block content
 
     // begin system
     section#system.system.section
-        .container_center
-            .system__top
+
+        .system__top
+            .container_center
                 h2.section__title
                     span системный интегратор<br> полного цикла
                 .system__list
@@ -154,10 +155,48 @@ block content
                             .pulse( style="--i:"+item.deley+";")
                             .system__text
                                 span=item.text
-            .system__bottom
-            .system__content
-                .system__left
-                .system__right
+                .system__caption
+                    h2.section__title
+                        span обладаем необходимыми лицензиями
+                        .section__text
+                            span Все наши технические и предпродажные специалисты не только сертифицированы, но и непрерывно обучаются новым технологиям.
+        .system__bottom
+            .container_center
+                .system__slider
+                    .swiper.swiper_licenses_js
+                        .swiper-wrapper
+                            each item in ['', '', '', ]
+                                .swiper-slide
+                                    .system__border
+                                        .system__img.img
+                                            img(src="../../img/licenses.jpg", alt="alt")
+
+                .system__content
+
+                    .system__nav
+                        .system__inner
+                            .system__fraction
+                                span.fraction_current_js 10
+                                span из
+                                span.fraction_all_js 38
+
+                            .system__label
+                                .system__el.active(data-index="0")
+                                    span Лицензией ФСТЭК 1 России на деятельность по технической защите конфиденциальной информации.
+                                .system__el(data-index="1")
+                                    span Лицензией ФСТЭК 2 
+                                .system__el(data-index="2")
+                                    span Лицензией ФСТЭК 3 России на деятельность по технической защите конфиденциальной информации.
+
+                    .system__arrows
+                        i.icon_arrow_left
+                        i.icon_arrow_right
+
+                    .swiper__dotted.mobile
+
+
+
+
 
     // end system
 

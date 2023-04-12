@@ -2,30 +2,40 @@ $(document).ready(function() {
 
     const licenses = new Swiper('.swiper_licenses_js', {
         speed: 500,
-        // autoplay: {
-        //     delay: 5000,
-        // },
-        // loop: true,
-        // autoHeight: true,
+        autoplay: {
+            delay: 5000,
+        },
+        loop: true,
 
-        // mousewheel: {
-        //     invert: false,
-        //     forceToAxis: true,
-        // },
+        mousewheel: {
+            invert: false,
+            forceToAxis: true,
+        },
+
+
 
         navigation: {
             nextEl: '.icon_arrow_right',
             prevEl: '.icon_arrow_left',
         },
 
+        pagination: {
+            el: '.swiper__dotted',
+            // clickable: true,
+        },
 
-        slidesPerView: 1,
-        // spaceBetween: 30,
+
+
+
+        slidesPerView: 2,
+        spaceBetween: 25,
 
         breakpoints: {
-            501: {
-                // spaceBetween: 270,
-                // slidesPerView: 2,
+            767: {
+                spaceBetween: 0,
+                slidesPerView: 1,
+
+
                 // freeMode: true,
                 // watchSlidesProgress: true,
             },
@@ -36,9 +46,10 @@ $(document).ready(function() {
             init: function (e) {
                 // console.log('swiper initialized');
                 // console.log(e.slides.length);
+                console.log(e.pagination.bullets.length);
 
                 $('.fraction_current_js').text(e.realIndex + 1);
-                $('.fraction_all_js').text(e.slides.length);
+                $('.fraction_all_js').text(e.pagination.bullets.length);
             },
         },
 

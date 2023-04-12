@@ -2,13 +2,12 @@ extends ../../layout/layout.pug
 
 block variable
     -var path = '../../';
+    -var header_class = 'header_dark';
 
 
 block content
     // begin ourwork
     section#ourwork.ourwork.section
-
-
         .ourwork__top
             .container_center
                 ul.ourwork__nav.list
@@ -16,77 +15,50 @@ block content
                         li
                             a(href="#")
                                 span=item 
-                                i.icon_arrow_right 
+                                i.icon_arrow_right
+
+        .ourwork__main
+            .container_center
+                .ourwork__content
+                    .ourwork__tag
+                        span >
+                        span \
+                    .ourwork__label
+                        span Просто о сложном
+                    .section__text
+                        span Предлагаем комплексные решения в области IT и информационной безопасности, консультируем в области соблюдения требований регуляторов и стандартов, а также оказываем техническую поддержку по всем представленным направлениям.
 
 
+        .ourwork__bottom
+            .container_center
+                .ourwork__content
+                    .section__title
+                        span Наша работа
+                    .section__text
+                        span Ключевыми направлениями нашей работы являются оказание услуг и поставка товаров как в области IT-технологий, так и в области информационной безопасности. Кроме того – это консалтинг в области соблюдения требований регуляторов и стандартов, а также техническая поддержка по всем представленным направлениям.
 
-
-        //- .ourwork__main
-        //-     .ourwork__img.img
-        //-         img(src=path+"/img/ourwork.webp" alt="alt")
-        //-     .container_center
-        //-         .ourwork__content
-        //-             .ourwork__tag
-        //-                 span >
-        //-                 span \
-        //-             .ourwork__label
-        //-                 span Просто о сложном
-        //-             .section__text
-        //-                 span Предлагаем комплексные решения в области IT и информационной безопасности, консультируем в области соблюдения требований регуляторов и стандартов, а также оказываем техническую поддержку по всем представленным направлениям.
-
-
-
-        .ourwork__wrap
-            .ourwork__video
-                video.video(width="100%" allowfullscreen="true" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop")
-                    source(src="../../media/waves.mp4" type="video/mp4")
-                    //- source(src="media/main-video.webm" type="video/webm")
-                    //- source(src="media/main-video.m4v" type="video/mp4")
-                    //- source(src="media/main-video.ogv" type="video/ogg")
-
-            .ourwork__inner
-                .ourwork__main
-                    .container_center
-                        .ourwork__content
-                            .ourwork__tag
-                                span >
-                                span \
-                            .ourwork__label
-                                span Просто о сложном
-                            .section__text
-                                span Предлагаем комплексные решения в области IT и информационной безопасности, консультируем в области соблюдения требований регуляторов и стандартов, а также оказываем техническую поддержку по всем представленным направлениям.
-
-
-                .ourwork__bottom
-                    .container_center
-                        .ourwork__content
-                            .section__title
-                                span Наша работа
-                            .section__text
-                                span Ключевыми направлениями нашей работы являются оказание услуг и поставка товаров как в области IT-технологий, так и в области информационной безопасности. Кроме того – это консалтинг в области соблюдения требований регуляторов и стандартов, а также техническая поддержка по всем представленным направлениям.
-
-                        .ourwork__list
-                            .ourwork__label
-                                span Что мы можем для вас сделать:
-                            ul.list
-                                li
-                                    .pulse( style="--i:0;")
-                                    span Повысть эффективность IT инфраструктуры
-                                li
-                                    .pulse( style="--i:1;")
-                                    span Предотвратить хищение ваших денег и денег клиентов
-                                li
-                                    .pulse( style="--i:2;")
-                                    span Обеспечить конфендициальность данных
-                                li
-                                    .pulse( style="--i:3;")
-                                    span Привести в соответствие с законами РФ вашу работу
-                                li
-                                    .pulse( style="--i:4;")
-                                    span Увеличить вашу прибыль
-                                li
-                                    .pulse( style="--i:5;")
-                                    span Совместно опередить ваших конкурентов
+                .ourwork__list
+                    .ourwork__label
+                        span Что мы можем для вас сделать:
+                    ul.list
+                        li
+                            .pulse( style="--i:0;")
+                            span Повысть эффективность IT инфраструктуры
+                        li
+                            .pulse( style="--i:1;")
+                            span Предотвратить хищение ваших денег и денег клиентов
+                        li
+                            .pulse( style="--i:2;")
+                            span Обеспечить конфендициальность данных
+                        li
+                            .pulse( style="--i:3;")
+                            span Привести в соответствие с законами РФ вашу работу
+                        li
+                            .pulse( style="--i:4;")
+                            span Увеличить вашу прибыль
+                        li
+                            .pulse( style="--i:5;")
+                            span Совместно опередить ваших конкурентов
 
     // end ourwork
 
@@ -149,17 +121,18 @@ block content
             .container_center
                 h2.section__title
                     span системный интегратор<br> полного цикла
-                .system__list
-                    each item in [ {deley: '0', text: 'Проектирование'}, {deley: '1', text: 'Поставка решений'}, {deley: '2', text: 'Интеграция'}, {deley: '3', text: 'Тех. поддержка 24/7'},]
-                        .system__item
-                            .pulse( style="--i:"+item.deley+";")
-                            .system__text
-                                span=item.text
+            .system__list
+                each item in [ {deley: '0', text: 'Проектирование'}, {deley: '1', text: 'Поставка решений'}, {deley: '2', text: 'Интеграция'}, {deley: '3', text: 'Тех. поддержка 24/7'},]
+                    .system__item
+                        .pulse( style="--i:"+item.deley+";")
+                        .system__text
+                            span=item.text
+            .container_center
                 .system__caption
                     h2.section__title
                         span обладаем необходимыми лицензиями
-                        .section__text
-                            span Все наши технические и предпродажные специалисты не только сертифицированы, но и непрерывно обучаются новым технологиям.
+                    .section__text
+                        span Все наши технические и предпродажные специалисты не только сертифицированы, но и непрерывно обучаются новым технологиям.
         .system__bottom
             .container_center
                 .system__slider
@@ -172,27 +145,26 @@ block content
                                             img(src="../../img/licenses.jpg", alt="alt")
 
                 .system__content
-
                     .system__nav
                         .system__inner
                             .system__fraction
                                 span.fraction_current_js 10
-                                span из
+                                span  из 
                                 span.fraction_all_js 38
 
                             .system__label
                                 .system__el.active(data-index="0")
-                                    span Лицензией ФСТЭК 1 России на деятельность по технической защите конфиденциальной информации.
+                                    span Лицензией ФСТЭК 1 России на деятельность по технической защите конфиденциальной информации. информации.информации.
                                 .system__el(data-index="1")
                                     span Лицензией ФСТЭК 2 
                                 .system__el(data-index="2")
                                     span Лицензией ФСТЭК 3 России на деятельность по технической защите конфиденциальной информации.
 
-                    .system__arrows
-                        i.icon_arrow_left
-                        i.icon_arrow_right
+                        .system__arrows.desktop
+                            i.icon_arrow_left
+                            i.icon_arrow_right
 
-                    .swiper__dotted.mobile
+                        .swiper__dotted.mobile
 
 
 

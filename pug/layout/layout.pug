@@ -1,7 +1,8 @@
 block variable
     -var path = '';
     //- -var page = true;
-    -var pageClass = 'wrapper_light';
+    //- -var header_class = 'header_light';
+    -var header_class = 'header_dark';
 
 <!DOCTYPE html>
 html(lang="en")
@@ -32,7 +33,15 @@ html(lang="en")
         //-         <div></div>
         //- end preloader
 
-        .wrapper#wrapper(class=""+pageClass+"")
+        .home_page_bg
+            video.video(width="100%" allowfullscreen="true" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop")
+                source(src="../../media/waves.mp4" type="video/mp4")
+                //- source(src="media/main-video.webm" type="video/webm")
+                //- source(src="media/main-video.m4v" type="video/mp4")
+                //- source(src="media/main-video.ogv" type="video/ogg")
+
+        .wrapper#wrapper
+
             include header.pug
 
             main.main_content

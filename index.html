@@ -11,8 +11,13 @@
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
   </head>
   <body>
-    <div class="wrapper wrapper_light" id="wrapper">
-      <header class="header">
+    <div class="home_page_bg">
+      <video class="video" width="100%" allowfullscreen="true" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop">
+        <source src="../../media/waves.mp4" type="video/mp4"/>
+      </video>
+    </div>
+    <div class="wrapper" id="wrapper">
+      <header class="header header_dark">
         <div class="header__content">
           <div class="header__row">
             <div class="header__col header__col_logo">
@@ -46,11 +51,7 @@
               </ul>
               <div class="language">
                 <label class="language__label">
-                  <input type="checkbox" id="themeCheckbox" name="themeCheckbox"/><span><i class="icon_polygon"></i></span>
-                  <ul class="language__submenu">
-                    <li class="language__item language_ru">ru</li>
-                    <li class="language__item language_en">en</li>
-                  </ul>
+                  <input type="checkbox" id="themeCheckbox" name="themeCheckbox"/><span></span>
                 </label>
               </div>
             </div>
@@ -108,11 +109,11 @@
       </header>
       <main class="main_content">
         <!-- begin projectNaw-->
-        <section class="projectNaw section" id="projectNaw">
+        <section class="projectNaw section" id="projectNaw" style="color: #fff;">
           <div class="container_center">
             <h2 class="section__title"><span>Навигация по проекту</span></h2>
             <ul style="font-size:1.25em;">
-              <li><a href="../pages/home/">Главная </a></li>
+              <li><a href="../pages/home/" style="color: #fff;">Главная </a></li>
             </ul>
           </div>
         </section>

@@ -3906,6 +3906,27 @@ textarea input[type=checkbox]:disabled:indeterminate:before {
   }
 }
 
+.business {
+  background-color: #F6F6F6;
+}
+@media (min-width: 768px) {
+  .business__content .swiper-wrapper {
+    transform: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.business__item {
+  position: relative;
+}
+.business__img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 4.6875em;
+  height: 4.25em;
+}
+
 .modal {
   display: none;
   overflow: auto;

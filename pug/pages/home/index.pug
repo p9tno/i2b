@@ -172,6 +172,32 @@ block content
 
     // end system
 
+    // begin business
+    section#business.business.section
+        .container_center
+            h2.section__title
+                span Работаем во всех сферах бизнеса
+
+            .business__content
+                .swiper.swiper_business_js
+                    .swiper-wrapper
+                        each item in [ {text: 'Государственный сектор', img: 'state'}, {text: 'Связь и телеком', img: 'connection'}, {text: 'Медиа и СМИ', img: 'smi'}, {text: 'Ритэйл', img: 'bag'}, {text: 'Строительство', img: 'building'}, {text: 'Энергетика', img: 'energy'}, {text: 'Банковские и фин. сферы', img: 'cart'}, {text: 'Здравоохранение и медицина', img: 'medicine'}, {text: 'Страхование', img: 'defense'}, {text: 'ТЭК', img: 'water'}, {text: 'Наука', img: 'science'}, {text: 'Образование', img: 'book'}, {text: 'Транспорт', img: 'transport'}, {text: 'Туризм', img: 'tourism'}, {text: 'Промышленность (машиностроение, атомная, горнодобывающая, металлургическая, химическая и т.д.)', img: 'Industry'}, {text: 'Оборонная и ракетно-космическая отрасли', img: 'rocket'}, ]
+                            .swiper-slide
+                                .business__item
+                                    .section__text
+                                        span!=item.text
+                                    .business__img.img
+                                        img(src="../../img/"+item.img+".svg", alt="alt")
+
+
+                    .swiper__dotted
+
+
+
+
+
+    // end business
+
 
 
 

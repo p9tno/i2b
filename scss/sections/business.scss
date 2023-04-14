@@ -1,0 +1,33 @@
+@media (min-width: 768px) {}
+@media (min-width: 1366px) {}
+@media (min-width: 1920px) {}
+
+.business {
+    background-color: $color_light_bg;
+
+    &__content {
+        .swiper-wrapper {
+
+            @media (min-width: 768px) {
+                transform: none;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+            }
+            @media (min-width: 1366px) {}
+            @media (min-width: 1920px) {}
+        }
+    }
+
+    &__item {
+        position: relative;
+    }
+
+    &__img {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 4.6875em;
+        height: 4.25em;
+    }
+
+}

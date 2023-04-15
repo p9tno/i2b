@@ -18,7 +18,7 @@ $(document).ready(function() {
         },
 
         pagination: {
-            el: '.swiper__dotted',
+            el: '.licenses_dotted_js',
             // clickable: true,
         },
 
@@ -68,7 +68,7 @@ $(document).ready(function() {
 
     function mobilSlider () {
         let business_slider = null;
-        let mediaQuerySize = 767;
+        let mediaQuerySize = 1365;
 
         function initSlider () {
             if (!business_slider) {
@@ -83,13 +83,13 @@ $(document).ready(function() {
                         forceToAxis: true,
                     },
                     pagination: {
-                        el: '.swiper__dotted',
+                        el: '.business_dotted_js',
                     },
                     slidesPerView: 2,
                     spaceBetween: 15,
                     breakpoints: {
                         767: {
-                            slidesPerView: 1,
+                            slidesPerView: 4,
                             spaceBetween: 15,
                         },
                     },
@@ -102,17 +102,16 @@ $(document).ready(function() {
                 business_slider.destroy();
                 business_slider = null;
             }
-
         }
 
         $(window).on('load resize', function () {
             let windowWidth = $(this).innerWidth();
             if (windowWidth <= mediaQuerySize) {
                 initSlider();
-                console.log('init');
+                // console.log('init');
             } else {
                 destroySlider();
-                console.log('destroy');
+                // console.log('destroy');
             }
         });
     }

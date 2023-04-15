@@ -124,7 +124,16 @@ body {
 }
 
 .section {
-	padding: 2em 0;
+	padding: 2.8125em 0;
+	@media (min-width: 768px) {
+		padding: 3.75em 0;
+	}
+	@media (min-width: 1366px) {
+		padding: 5.625em 0;
+	}
+	@media (min-width: 1920px) {
+		padding: 7.5em 0;
+	}
 
 	&__title {
 		margin: 0;

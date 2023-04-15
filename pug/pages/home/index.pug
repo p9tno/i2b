@@ -102,15 +102,12 @@ block content
                             li
                                 span!=item
 
-
                 .target__right
                     .target__label
                         span «Относись к клиенту, как к индивидуальности»
                     ul.list
                         li
                             span При создании компании «Айтуби» нашими неизменными учредителями было принято правило, сохраняющееся и на сегодняшний день
-
-
 
     // end target
 
@@ -164,11 +161,7 @@ block content
                             i.icon_arrow_left
                             i.icon_arrow_right
 
-                        .swiper__dotted.mobile
-
-
-
-
+                        .swiper__dotted.licenses_dotted_js.mobile
 
     // end system
 
@@ -177,27 +170,56 @@ block content
         .container_center
             h2.section__title
                 span Работаем во всех сферах бизнеса
-
             .business__content
                 .swiper.swiper_business_js
                     .swiper-wrapper
-                        each item in [ {text: 'Государственный сектор', img: 'state'}, {text: 'Связь и телеком', img: 'connection'}, {text: 'Медиа и СМИ', img: 'smi'}, {text: 'Ритэйл', img: 'bag'}, {text: 'Строительство', img: 'building'}, {text: 'Энергетика', img: 'energy'}, {text: 'Банковские и фин. сферы', img: 'cart'}, {text: 'Здравоохранение и медицина', img: 'medicine'}, {text: 'Страхование', img: 'defense'}, {text: 'ТЭК', img: 'water'}, {text: 'Наука', img: 'science'}, {text: 'Образование', img: 'book'}, {text: 'Транспорт', img: 'transport'}, {text: 'Туризм', img: 'tourism'}, {text: 'Промышленность (машиностроение, атомная, горнодобывающая, металлургическая, химическая и т.д.)', img: 'Industry'}, {text: 'Оборонная и ракетно-космическая отрасли', img: 'rocket'}, ]
+                        each item in [ {text: 'Государственный сектор', img: 'state'}, {text: 'Связь и телеком', img: 'connection'}, {text: 'Медиа и СМИ', img: 'smi'}, {text: 'Ритэйл', img: 'bag'}, {text: 'Строительство', img: 'building'}, {text: 'Энергетика', img: 'energy'}, {text: 'Банковские и фин. сферы', img: 'cart'}, {text: 'Здравоохранение<br> и медицина', img: 'medicine'}, {text: 'Страхование', img: 'defense'}, {text: 'ТЭК', img: 'water'}, {text: 'Наука', img: 'science'}, {text: 'Образование', img: 'book'}, {text: 'Транспорт', img: 'transport'}, {text: 'Туризм', img: 'tourism'}, {text: 'Промышленность (машиностроение, атомная, горнодобывающая, металлургическая, химическая и т.д.)', img: 'Industry'}, {text: 'Оборонная и ракетно-космическая отрасли', img: 'rocket'}, ]
                             .swiper-slide
-                                .business__item
-                                    .section__text
-                                        span!=item.text
-                                    .business__img.img
-                                        img(src="../../img/"+item.img+".svg", alt="alt")
 
+                                .section__text
+                                    span!=item.text
+                                .business__img.img
+                                    img(src="../../img/"+item.img+".svg", alt="alt")
 
-                    .swiper__dotted
-
-
-
-
+                .swiper__dotted.business_dotted_js
 
     // end business
 
+    // begin contactus
+    section#contactus.contactus.section
+        .container_center
+            h2.section__title
+                span Свяжитесь с нами
+            .contactus__content
+
+                .contactus__action
+                    .contactus__link
+                        a(href="tel:+7 (495) 222-34-69") +7 (495) 222-34-69
+                    .contactus__link
+                        a(href="mailto:info@it2bsns.ru") info@it2bsns.ru
+
+                .contactus__form
+                    .form__content   
+                        form.form(action="send.php")
+                            input(type="hidden" name="subject" value="форма в футоре")
+                            input(type="hidden" name="notspam" value="")
+
+
+                            .form__row
+                                input(type="text" placeholder="Ваше имя")
+                            .form__row
+                                input(type="text", required placeholder="Телефон")
+                            .form__row.form__row_full
+                                textarea(type="text", placeholder="Дополнительная информация")
+                            .form__row
+                                .button
+                                    button.btn(type="submit") Отправить
+                            .form__row
+                                .form__privacy
+                                    span Мы надежно храним ваши данные, вот <a href="#" target="_blank">условия</a>  и <a href="#" target="_blank">политика конфендициальности</a>
+
+
+    // end contactus
 
 
 
@@ -205,66 +227,6 @@ block content
 
 
 
-
-    //- // begin form
-    //- section#form.form.section
-    //-     .container_center
-    //-         .form__content
-    //-             h1.form__title Подать заявку на лизинг
-    //-             i.icon_close    
-    //-             form.form.form_grid(action="send.php")
-    //-                 //- из какой формы на сайте
-    //-                 input(type="hidden" name="subject" value="форма в футоре")
-    //-                 //- проверка спама
-    //-                 input(type="hidden" name="notspam" value="")
-    //-                 .form__row
-    //-                     input(type="text", required placeholder="Предмет лизинга*")
-    //-                 .form__row
-    //-                     input(type="number", placeholder="ИНН")
-    //-                 .form__row
-    //-                     input(type="number", placeholder="Стоимость")
-    //-                 .form__row
-    //-                     input(type="text", placeholder="Контактное лицо")
-    //-                 .form__row
-    //-                     input(type="number", placeholder="Колличество")
-    //-                 .form__row
-    //-                     input(type="text", required placeholder="Телефон*")
-    //-                 .form__row
-    //-                     input(type="number", placeholder="Аванс")
-    //-                 .form__label
-    //-                 .form__row
-    //-                     select.select(data-placeholder="Выбор")
-    //-                         option(value="")
-    //-                         option(value="Значение 1") Значение 1
-    //-                         option(value="Значение 2") Значение 2
-    //-                         option(value="Значение 3") Значение 3
-    //-                         option(value="Значение 4") Значение 4
-    //-                 .form__row
-    //-                     input(type="email", placeholder="E-mail")
-    //-                 .form__row
-    //-                     input(type="text", placeholder="Местонахождение")
-    //-                 .form__row.form__row_full
-    //-                     textarea(type="text", placeholder="Дополнительная информация")
-    //-                 .form__row.form__row_full
-    //-                     .form__grup
-    //-                         label.form__check
-    //-                             input(type="radio" name="test" checked="checked" value="test")
-    //-                             span radio 1
-    //-                         label.form__check
-    //-                             input(type="radio" name="test" value="test_2")
-    //-                             span radio 2
-    //- 
-    //-                 .form__row
-    //-                     span.form__text Поля, помеченные *, обязательны к заполнения
-    //-                 .form__row
-    //-                     .button
-    //-                         button.btn#btn_didisabled_js(type="submit") Отправить
-    //-                 .form__row.form__row_full
-    //-                     .form__privacy
-    //-                         label.form__check
-    //-                             input#check_checked(type="checkbox" checked="checked")
-    //-                             span Прочитал(-а) Пользовательское соглашение и соглашаюсь с <a href="#" target="_blank">политикой обработки персональных данных</a>
-    //- // end form
 
 
     //- // begin tabsPreview

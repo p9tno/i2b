@@ -1,25 +1,69 @@
-@media (min-width: 768px) {}
-@media (min-width: 1366px) {}
-@media (min-width: 1920px) {}
-
 .business {
-    background-color: $color_light_bg;
+    background-color: $color_white;
+    overflow: hidden;
+    @media (min-width: 1366px) {
+        overflow: initial;
+    }
 
     &__content {
-        .swiper-wrapper {
+        margin-top: 1.625em;
+        @media (min-width: 768px) {
+            margin-top: 1.875em;
+        }
+        @media (min-width: 1366px) {
+            margin-top: 2.5em;
+        }
+        @media (min-width: 1920px) {
+            margin-top: 3.375em;
+        }
 
+        .swiper {
+            width: 28.4375em;
             @media (min-width: 768px) {
+                width: 57.8125em;
+            }
+            @media (min-width: 1366px) {
+                width: auto;
+            }
+        }
+
+        .swiper-wrapper {
+            @media (min-width: 1366px) {
                 transform: none;
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
+                grid-auto-rows: minmax(8.4375em, auto);
+                grid-gap: 1.875em;
             }
-            @media (min-width: 1366px) {}
-            @media (min-width: 1920px) {}
         }
-    }
 
-    &__item {
-        position: relative;
+        .swiper-slide {
+            position: relative;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 0.75em 0.375em;
+            border: 0.0625em solid #E2E2E2;
+
+            text-align: center;
+
+            @media (max-width: 1365px) {
+                min-height: 7.5em;
+            }
+        }
+
+        .section__text {
+            position: relative;
+            z-index: 1;
+        }
+
+        .swiper__dotted {
+            @media (min-width: 1366px) {
+                display: none;
+            }
+        }
     }
 
     &__img {
@@ -28,6 +72,15 @@
         right: 0;
         width: 4.6875em;
         height: 4.25em;
+
+        font-size: 1em;
+
+        @media (min-width: 1366px) {
+            font-size: 0.7em;
+        }
+        @media (min-width: 1920px) {
+            font-size: 1em;
+        }
     }
 
 }

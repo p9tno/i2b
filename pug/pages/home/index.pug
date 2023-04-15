@@ -195,31 +195,35 @@ block content
                 .contactus__action
                     .contactus__link
                         a(href="tel:+7 (495) 222-34-69") +7 (495) 222-34-69
-                    .contactus__link
+                    .contactus__link.contactus__link_mail
                         a(href="mailto:info@it2bsns.ru") info@it2bsns.ru
 
                 .contactus__form
-                    .form__content   
-                        form.form(action="send.php")
-                            input(type="hidden" name="subject" value="форма в футоре")
-                            input(type="hidden" name="notspam" value="")
+                    form.form.form_grid(action="send.php")
+                        input(type="hidden" name="subject" value="форма в футоре")
+                        input(type="hidden" name="notspam" value="")
 
 
-                            .form__row
-                                input(type="text" placeholder="Ваше имя")
-                            .form__row
-                                input(type="text", required placeholder="Телефон")
-                            .form__row.form__row_full
-                                textarea(type="text", placeholder="Дополнительная информация")
-                            .form__row
-                                .button
-                                    button.btn(type="submit") Отправить
-                            .form__row
-                                .form__privacy
-                                    span Мы надежно храним ваши данные, вот <a href="#" target="_blank">условия</a>  и <a href="#" target="_blank">политика конфендициальности</a>
+                        .form__row
+                            input(type="text" name="name" placeholder="Ваше имя" autocomplete="off")
+
+                        .form__row
+                            input(type="text" name="tel" class="tel" required placeholder="Телефон" autocomplete="off")
+
+                        .form__row.form__row_full
+                            textarea(type="text" name="message" placeholder="Задайте вопрос" autocomplete="off")
+                            //- input(type="text" name="message" placeholder="Задайте вопрос")
+
+                        .form__row.form__row_full.form__row_button
+                            button.btn(type="submit")
+                                span Отправить
+                            .form__privacy
+                                span Мы надежно храним ваши данные, вот <a href="#" target="_blank">условия</a> и <a href="#" target="_blank">политика конфендициальности</a>
+
 
 
     // end contactus
+
 
 
 

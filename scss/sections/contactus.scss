@@ -1,0 +1,159 @@
+@media (min-width: 768px) {}
+@media (min-width: 1366px) {}
+@media (min-width: 1920px) {}
+
+.contactus {
+    position: relative;
+    overflow: hidden;
+    background-color: #252525;
+    color: $color_white;
+
+    .container_center {
+        position: relative;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: -2em;
+        right: -18em;
+        width: 42.125em;
+        height: 37.375em;
+
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url("../../img/logo_grey.webp");
+        font-size: 0.6em;
+
+    }
+    @media (max-width: 767px) {
+        padding-bottom: 2.375em;
+    }
+    @media (min-width: 768px) {
+        &:before {
+            bottom: -1.25em;
+            right: auto;
+            left: -18.0625em;
+            font-size: 0.75em;
+            // background-image: url("../../img/contactus_logo_md.png");
+            // width: 17.9375em;
+            // height: 27.75em;
+        }
+    }
+    @media (min-width: 1366px) {
+        &:before {
+            bottom: -2em;
+            left: -8.6em;
+            font-size: 1em;
+        }
+    }
+    @media (min-width: 1920px) {
+        &:before {
+            bottom: -5em;
+            left: -6.75em;
+            font-size: 1.4em;
+        }
+    }
+
+    &__content {
+        margin-top: 2.1875em;
+        @media (min-width: 768px) {
+            display: flex;
+            justify-content: space-between;
+        }
+        @media (min-width: 1366px) {
+            margin-top: 3.5em;
+        }
+        @media (min-width: 1920px) {
+            margin-top: 8.125em;
+        }
+    }
+
+    &__action {
+        display: flex;
+        @media (min-width: 768px) {
+            flex-direction: column;
+        }
+        @media (min-width: 1366px) {}
+        @media (min-width: 1920px) {}
+    }
+
+    &__link {
+        &:first-child {
+            margin-right: 2.8125em;
+        }
+
+        a {
+            font-size: 0.875em;
+            font-weight: 300;
+            color: #FF620E;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            text-decoration: none;
+
+            &:hover {
+                color: $color_white;
+            }
+        }
+
+        &_mail {
+            a {
+                position: relative;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0.125em;
+                    left: 0;
+                    width: 100%;
+                    border-bottom: 0.0625em solid;
+
+                }
+            }
+        }
+
+        @media (min-width: 768px) {
+
+            margin-top: 2.25em;
+
+            &:first-child {
+                margin-top: 0;
+                margin-right: 0;
+            }
+
+            a {
+                font-size: 1.25em;
+            }
+        }
+        @media (min-width: 1366px) {
+            margin-top: 2.5em;
+
+            a {
+                font-size: 1.625em;
+            }
+        }
+        @media (min-width: 1920px) {
+            margin-top: 5.375em;
+
+            a {
+                font-size: 2.1875em;
+            }
+        }
+    }
+
+    &__form {
+        margin-top: 2.75em;
+        @media (min-width: 768px) {
+            margin-top: 0;
+            width: 25.875em;
+        }
+        @media (min-width: 1366px) {
+            width: 40.75em;
+        }
+        @media (min-width: 1920px) {
+            width: 59.375em;
+        }
+    }
+
+}

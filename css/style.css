@@ -1883,30 +1883,50 @@ body {
 .form_grid {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -1em;
+  margin: 0 -1.25em;
+}
+@media (min-width: 1920px) {
+  .form_grid {
+    margin: 0 -1.5625em;
+  }
 }
 .form_grid .form__row {
-  margin: 0 1em 2em;
+  margin: 0 1.25em 1.875em;
   width: 100%;
 }
 @media (min-width: 768px) {
   .form_grid .form__row {
-    width: calc(50% - 2em);
+    margin: 0 1.25em 2.1875em;
+  }
+}
+@media (min-width: 1366px) {
+  .form_grid .form__row {
+    margin: 0 1.25em 3.125em;
+    width: calc(50% - 2.5em);
+  }
+}
+@media (min-width: 1920px) {
+  .form_grid .form__row {
+    margin: 0 1.5625em 4.375em;
+    width: calc(50% - 3.125em);
   }
 }
 .form_grid .form__row_full {
   width: 100%;
 }
-.form__content {
-  background: #FFFFFF;
-  box-shadow: 0 1.25em 3.125em rgba(50, 63, 83, 0.3);
-  padding: 2.5em 3em 3em;
-  position: relative;
+.form_grid .form__row_button {
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
 }
-.form__row {
-  margin-bottom: 1em;
+.form_grid .form__row_button .btn {
+  flex: none;
 }
-.form__row .btn,
+@media (min-width: 1366px) {
+  .form_grid .form__row_button {
+    margin-top: 0.75em;
+  }
+}
 .form__row input:not([type]),
 .form__row input[type=date],
 .form__row input[type=email],
@@ -1919,463 +1939,283 @@ body {
 .form__row textarea {
   width: 100%;
 }
-.form__row textarea {
-  min-height: 6em;
-  resize: vertical;
+.form__privacy {
+  flex: none;
+  line-height: 1;
+  width: 13.75em;
+  margin-left: 1.125em;
 }
-.form__check {
-  display: flex;
-  align-items: center;
+.form__privacy span {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.75em;
 }
-.form__check span {
-  margin-left: 0.5em;
+.form__privacy a {
+  color: rgba(255, 255, 255, 0.6);
 }
-
-input:not([type]),
-input[type=date],
-input[type=email],
-input[type=number],
-input[type=password],
-input[type=search],
-input[type=tel],
-input[type=text],
-input[type=url],
-textarea {
-  background-color: #fff;
-  border: 0.0625em solid #ddd;
+.form__privacy a:hover {
+  color: white;
+}
+@media (min-width: 768px) {
+  .form__privacy {
+    margin-left: 3.25em;
+  }
+}
+@media (min-width: 1366px) {
+  .form__privacy {
+    line-height: 1.125;
+    width: 19.375em;
+    margin-left: 4.25em;
+  }
+  .form__privacy span {
+    font-size: 0.8125em;
+  }
+}
+@media (min-width: 1920px) {
+  .form__privacy {
+    margin-left: 5.3125em;
+  }
+  .form__privacy span {
+    font-size: 0.875em;
+  }
+}
+.form input:not([type]),
+.form input[type=date],
+.form input[type=email],
+.form input[type=number],
+.form input[type=password],
+.form input[type=search],
+.form input[type=tel],
+.form input[type=text],
+.form input[type=url],
+.form textarea {
+  border: 0;
+  border-bottom: 0.0625em solid;
+  border-color: rgba(255, 255, 255, 0.5);
+  border-radius: 0;
   font-family: "Jost";
-  color: #1A1A1A;
-  padding: 0.5em 1em;
-  outline: none;
-  font-size: 1em;
   font-weight: 400;
-  border-radius: 0.3125em;
+  font-size: 0.875em;
+  padding: 0 0 1.4286em;
+  background-color: transparent !important;
+  background-color: #252525;
+  color: #ffffff;
+  outline: none;
   transition: 0.3s;
   /* Для Chrome */
   /* Для Firefox */
 }
-input:not([type]):hover,
-input[type=date]:hover,
-input[type=email]:hover,
-input[type=number]:hover,
-input[type=password]:hover,
-input[type=search]:hover,
-input[type=tel]:hover,
-input[type=text]:hover,
-input[type=url]:hover,
-textarea:hover {
-  border: 0.0625em solid #ddd;
-  background-color: #fff;
+@media (min-width: 1366px) {
+  .form input:not([type]),
+.form input[type=date],
+.form input[type=email],
+.form input[type=number],
+.form input[type=password],
+.form input[type=search],
+.form input[type=tel],
+.form input[type=text],
+.form input[type=url],
+.form textarea {
+    font-size: 1.125em;
+    padding: 0 0 1.3889em;
+  }
 }
-input:not([type]):focus,
-input[type=date]:focus,
-input[type=email]:focus,
-input[type=number]:focus,
-input[type=password]:focus,
-input[type=search]:focus,
-input[type=tel]:focus,
-input[type=text]:focus,
-input[type=url]:focus,
-textarea:focus {
-  border: 0.0625em solid #ddd;
-  background-color: #fff;
+@media (min-width: 1920px) {
+  .form input:not([type]),
+.form input[type=date],
+.form input[type=email],
+.form input[type=number],
+.form input[type=password],
+.form input[type=search],
+.form input[type=tel],
+.form input[type=text],
+.form input[type=url],
+.form textarea {
+    font-size: 1.25em;
+    padding: 0 0 1.5em;
+  }
 }
-input:not([type]).invalid,
-input[type=date].invalid,
-input[type=email].invalid,
-input[type=number].invalid,
-input[type=password].invalid,
-input[type=search].invalid,
-input[type=tel].invalid,
-input[type=text].invalid,
-input[type=url].invalid,
-textarea.invalid {
-  background-color: #fff;
-  border: 0.0625em solid red;
+.form input:not([type]).invalid,
+.form input[type=date].invalid,
+.form input[type=email].invalid,
+.form input[type=number].invalid,
+.form input[type=password].invalid,
+.form input[type=search].invalid,
+.form input[type=tel].invalid,
+.form input[type=text].invalid,
+.form input[type=url].invalid,
+.form textarea.invalid {
+  border-color: #ff1a1a;
 }
-input:not([type])::-webkit-input-placeholder,
-input[type=date]::-webkit-input-placeholder,
-input[type=email]::-webkit-input-placeholder,
-input[type=number]::-webkit-input-placeholder,
-input[type=password]::-webkit-input-placeholder,
-input[type=search]::-webkit-input-placeholder,
-input[type=tel]::-webkit-input-placeholder,
-input[type=text]::-webkit-input-placeholder,
-input[type=url]::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
-  color: #ddd;
+.form input:not([type]).invalid::-webkit-input-placeholder,
+.form input[type=date].invalid::-webkit-input-placeholder,
+.form input[type=email].invalid::-webkit-input-placeholder,
+.form input[type=number].invalid::-webkit-input-placeholder,
+.form input[type=password].invalid::-webkit-input-placeholder,
+.form input[type=search].invalid::-webkit-input-placeholder,
+.form input[type=tel].invalid::-webkit-input-placeholder,
+.form input[type=text].invalid::-webkit-input-placeholder,
+.form input[type=url].invalid::-webkit-input-placeholder,
+.form textarea.invalid::-webkit-input-placeholder {
+  color: #ff1a1a;
 }
-input:not([type]):-moz-placeholder,
-input[type=date]:-moz-placeholder,
-input[type=email]:-moz-placeholder,
-input[type=number]:-moz-placeholder,
-input[type=password]:-moz-placeholder,
-input[type=search]:-moz-placeholder,
-input[type=tel]:-moz-placeholder,
-input[type=text]:-moz-placeholder,
-input[type=url]:-moz-placeholder,
-textarea:-moz-placeholder {
-  color: #ddd;
+.form input:not([type]).invalid:-moz-placeholder,
+.form input[type=date].invalid:-moz-placeholder,
+.form input[type=email].invalid:-moz-placeholder,
+.form input[type=number].invalid:-moz-placeholder,
+.form input[type=password].invalid:-moz-placeholder,
+.form input[type=search].invalid:-moz-placeholder,
+.form input[type=tel].invalid:-moz-placeholder,
+.form input[type=text].invalid:-moz-placeholder,
+.form input[type=url].invalid:-moz-placeholder,
+.form textarea.invalid:-moz-placeholder {
+  color: #ff1a1a;
 }
-input:not([type])::-moz-placeholder,
-input[type=date]::-moz-placeholder,
-input[type=email]::-moz-placeholder,
-input[type=number]::-moz-placeholder,
-input[type=password]::-moz-placeholder,
-input[type=search]::-moz-placeholder,
-input[type=tel]::-moz-placeholder,
-input[type=text]::-moz-placeholder,
-input[type=url]::-moz-placeholder,
-textarea::-moz-placeholder {
-  color: #ddd;
+.form input:not([type]).invalid::-moz-placeholder,
+.form input[type=date].invalid::-moz-placeholder,
+.form input[type=email].invalid::-moz-placeholder,
+.form input[type=number].invalid::-moz-placeholder,
+.form input[type=password].invalid::-moz-placeholder,
+.form input[type=search].invalid::-moz-placeholder,
+.form input[type=tel].invalid::-moz-placeholder,
+.form input[type=text].invalid::-moz-placeholder,
+.form input[type=url].invalid::-moz-placeholder,
+.form textarea.invalid::-moz-placeholder {
+  color: #ff1a1a;
 }
-input:not([type]):-ms-input-placeholder,
-input[type=date]:-ms-input-placeholder,
-input[type=email]:-ms-input-placeholder,
-input[type=number]:-ms-input-placeholder,
-input[type=password]:-ms-input-placeholder,
-input[type=search]:-ms-input-placeholder,
-input[type=tel]:-ms-input-placeholder,
-input[type=text]:-ms-input-placeholder,
-input[type=url]:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
-  color: #ddd;
+.form input:not([type]).invalid:-ms-input-placeholder,
+.form input[type=date].invalid:-ms-input-placeholder,
+.form input[type=email].invalid:-ms-input-placeholder,
+.form input[type=number].invalid:-ms-input-placeholder,
+.form input[type=password].invalid:-ms-input-placeholder,
+.form input[type=search].invalid:-ms-input-placeholder,
+.form input[type=tel].invalid:-ms-input-placeholder,
+.form input[type=text].invalid:-ms-input-placeholder,
+.form input[type=url].invalid:-ms-input-placeholder,
+.form textarea.invalid:-ms-input-placeholder {
+  color: #ff1a1a;
 }
-input:not([type]) input[type=search]::-webkit-search-cancel-button,
-input:not([type]) input[type=search]::-webkit-search-decoration,
-input[type=date] input[type=search]::-webkit-search-cancel-button,
-input[type=date] input[type=search]::-webkit-search-decoration,
-input[type=email] input[type=search]::-webkit-search-cancel-button,
-input[type=email] input[type=search]::-webkit-search-decoration,
-input[type=number] input[type=search]::-webkit-search-cancel-button,
-input[type=number] input[type=search]::-webkit-search-decoration,
-input[type=password] input[type=search]::-webkit-search-cancel-button,
-input[type=password] input[type=search]::-webkit-search-decoration,
-input[type=search] input[type=search]::-webkit-search-cancel-button,
-input[type=search] input[type=search]::-webkit-search-decoration,
-input[type=tel] input[type=search]::-webkit-search-cancel-button,
-input[type=tel] input[type=search]::-webkit-search-decoration,
-input[type=text] input[type=search]::-webkit-search-cancel-button,
-input[type=text] input[type=search]::-webkit-search-decoration,
-input[type=url] input[type=search]::-webkit-search-cancel-button,
-input[type=url] input[type=search]::-webkit-search-decoration,
-textarea input[type=search]::-webkit-search-cancel-button,
-textarea input[type=search]::-webkit-search-decoration {
+.form input:not([type])::-webkit-input-placeholder,
+.form input[type=date]::-webkit-input-placeholder,
+.form input[type=email]::-webkit-input-placeholder,
+.form input[type=number]::-webkit-input-placeholder,
+.form input[type=password]::-webkit-input-placeholder,
+.form input[type=search]::-webkit-input-placeholder,
+.form input[type=tel]::-webkit-input-placeholder,
+.form input[type=text]::-webkit-input-placeholder,
+.form input[type=url]::-webkit-input-placeholder,
+.form textarea::-webkit-input-placeholder {
+  color: #ffffff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.form input:not([type]):-moz-placeholder,
+.form input[type=date]:-moz-placeholder,
+.form input[type=email]:-moz-placeholder,
+.form input[type=number]:-moz-placeholder,
+.form input[type=password]:-moz-placeholder,
+.form input[type=search]:-moz-placeholder,
+.form input[type=tel]:-moz-placeholder,
+.form input[type=text]:-moz-placeholder,
+.form input[type=url]:-moz-placeholder,
+.form textarea:-moz-placeholder {
+  color: #ffffff;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+}
+.form input:not([type])::-moz-placeholder,
+.form input[type=date]::-moz-placeholder,
+.form input[type=email]::-moz-placeholder,
+.form input[type=number]::-moz-placeholder,
+.form input[type=password]::-moz-placeholder,
+.form input[type=search]::-moz-placeholder,
+.form input[type=tel]::-moz-placeholder,
+.form input[type=text]::-moz-placeholder,
+.form input[type=url]::-moz-placeholder,
+.form textarea::-moz-placeholder {
+  color: #ffffff;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+}
+.form input:not([type]):-ms-input-placeholder,
+.form input[type=date]:-ms-input-placeholder,
+.form input[type=email]:-ms-input-placeholder,
+.form input[type=number]:-ms-input-placeholder,
+.form input[type=password]:-ms-input-placeholder,
+.form input[type=search]:-ms-input-placeholder,
+.form input[type=tel]:-ms-input-placeholder,
+.form input[type=text]:-ms-input-placeholder,
+.form input[type=url]:-ms-input-placeholder,
+.form textarea:-ms-input-placeholder {
+  color: #ffffff;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+}
+.form input:not([type]) input[type=search]::-webkit-search-cancel-button,
+.form input:not([type]) input[type=search]::-webkit-search-decoration,
+.form input[type=date] input[type=search]::-webkit-search-cancel-button,
+.form input[type=date] input[type=search]::-webkit-search-decoration,
+.form input[type=email] input[type=search]::-webkit-search-cancel-button,
+.form input[type=email] input[type=search]::-webkit-search-decoration,
+.form input[type=number] input[type=search]::-webkit-search-cancel-button,
+.form input[type=number] input[type=search]::-webkit-search-decoration,
+.form input[type=password] input[type=search]::-webkit-search-cancel-button,
+.form input[type=password] input[type=search]::-webkit-search-decoration,
+.form input[type=search] input[type=search]::-webkit-search-cancel-button,
+.form input[type=search] input[type=search]::-webkit-search-decoration,
+.form input[type=tel] input[type=search]::-webkit-search-cancel-button,
+.form input[type=tel] input[type=search]::-webkit-search-decoration,
+.form input[type=text] input[type=search]::-webkit-search-cancel-button,
+.form input[type=text] input[type=search]::-webkit-search-decoration,
+.form input[type=url] input[type=search]::-webkit-search-cancel-button,
+.form input[type=url] input[type=search]::-webkit-search-decoration,
+.form textarea input[type=search]::-webkit-search-cancel-button,
+.form textarea input[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
           appearance: none;
 }
-input:not([type]) input[type=number]::-webkit-inner-spin-button,
-input:not([type]) input[type=number]::-webkit-outer-spin-button,
-input[type=date] input[type=number]::-webkit-inner-spin-button,
-input[type=date] input[type=number]::-webkit-outer-spin-button,
-input[type=email] input[type=number]::-webkit-inner-spin-button,
-input[type=email] input[type=number]::-webkit-outer-spin-button,
-input[type=number] input[type=number]::-webkit-inner-spin-button,
-input[type=number] input[type=number]::-webkit-outer-spin-button,
-input[type=password] input[type=number]::-webkit-inner-spin-button,
-input[type=password] input[type=number]::-webkit-outer-spin-button,
-input[type=search] input[type=number]::-webkit-inner-spin-button,
-input[type=search] input[type=number]::-webkit-outer-spin-button,
-input[type=tel] input[type=number]::-webkit-inner-spin-button,
-input[type=tel] input[type=number]::-webkit-outer-spin-button,
-input[type=text] input[type=number]::-webkit-inner-spin-button,
-input[type=text] input[type=number]::-webkit-outer-spin-button,
-input[type=url] input[type=number]::-webkit-inner-spin-button,
-input[type=url] input[type=number]::-webkit-outer-spin-button,
-textarea input[type=number]::-webkit-inner-spin-button,
-textarea input[type=number]::-webkit-outer-spin-button {
+.form input:not([type]) input[type=number]::-webkit-inner-spin-button,
+.form input:not([type]) input[type=number]::-webkit-outer-spin-button,
+.form input[type=date] input[type=number]::-webkit-inner-spin-button,
+.form input[type=date] input[type=number]::-webkit-outer-spin-button,
+.form input[type=email] input[type=number]::-webkit-inner-spin-button,
+.form input[type=email] input[type=number]::-webkit-outer-spin-button,
+.form input[type=number] input[type=number]::-webkit-inner-spin-button,
+.form input[type=number] input[type=number]::-webkit-outer-spin-button,
+.form input[type=password] input[type=number]::-webkit-inner-spin-button,
+.form input[type=password] input[type=number]::-webkit-outer-spin-button,
+.form input[type=search] input[type=number]::-webkit-inner-spin-button,
+.form input[type=search] input[type=number]::-webkit-outer-spin-button,
+.form input[type=tel] input[type=number]::-webkit-inner-spin-button,
+.form input[type=tel] input[type=number]::-webkit-outer-spin-button,
+.form input[type=text] input[type=number]::-webkit-inner-spin-button,
+.form input[type=text] input[type=number]::-webkit-outer-spin-button,
+.form input[type=url] input[type=number]::-webkit-inner-spin-button,
+.form input[type=url] input[type=number]::-webkit-outer-spin-button,
+.form textarea input[type=number]::-webkit-inner-spin-button,
+.form textarea input[type=number]::-webkit-outer-spin-button {
   height: auto;
   -webkit-appearance: none;
           appearance: none;
   margin: 0;
 }
-input:not([type]) input[type=number],
-input[type=date] input[type=number],
-input[type=email] input[type=number],
-input[type=number] input[type=number],
-input[type=password] input[type=number],
-input[type=search] input[type=number],
-input[type=tel] input[type=number],
-input[type=text] input[type=number],
-input[type=url] input[type=number],
-textarea input[type=number] {
+.form input:not([type]) input[type=number],
+.form input[type=date] input[type=number],
+.form input[type=email] input[type=number],
+.form input[type=number] input[type=number],
+.form input[type=password] input[type=number],
+.form input[type=search] input[type=number],
+.form input[type=tel] input[type=number],
+.form input[type=text] input[type=number],
+.form input[type=url] input[type=number],
+.form textarea input[type=number] {
   -webkit-appearance: textfield;
      -moz-appearance: textfield;
           appearance: textfield;
 }
-input:not([type]) input[type=checkbox],
-input:not([type]) input[type=radio],
-input[type=date] input[type=checkbox],
-input[type=date] input[type=radio],
-input[type=email] input[type=checkbox],
-input[type=email] input[type=radio],
-input[type=number] input[type=checkbox],
-input[type=number] input[type=radio],
-input[type=password] input[type=checkbox],
-input[type=password] input[type=radio],
-input[type=search] input[type=checkbox],
-input[type=search] input[type=radio],
-input[type=tel] input[type=checkbox],
-input[type=tel] input[type=radio],
-input[type=text] input[type=checkbox],
-input[type=text] input[type=radio],
-input[type=url] input[type=checkbox],
-input[type=url] input[type=radio],
-textarea input[type=checkbox],
-textarea input[type=radio] {
-  padding: 0;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex: none;
-  height: 0.875em;
-  /* 14/16 */
-  width: 0.875em;
-  /* 14/16 */
-  color: #aaa;
-  background: 0 0;
-  border: 0.0625em solid;
-  /* 1/16 */
-  overflow: hidden;
-  vertical-align: middle;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  outline: 0;
-  text-align: center;
-  position: relative;
+.form textarea {
+  resize: vertical;
+  min-height: 4em;
 }
-input:not([type]) input[type=checkbox]:not(:disabled), input:not([type]) input[type=checkbox]:not(:disabled),
-input:not([type]) input[type=radio]:not(:disabled),
-input:not([type]) input[type=radio]:not(:disabled),
-input[type=date] input[type=checkbox]:not(:disabled),
-input[type=date] input[type=checkbox]:not(:disabled),
-input[type=date] input[type=radio]:not(:disabled),
-input[type=date] input[type=radio]:not(:disabled),
-input[type=email] input[type=checkbox]:not(:disabled),
-input[type=email] input[type=checkbox]:not(:disabled),
-input[type=email] input[type=radio]:not(:disabled),
-input[type=email] input[type=radio]:not(:disabled),
-input[type=number] input[type=checkbox]:not(:disabled),
-input[type=number] input[type=checkbox]:not(:disabled),
-input[type=number] input[type=radio]:not(:disabled),
-input[type=number] input[type=radio]:not(:disabled),
-input[type=password] input[type=checkbox]:not(:disabled),
-input[type=password] input[type=checkbox]:not(:disabled),
-input[type=password] input[type=radio]:not(:disabled),
-input[type=password] input[type=radio]:not(:disabled),
-input[type=search] input[type=checkbox]:not(:disabled),
-input[type=search] input[type=checkbox]:not(:disabled),
-input[type=search] input[type=radio]:not(:disabled),
-input[type=search] input[type=radio]:not(:disabled),
-input[type=tel] input[type=checkbox]:not(:disabled),
-input[type=tel] input[type=checkbox]:not(:disabled),
-input[type=tel] input[type=radio]:not(:disabled),
-input[type=tel] input[type=radio]:not(:disabled),
-input[type=text] input[type=checkbox]:not(:disabled),
-input[type=text] input[type=checkbox]:not(:disabled),
-input[type=text] input[type=radio]:not(:disabled),
-input[type=text] input[type=radio]:not(:disabled),
-input[type=url] input[type=checkbox]:not(:disabled),
-input[type=url] input[type=checkbox]:not(:disabled),
-input[type=url] input[type=radio]:not(:disabled),
-input[type=url] input[type=radio]:not(:disabled),
-textarea input[type=checkbox]:not(:disabled),
-textarea input[type=checkbox]:not(:disabled),
-textarea input[type=radio]:not(:disabled),
-textarea input[type=radio]:not(:disabled) {
-  cursor: pointer;
-}
-input:not([type]) input[type=checkbox]:before, input:not([type]) input[type=checkbox]:before,
-input:not([type]) input[type=radio]:before,
-input:not([type]) input[type=radio]:before,
-input[type=date] input[type=checkbox]:before,
-input[type=date] input[type=checkbox]:before,
-input[type=date] input[type=radio]:before,
-input[type=date] input[type=radio]:before,
-input[type=email] input[type=checkbox]:before,
-input[type=email] input[type=checkbox]:before,
-input[type=email] input[type=radio]:before,
-input[type=email] input[type=radio]:before,
-input[type=number] input[type=checkbox]:before,
-input[type=number] input[type=checkbox]:before,
-input[type=number] input[type=radio]:before,
-input[type=number] input[type=radio]:before,
-input[type=password] input[type=checkbox]:before,
-input[type=password] input[type=checkbox]:before,
-input[type=password] input[type=radio]:before,
-input[type=password] input[type=radio]:before,
-input[type=search] input[type=checkbox]:before,
-input[type=search] input[type=checkbox]:before,
-input[type=search] input[type=radio]:before,
-input[type=search] input[type=radio]:before,
-input[type=tel] input[type=checkbox]:before,
-input[type=tel] input[type=checkbox]:before,
-input[type=tel] input[type=radio]:before,
-input[type=tel] input[type=radio]:before,
-input[type=text] input[type=checkbox]:before,
-input[type=text] input[type=checkbox]:before,
-input[type=text] input[type=radio]:before,
-input[type=text] input[type=radio]:before,
-input[type=url] input[type=checkbox]:before,
-input[type=url] input[type=checkbox]:before,
-input[type=url] input[type=radio]:before,
-input[type=url] input[type=radio]:before,
-textarea input[type=checkbox]:before,
-textarea input[type=checkbox]:before,
-textarea input[type=radio]:before,
-textarea input[type=radio]:before {
-  display: block;
-}
-input:not([type]) input[type=checkbox]:disabled, input:not([type]) input[type=checkbox]:disabled,
-input:not([type]) input[type=radio]:disabled,
-input:not([type]) input[type=radio]:disabled,
-input[type=date] input[type=checkbox]:disabled,
-input[type=date] input[type=checkbox]:disabled,
-input[type=date] input[type=radio]:disabled,
-input[type=date] input[type=radio]:disabled,
-input[type=email] input[type=checkbox]:disabled,
-input[type=email] input[type=checkbox]:disabled,
-input[type=email] input[type=radio]:disabled,
-input[type=email] input[type=radio]:disabled,
-input[type=number] input[type=checkbox]:disabled,
-input[type=number] input[type=checkbox]:disabled,
-input[type=number] input[type=radio]:disabled,
-input[type=number] input[type=radio]:disabled,
-input[type=password] input[type=checkbox]:disabled,
-input[type=password] input[type=checkbox]:disabled,
-input[type=password] input[type=radio]:disabled,
-input[type=password] input[type=radio]:disabled,
-input[type=search] input[type=checkbox]:disabled,
-input[type=search] input[type=checkbox]:disabled,
-input[type=search] input[type=radio]:disabled,
-input[type=search] input[type=radio]:disabled,
-input[type=tel] input[type=checkbox]:disabled,
-input[type=tel] input[type=checkbox]:disabled,
-input[type=tel] input[type=radio]:disabled,
-input[type=tel] input[type=radio]:disabled,
-input[type=text] input[type=checkbox]:disabled,
-input[type=text] input[type=checkbox]:disabled,
-input[type=text] input[type=radio]:disabled,
-input[type=text] input[type=radio]:disabled,
-input[type=url] input[type=checkbox]:disabled,
-input[type=url] input[type=checkbox]:disabled,
-input[type=url] input[type=radio]:disabled,
-input[type=url] input[type=radio]:disabled,
-textarea input[type=checkbox]:disabled,
-textarea input[type=checkbox]:disabled,
-textarea input[type=radio]:disabled,
-textarea input[type=radio]:disabled {
-  color: #ddd;
-}
-input:not([type]) input[type=radio],
-input[type=date] input[type=radio],
-input[type=email] input[type=radio],
-input[type=number] input[type=radio],
-input[type=password] input[type=radio],
-input[type=search] input[type=radio],
-input[type=tel] input[type=radio],
-input[type=text] input[type=radio],
-input[type=url] input[type=radio],
-textarea input[type=radio] {
-  border-radius: 50%;
-}
-input:not([type]) input[type=radio]:checked:before,
-input[type=date] input[type=radio]:checked:before,
-input[type=email] input[type=radio]:checked:before,
-input[type=number] input[type=radio]:checked:before,
-input[type=password] input[type=radio]:checked:before,
-input[type=search] input[type=radio]:checked:before,
-input[type=tel] input[type=radio]:checked:before,
-input[type=text] input[type=radio]:checked:before,
-input[type=url] input[type=radio]:checked:before,
-textarea input[type=radio]:checked:before {
-  content: "";
-  width: 0.375em;
-  /* 6/16 */
-  height: 0.375em;
-  /* 6/16 */
-  display: block;
-  border-radius: 50%;
-  background: #000;
-}
-input:not([type]) input[type=radio]:disabled:checked:before,
-input[type=date] input[type=radio]:disabled:checked:before,
-input[type=email] input[type=radio]:disabled:checked:before,
-input[type=number] input[type=radio]:disabled:checked:before,
-input[type=password] input[type=radio]:disabled:checked:before,
-input[type=search] input[type=radio]:disabled:checked:before,
-input[type=tel] input[type=radio]:disabled:checked:before,
-input[type=text] input[type=radio]:disabled:checked:before,
-input[type=url] input[type=radio]:disabled:checked:before,
-textarea input[type=radio]:disabled:checked:before {
-  background-color: #aaa;
-}
-input:not([type]) input[type=checkbox]:checked:before, input:not([type]) input[type=checkbox]:indeterminate:before,
-input[type=date] input[type=checkbox]:checked:before,
-input[type=date] input[type=checkbox]:indeterminate:before,
-input[type=email] input[type=checkbox]:checked:before,
-input[type=email] input[type=checkbox]:indeterminate:before,
-input[type=number] input[type=checkbox]:checked:before,
-input[type=number] input[type=checkbox]:indeterminate:before,
-input[type=password] input[type=checkbox]:checked:before,
-input[type=password] input[type=checkbox]:indeterminate:before,
-input[type=search] input[type=checkbox]:checked:before,
-input[type=search] input[type=checkbox]:indeterminate:before,
-input[type=tel] input[type=checkbox]:checked:before,
-input[type=tel] input[type=checkbox]:indeterminate:before,
-input[type=text] input[type=checkbox]:checked:before,
-input[type=text] input[type=checkbox]:indeterminate:before,
-input[type=url] input[type=checkbox]:checked:before,
-input[type=url] input[type=checkbox]:indeterminate:before,
-textarea input[type=checkbox]:checked:before,
-textarea input[type=checkbox]:indeterminate:before {
-  content: "";
-  width: 40%;
-  height: 60%;
-  color: #000;
-  margin-top: -0.1875em;
-  /* 3/16 */
-  border-right: 0.0625em solid;
-  /* 1/16 */
-  border-bottom: 0.0625em solid;
-  /* 1/16 */
-  transform: rotate(45deg);
-}
-input:not([type]) input[type=checkbox]:indeterminate:before,
-input[type=date] input[type=checkbox]:indeterminate:before,
-input[type=email] input[type=checkbox]:indeterminate:before,
-input[type=number] input[type=checkbox]:indeterminate:before,
-input[type=password] input[type=checkbox]:indeterminate:before,
-input[type=search] input[type=checkbox]:indeterminate:before,
-input[type=tel] input[type=checkbox]:indeterminate:before,
-input[type=text] input[type=checkbox]:indeterminate:before,
-input[type=url] input[type=checkbox]:indeterminate:before,
-textarea input[type=checkbox]:indeterminate:before {
-  content: "";
-}
-input:not([type]) input[type=checkbox]:disabled:checked:before, input:not([type]) input[type=checkbox]:disabled:indeterminate:before,
-input[type=date] input[type=checkbox]:disabled:checked:before,
-input[type=date] input[type=checkbox]:disabled:indeterminate:before,
-input[type=email] input[type=checkbox]:disabled:checked:before,
-input[type=email] input[type=checkbox]:disabled:indeterminate:before,
-input[type=number] input[type=checkbox]:disabled:checked:before,
-input[type=number] input[type=checkbox]:disabled:indeterminate:before,
-input[type=password] input[type=checkbox]:disabled:checked:before,
-input[type=password] input[type=checkbox]:disabled:indeterminate:before,
-input[type=search] input[type=checkbox]:disabled:checked:before,
-input[type=search] input[type=checkbox]:disabled:indeterminate:before,
-input[type=tel] input[type=checkbox]:disabled:checked:before,
-input[type=tel] input[type=checkbox]:disabled:indeterminate:before,
-input[type=text] input[type=checkbox]:disabled:checked:before,
-input[type=text] input[type=checkbox]:disabled:indeterminate:before,
-input[type=url] input[type=checkbox]:disabled:checked:before,
-input[type=url] input[type=checkbox]:disabled:indeterminate:before,
-textarea input[type=checkbox]:disabled:checked:before,
-textarea input[type=checkbox]:disabled:indeterminate:before {
-  color: #aaa;
-}
-
 .breadcrumbs {
   padding-bottom: 0;
 }
@@ -2409,33 +2249,95 @@ textarea input[type=checkbox]:disabled:indeterminate:before {
 }
 
 .btn {
-  display: inline-block;
-  padding: 1em 2em;
-  border-radius: 1em;
-  border: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6.875em;
+  height: 6.875em;
+  border-radius: 100%;
+  padding: 0;
+  border: 0.0625em solid #E55000;
   outline: none;
-  max-width: 100%;
   font-family: "Jost";
-  font-size: 1em;
   font-weight: 400;
+  font-size: 1em;
   text-decoration: none;
   text-align: center;
-  color: #1A1A1A;
-  background-color: #7b8287;
+  text-transform: uppercase;
+  letter-spacing: 0.035em;
+  color: #ffffff;
+  background-color: #E55000;
   cursor: pointer;
   transition: 0.3s;
 }
-.btn:hover {
-  background-color: #cbcbcb;
-  color: #1A1A1A;
+.btn span {
+  font-size: 0.8125em;
 }
-.btn:active, .btn:focus {
-  background-color: #c4c4c4;
-  color: #1A1A1A;
+.btn_transparent {
+  background-color: transparent;
+}
+@media (min-width: 768px) {
+  .btn {
+    width: 8.75em;
+    height: 8.75em;
+  }
+}
+@media (min-width: 1366px) {
+  .btn {
+    width: 13em;
+    height: 13em;
+  }
+  .btn:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-color: #E55000;
+    transition: 0.3s;
+  }
+  .btn span {
+    position: relative;
+    z-index: 1;
+    font-size: 1.125em;
+  }
+  .btn_transparent:after {
+    content: none;
+  }
+}
+@media (min-width: 1920px) {
+  .btn {
+    width: 16.375em;
+    height: 16.375em;
+  }
+  .btn span {
+    font-size: 1.25em;
+  }
+}
+.btn:hover {
+  background-color: #FF5900;
+}
+@media (min-width: 1366px) {
+  .btn:hover:after {
+    transform: translate(-50%, -50%) scale(1.4);
+    background-color: #FF5900;
+  }
+}
+.btn:active {
+  background-color: #E55000;
+}
+@media (min-width: 1366px) {
+  .btn:active:after {
+    background-color: #E55000;
+  }
 }
 .btn:disabled {
-  color: red;
-  cursor: not-allowed;
+  opacity: 0.4;
+  pointer-events: none;
 }
 
 .video__wrapper {
@@ -4009,6 +3911,155 @@ textarea input[type=checkbox]:disabled:indeterminate:before {
 @media (min-width: 1920px) {
   .business__img {
     font-size: 1em;
+  }
+}
+
+.contactus {
+  position: relative;
+  overflow: hidden;
+  background-color: #252525;
+  color: #ffffff;
+}
+.contactus .container_center, .contactus .footer__content {
+  position: relative;
+}
+.contactus:before {
+  content: "";
+  position: absolute;
+  bottom: -2em;
+  right: -18em;
+  width: 42.125em;
+  height: 37.375em;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../../img/logo_grey.webp");
+  font-size: 0.6em;
+}
+@media (max-width: 767px) {
+  .contactus {
+    padding-bottom: 2.375em;
+  }
+}
+@media (min-width: 768px) {
+  .contactus:before {
+    bottom: -1.25em;
+    right: auto;
+    left: -18.0625em;
+    font-size: 0.75em;
+  }
+}
+@media (min-width: 1366px) {
+  .contactus:before {
+    bottom: -2em;
+    left: -8.6em;
+    font-size: 1em;
+  }
+}
+@media (min-width: 1920px) {
+  .contactus:before {
+    bottom: -5em;
+    left: -6.75em;
+    font-size: 1.4em;
+  }
+}
+.contactus__content {
+  margin-top: 2.1875em;
+}
+@media (min-width: 768px) {
+  .contactus__content {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1366px) {
+  .contactus__content {
+    margin-top: 3.5em;
+  }
+}
+@media (min-width: 1920px) {
+  .contactus__content {
+    margin-top: 8.125em;
+  }
+}
+.contactus__action {
+  display: flex;
+}
+@media (min-width: 768px) {
+  .contactus__action {
+    flex-direction: column;
+  }
+}
+.contactus__link:first-child {
+  margin-right: 2.8125em;
+}
+.contactus__link a {
+  font-size: 0.875em;
+  font-weight: 300;
+  color: #FF620E;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+}
+.contactus__link a:hover {
+  color: #ffffff;
+}
+.contactus__link_mail a {
+  position: relative;
+}
+.contactus__link_mail a:after {
+  content: "";
+  position: absolute;
+  bottom: 0.125em;
+  left: 0;
+  width: 100%;
+  border-bottom: 0.0625em solid;
+}
+@media (min-width: 768px) {
+  .contactus__link {
+    margin-top: 2.25em;
+  }
+  .contactus__link:first-child {
+    margin-top: 0;
+    margin-right: 0;
+  }
+  .contactus__link a {
+    font-size: 1.25em;
+  }
+}
+@media (min-width: 1366px) {
+  .contactus__link {
+    margin-top: 2.5em;
+  }
+  .contactus__link a {
+    font-size: 1.625em;
+  }
+}
+@media (min-width: 1920px) {
+  .contactus__link {
+    margin-top: 5.375em;
+  }
+  .contactus__link a {
+    font-size: 2.1875em;
+  }
+}
+.contactus__form {
+  margin-top: 2.75em;
+}
+@media (min-width: 768px) {
+  .contactus__form {
+    margin-top: 0;
+    width: 25.875em;
+  }
+}
+@media (min-width: 1366px) {
+  .contactus__form {
+    width: 40.75em;
+  }
+}
+@media (min-width: 1920px) {
+  .contactus__form {
+    width: 59.375em;
   }
 }
 

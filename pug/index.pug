@@ -15,18 +15,29 @@ block content
     // end projectNaw
 
 
-    //- // begin projectBtn
-    //- section#projectBtn.projectBtn.section
-    //-     .container_center
-    //-         h2.section__title
-    //-             span Кнопки
-    //-         .section__content
-    //-             a.btn(href="#") Кнопка
-    //-             br
-    //-             br
-    //-             a.btn.btn_sm(href="#") Маленькая кнопка
-    //- 
-    //- // end projectBtn
+    // begin projectBtn
+    section#projectBtn.projectBtn.section(style="color: #fff;")
+        .container_center
+            h2.section__title
+                span Кнопки
+            br
+            .section__content
+                button.btn
+                    span Отправить
+                br
+                br
+                button.btn(disabled) 
+                    span Отправить
+                br
+                br
+                button.btn.btn_transparent
+                    span хорошо
+                br
+                br
+                button.btn.btn_transparent(disabled)
+                    span хорошо
+
+    // end projectBtn
 
     //- // begin projectModal
     //- section#projectModal.projectModal.section

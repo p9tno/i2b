@@ -1,67 +1,112 @@
 // Style for button and pseudo button for input and link
 
 .btn {
-	display: inline-block;
-	padding: 1em 2em;
-	border-radius: 1em;
-	border: none;
+	position: relative;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 6.875em;
+	height: 6.875em;
+	border-radius: 100%;
+
+	padding: 0;
+	border: 0.0625em solid $color_warning;
 	outline: none;
-	max-width: 100%;
 
 	font-family: $main_font_family;
-	font-size: 1em;
 	font-weight: 400;
+	font-size: 1em;
+
 	text-decoration: none;
 	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 0.035em;
 
-	color: $main_color;
-	background-color: $color_primary;
-	
+	color: $color_white;
+	background-color: $color_warning;
+
 	cursor: pointer;
 	transition: 0.3s;
 
-	// градиент
-	// position: relative;
-	// z-index: 10;
-	// overflow: hidden;
-	//
-	// &:before {
-	// 	content: '';
-	// 	position: absolute;
-	// 	top: 0;
-	// 	left: 0;
-	// 	width: 100%;
-	// 	height: 100%;
-	// 	z-index: -1;
-	// 	transition: width 0.5s;
-	// 	background-image: linear-gradient(90deg, $color_seccondary 0%, #e8b7be 100%);
-	// }
-	//
-	// &:hover {
-	// 	background-color: #fff;
-	// 	color: $color_withe;
-	// 	text-decoration: none;
-	//
-	// 	&:before {
-	// 		width: 150%;
-	// 	}
-	// }
-
-	&:hover {
-		background-color: $btn_default_bg_color_hover;
-		color: $btn_default_text_color;
+	span {
+		font-size: 0.8125em;
 	}
 
-	&:active,
-	&:focus {
-		background-color: $btn_default_bg_color_active;
-		color: $btn_default_text_color;
+	&_transparent {
+		background-color: transparent;
+	}
+
+	@media (min-width: 768px) {
+		width: 8.75em;
+		height: 8.75em;
+	}
+
+	@media (min-width: 1366px) {
+		width: 13em;
+		height: 13em;
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%)scale(1);
+
+			width: 100%;
+			height: 100%;
+			border-radius: 100%;
+			background-color: $color_warning;
+			transition: 0.3s;
+		}
+
+		span {
+			position: relative;
+			z-index: 1;
+			font-size: 1.125em;
+		}
+
+		&_transparent {
+			&:after {
+				content: none;
+			}
+		}
+	}
+	@media (min-width: 1920px) {
+		width: 16.375em;
+		height: 16.375em;
+
+		span {
+			font-size: 1.25em;
+		}
+	}
+
+	&:hover {
+		background-color: #FF5900;
+		@media (min-width: 1366px) {
+			&:after {
+				transform: translate(-50%,-50%)scale(1.4);
+				background-color: #FF5900;
+
+			}
+		}
+	}
+
+	&:active {
+		background-color: $color_warning;
+
+		@media (min-width: 1366px) {
+			&:after {
+				background-color: $color_warning;
+			}
+		}
 	}
 
 	&:disabled {
-		color: red;
-		cursor: not-allowed;
-		// pointer-events: none;
+		opacity: 0.4;
+		// cursor: not-allowed;
+		pointer-events: none;
 	}
 
 }

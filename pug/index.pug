@@ -39,17 +39,26 @@ block content
 
     // end projectBtn
 
-    //- // begin projectModal
-    //- section#projectModal.projectModal.section
-    //-     .container_center
-    //-         h2.section__title
-    //-             span Модальные окна
-    //-         .section__content
-    //-             a.btn.show_modal_js(href="#info") Собщение
-    //-             br
-    //-             br
-    //-             span.btn.youtubeModal_js#rsDoGqnPE4c Видео
-    //- 
-    //-             .youtubeModal-js#rsDoGqnPE4c
-    //- 
-    //- // end projectModal
+    // begin projectModal
+    section#projectModal.projectModal.section(style="color: #fff;")
+        .container_center
+            h2.section__title
+                span Модальные окна
+            br
+            br
+            .section__content
+                a.btn.btn_transparent.show_modal_js(href="#success") 
+                    span Успех
+                br
+                br
+                a.btn.btn_transparent.show_modal_js(href="#error")
+                    span Ошибка
+                br
+                br
+                a.btn.btn_transparent.show_modal_js(href="#write")
+                    span Напишите нам
+                br
+                br
+
+
+    // end projectModal

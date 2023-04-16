@@ -200,7 +200,7 @@ $(document).ready(function() {
 
 
     $(function(){
-        $(".tel").mask("+7 (999) 999-99-99");
+        $(".tel").mask("+7 ( 999 ) 999 - 99 - 99");
     });
 
 

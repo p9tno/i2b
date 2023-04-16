@@ -1,7 +1,3 @@
-@media (min-width: 768px) {}
-@media (min-width: 1366px) {}
-@media (min-width: 1920px) {}
-
 .contactus {
     position: relative;
     overflow: hidden;
@@ -36,9 +32,6 @@
             right: auto;
             left: -18.0625em;
             font-size: 0.75em;
-            // background-image: url("../../img/contactus_logo_md.png");
-            // width: 17.9375em;
-            // height: 27.75em;
         }
     }
     @media (min-width: 1366px) {
@@ -75,8 +68,6 @@
         @media (min-width: 768px) {
             flex-direction: column;
         }
-        @media (min-width: 1366px) {}
-        @media (min-width: 1920px) {}
     }
 
     &__link {

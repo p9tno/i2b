@@ -1,20 +1,15 @@
-@media (min-width: 768px) {}
-@media (min-width: 1366px) {}
-@media (min-width: 1920px) {}
-
 .form {
 	&_grid {
 		display: flex;
 		flex-wrap: wrap;
 		margin: 0 -1.25em;
 
-		// @media (min-width: 768px) {}
-		// @media (min-width: 1366px) {}
 		@media (min-width: 1920px) {
 			margin: 0 -1.5625em;
 		}
 
 		.form__row {
+			position: relative;
 			margin: 0 1.25em 1.875em;
 			width: 100%;
 
@@ -35,20 +30,20 @@
 			}
 
 			&_button {
-				margin-bottom: 0;
 				display: flex;
 				align-items: center;
 
 				.btn {
 					flex: none;
 				}
-				@media (min-width: 768px) {}
 				@media (min-width: 1366px) {
 					margin-top: 0.75em;
 				}
-				@media (min-width: 1920px) {
-					// margin-top: -1.25em;
-				}
+
+			}
+
+			&_mb0 {
+				margin-bottom: 0!important;
 			}
 		}
 	}
@@ -108,6 +103,43 @@
 				font-size: 0.875em;
 			}
 		}
+
+	}
+
+	.form__row_required {
+		&.invalid {
+			.form__invalid {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__invalid {
+		position: absolute;
+		bottom: -0.875em;
+		left: 0;
+		opacity: 0;
+		transition: 0.3s;
+
+		span {
+			font-size: 0.5em;
+			color: $color_danger;
+		}
+
+		@media (min-width: 1366px) {
+			bottom: -1.125em;
+
+			span {
+				font-size: 0.625em;
+			}
+		}
+		@media (min-width: 1920px) {
+			bottom: -1.25em;
+
+			span {
+				font-size: 0.75em;
+			}
+		}
 	}
 
 	// Input text and textarea ================================================
@@ -154,6 +186,7 @@
 
 		&.invalid {
 			border-color: rgba($color_danger, 1);
+			color: $color_danger;
 			@include placeholder {
 				color: $color_danger;
 			}

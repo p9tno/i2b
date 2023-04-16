@@ -14,3 +14,83 @@
             a(href="#" class="modal-close" data-dismiss="modal")
             .form__message
 // End modal info
+
+
+// Begin Modal success
+.modal.fade.success.message#success
+    .modal-dialog
+        .modal-content
+            a(href="#" class="modal-close" data-dismiss="modal")
+            .modal-body
+                .modal-row
+                    .modal-col
+                        .section__title
+                            span Cпасибо за ваше  обращение
+                        .section__text
+                            span Мы свяжемся с вами в течение 48 часов и ответим на все ваши вопросы.
+                    .modal-col.desktop
+                        a(href="#" class="btn btn_transparent" data-dismiss="modal")
+                            span хорошо
+
+
+// End modal success
+
+
+// Begin Modal error
+.modal.fade.error.message#error
+    .modal-dialog
+        .modal-content
+            a(href="#" class="modal-close" data-dismiss="modal")
+            .modal-body
+                .modal-row
+                    .modal-col
+                        .section__title
+                            span Произошла ошибка при отправке
+                        .section__text
+                            span Попробуйте отправить форму позже.
+                    .modal-col.desktop
+                        a(href="#" class="btn btn_transparent" data-dismiss="modal")
+                            span хорошо
+// End modal error
+
+
+// Begin Modal write
+.modal.fade.write#write
+    .modal-dialog
+        .modal-content
+            a(href="#" class="modal-close" data-dismiss="modal")
+            .modal-body
+                .section__title
+                    span Напишите нам
+
+                .modal-wrap
+                    .modal-form
+                        form.form.form_grid(action="send.php")
+                            input(type="hidden" name="subject" value="форма в футоре")
+                            input(type="hidden" name="notspam" value="")
+
+                            .form__row.form__row_required
+                                input(type="text" name="name" required placeholder="Ваше имя" autocomplete="off")
+                                .form__invalid
+                                    span
+
+                            .form__row.form__row_required
+                                input(type="text" name="tel" class="tel" required placeholder="Телефон" autocomplete="off" inputmode="tel")
+                                .form__invalid
+                                    span 
+
+                            .form__row.form__row_full
+                                textarea(type="text" name="message" placeholder="Задайте вопрос" autocomplete="off")
+                                //- input(type="text" name="message" placeholder="Задайте вопрос")
+
+                            .form__row.form__row_full.form__row_mb0
+                                .form__privacy
+                                    span Мы надежно храним ваши данные, вот <a href="#" target="_blank">условия</a> и <a href="#" target="_blank">политика конфендициальности</a>
+
+                            .modal-button
+                                button.btn(type="submit")
+                                    span Отправить
+
+
+
+// End modal write

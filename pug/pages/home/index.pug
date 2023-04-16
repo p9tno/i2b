@@ -204,17 +204,21 @@ block content
                         input(type="hidden" name="notspam" value="")
 
 
-                        .form__row
-                            input(type="text" name="name" placeholder="Ваше имя" autocomplete="off")
+                        .form__row.form__row_required
+                            input(type="text" name="name" required placeholder="Ваше имя" autocomplete="off")
+                            .form__invalid
+                                span
 
-                        .form__row
-                            input(type="text" name="tel" class="tel" required placeholder="Телефон" autocomplete="off")
+                        .form__row.form__row_required
+                            input(type="text" name="tel" class="tel" required placeholder="Телефон" autocomplete="off" inputmode="tel")
+                            .form__invalid
+                                span 
 
                         .form__row.form__row_full
                             textarea(type="text" name="message" placeholder="Задайте вопрос" autocomplete="off")
                             //- input(type="text" name="message" placeholder="Задайте вопрос")
 
-                        .form__row.form__row_full.form__row_button
+                        .form__row.form__row_full.form__row_button.form__row_mb0
                             button.btn(type="submit")
                                 span Отправить
                             .form__privacy

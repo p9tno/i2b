@@ -11,6 +11,18 @@
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
   </head>
   <body>
+    <div class="preloader__wrap" id="preloader">
+      <div class="preloader"><div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+      </div>
+    </div>
     <div class="home_page_bg">
       <video class="video" width="100%" allowfullscreen="true" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop">
         <source src="../../media/waves.mp4" type="video/mp4"/>
@@ -131,6 +143,14 @@
           </div>
         </section>
         <!-- end projectBtn-->
+        <!-- begin projectModal-->
+        <section class="projectModal section" id="projectModal" style="color: #fff;">
+          <div class="container_center">
+            <h2 class="section__title"><span>Модальные окна</span></h2><br/><br/>
+            <div class="section__content"><a class="btn btn_transparent show_modal_js" href="#success"> <span>Успех</span></a><br/><br/><a class="btn btn_transparent show_modal_js" href="#error"><span>Ошибка</span></a><br/><br/><a class="btn btn_transparent show_modal_js" href="#write"><span>Напишите нам</span></a><br/><br/></div>
+          </div>
+        </section>
+        <!-- end projectModal-->
       </main>
       <footer class="footer">
         <div class="footer__row">
@@ -207,6 +227,76 @@
         </div>
       </div>
       <!-- End modal info-->
+      <!-- Begin Modal success-->
+      <div class="modal fade success message" id="success">
+        <div class="modal-dialog">
+          <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+            <div class="modal-body">
+              <div class="modal-row">
+                <div class="modal-col">
+                  <div class="section__title"><span>Cпасибо за ваше  обращение</span></div>
+                  <div class="section__text"><span>Мы свяжемся с вами в течение 48 часов и ответим на все ваши вопросы.</span></div>
+                </div>
+                <div class="modal-col desktop"><a class="btn btn_transparent" href="#" data-dismiss="modal"><span>хорошо</span></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End modal success-->
+      <!-- Begin Modal error-->
+      <div class="modal fade error message" id="error">
+        <div class="modal-dialog">
+          <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+            <div class="modal-body">
+              <div class="modal-row">
+                <div class="modal-col">
+                  <div class="section__title"><span>Произошла ошибка при отправке</span></div>
+                  <div class="section__text"><span>Попробуйте отправить форму позже.</span></div>
+                </div>
+                <div class="modal-col desktop"><a class="btn btn_transparent" href="#" data-dismiss="modal"><span>хорошо</span></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End modal error-->
+      <!-- Begin Modal write-->
+      <div class="modal fade write" id="write">
+        <div class="modal-dialog">
+          <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+            <div class="modal-body">
+              <div class="section__title"><span>Напишите нам</span></div>
+              <div class="modal-wrap">
+                <div class="modal-form">
+                  <form class="form form_grid" action="send.php">
+                    <input type="hidden" name="subject" value="форма в футоре"/>
+                    <input type="hidden" name="notspam" value=""/>
+                    <div class="form__row form__row_required">
+                      <input type="text" name="name" required="required" placeholder="Ваше имя" autocomplete="off"/>
+                      <div class="form__invalid"><span></span></div>
+                    </div>
+                    <div class="form__row form__row_required">
+                      <input class="tel" type="text" name="tel" required="required" placeholder="Телефон" autocomplete="off" inputmode="tel"/>
+                      <div class="form__invalid"><span> </span></div>
+                    </div>
+                    <div class="form__row form__row_full">
+                      <textarea type="text" name="message" placeholder="Задайте вопрос" autocomplete="off"></textarea>
+                    </div>
+                    <div class="form__row form__row_full form__row_mb0">
+                      <div class="form__privacy"><span>Мы надежно храним ваши данные, вот <a href="#" target="_blank">условия</a> и <a href="#" target="_blank">политика конфендициальности</a></span></div>
+                    </div>
+                    <div class="modal-button">
+                      <button class="btn" type="submit"><span>Отправить</span></button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End modal write-->
       <script src="js/jquery.js"></script>
       <script src="js/jquery.maskedinput.min.js"></script>
       <script src="js/modal.js"></script>

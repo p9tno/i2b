@@ -3,6 +3,7 @@ block variable
     //- -var page = true;
     //- -var header_class = 'header_light';
     -var header_class = 'header_dark';
+    -var video_bg = true;
 
 <!DOCTYPE html>
 html(lang="en")
@@ -33,12 +34,13 @@ html(lang="en")
                 <div></div>
         //- end preloader
 
-        .home_page_bg
-            video.video(width="100%" allowfullscreen="true" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop")
-                source(src="../../media/waves.mp4" type="video/mp4")
-                //- source(src="media/main-video.webm" type="video/webm")
-                //- source(src="media/main-video.m4v" type="video/mp4")
-                //- source(src="media/main-video.ogv" type="video/ogg")
+        if video_bg
+            .home_page_bg
+                video.video(width="100%" allowfullscreen="true" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop")
+                    source(src="../../media/waves.mp4" type="video/mp4")
+                    //- source(src="media/main-video.webm" type="video/webm")
+                    //- source(src="media/main-video.m4v" type="video/mp4")
+                    //- source(src="media/main-video.ogv" type="video/ogg")
 
         .wrapper#wrapper
 

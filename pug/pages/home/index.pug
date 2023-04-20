@@ -4,6 +4,7 @@ block variable
     -var path = '../../';
     -var header_class = 'header_dark';
     -var video_bg = true;
+    -var contactus = true;
 
 
 block content
@@ -185,53 +186,6 @@ block content
                 .swiper__dotted.business_dotted_js
 
     // end business
-
-    // begin contactus
-    section#contactus.contactus.section
-        .container_center
-            h2.section__title
-                span Свяжитесь с нами
-            .contactus__content
-
-                .contactus__action
-                    .contactus__link
-                        a(href="tel:+7 (495) 222-34-69") +7 (495) 222-34-69
-                    .contactus__link.contactus__link_mail
-                        a(href="mailto:info@it2bsns.ru") info@it2bsns.ru
-
-                .contactus__form
-                    form.form.form_grid(action="send.php")
-                        input(type="hidden" name="subject" value="форма в футоре")
-                        input(type="hidden" name="notspam" value="")
-
-
-                        .form__row.form__row_required
-                            input(type="text" name="name" required placeholder="Ваше имя" autocomplete="off")
-                            .form__invalid
-                                span
-
-                        .form__row.form__row_required
-                            input(type="text" name="tel" class="tel" required placeholder="Телефон" autocomplete="off" inputmode="tel")
-                            .form__invalid
-                                span 
-
-                        .form__row.form__row_full
-                            textarea(type="text" name="message" placeholder="Задайте вопрос" autocomplete="off")
-                            //- input(type="text" name="message" placeholder="Задайте вопрос")
-
-                        .form__row.form__row_full.form__row_button.form__row_mb0
-                            button.btn(type="submit")
-                                span Отправить
-                            .form__privacy
-                                span Мы надежно храним ваши данные, вот <a href="#" target="_blank">условия</a> и <a href="#" target="_blank">политика конфендициальности</a>
-
-
-
-    // end contactus
-
-
-
-
 
 
 

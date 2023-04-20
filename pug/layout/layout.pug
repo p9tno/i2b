@@ -4,6 +4,7 @@ block variable
     //- -var header_class = 'header_light';
     -var header_class = 'header_dark';
     -var video_bg = true;
+    -var contactus = false;
 
 <!DOCTYPE html>
 html(lang="en")
@@ -21,17 +22,17 @@ html(lang="en")
     body
 
         //- begin preloader
-        .preloader__wrap#preloader
-            .preloader
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+        //- .preloader__wrap#preloader
+        //-     .preloader
+        //-         <div></div>
+        //-         <div></div>
+        //-         <div></div>
+        //-         <div></div>
+        //-         <div></div>
+        //-         <div></div>
+        //-         <div></div>
+        //-         <div></div>
+        //-         <div></div>
         //- end preloader
 
         if video_bg
@@ -49,12 +50,14 @@ html(lang="en")
             main.main_content
                 block content
 
+            if contactus
+                include contactus.pug
+
             include footer.pug
 
-            if condition
-                //- code
-            else
-                //- code
+
+
+
 
             //- begin toTop
             //- .toTop

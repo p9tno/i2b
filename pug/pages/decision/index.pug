@@ -6,10 +6,38 @@ block variable
     -var video_bg = false;
 
 block content
-    // begin decision
-    section#decision.decision.section
+    // begin breadcrumbs
+    .breadcrumbs.section
         .container_center
-            h1.section__title
+            .aioseo-breadcrumbs
+                span.aioseo-breadcrumb
+                    a(href="#") Главная
+
+                span.aioseo-breadcrumb-separator •
+
+                span.aioseo-breadcrumb Решения
+
+            //- .aioseo-breadcrumbs
+            //-     span.aioseo-breadcrumb
+            //-         a(href="#") Главная
+            //- 
+            //-     span.aioseo-breadcrumb-separator •
+            //- 
+            //-     span.aioseo-breadcrumb
+            //-         a(href="#") Блог
+            //- 
+            //-     span.aioseo-breadcrumb-separator •
+            //- 
+            //-     span.aioseo-breadcrumb 	Новая запись
+
+
+    // end breadcrumbs
+
+
+    // begin decision
+    section#decision.decision.section.section_first
+        .container_center
+            h1.section__title.section__title_primary
                 span Решения
             .decision__list
                 each item in ['IT-решения', 'Информационная безопасность', 'Консалтинг', 'Отраслевые решения', 'Техническая поддержка', ]

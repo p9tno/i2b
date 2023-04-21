@@ -2,17 +2,26 @@
     position: relative;
 
     .rotation {
+        &__wrap {
+            @media (min-width: 768px) {
+                bottom: -14.375em;
+                right: 0;
+                z-index: 1;
+                font-size: 0.5em;
+            }
+            @media (min-width: 1366px) {
+                font-size: 0.75em;
+            }
+            @media (min-width: 1920px) {
+                font-size: 1em;
+            }
+        }
+
+        font-size: 1em;
         @media (min-width: 768px) {
-            bottom: -14.375em;
+            bottom: 0;
             right: -6.75em;
             z-index: 1;
-            font-size: 0.5em;
-        }
-        @media (min-width: 1366px) {
-            font-size: 0.75em;
-        }
-        @media (min-width: 1920px) {
-            font-size: 1em;
         }
     }
 

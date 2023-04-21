@@ -5,7 +5,8 @@
 
 	&_light {
 		border-color: #E2E2E2;
-		background-color: #FCFAFA;
+		// background-color: #FCFAFA;
+		background-color: $color_white;
 
 		.license__link {
 			color: $main_color;

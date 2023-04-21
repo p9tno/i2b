@@ -28,4 +28,20 @@
 		}
 	}
 
+	.aioseo-back {
+		.aioseo-breadcrumbs {
+			a {
+				&:before {
+					display: inline-block;
+					line-height: 0.8;
+					content: '\e901';
+					font-family: 'icon';
+					transform: translateY(0.0625em);
+					margin-right: 0.5em;
+
+				}
+			}
+		}
+	}
+
 }

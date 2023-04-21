@@ -120,3 +120,25 @@ block content
                                         a(href="#")=item
 
     // end single
+
+    // begin others
+    section#others.others.section
+        .container_center
+            h2.section__title.section__title_primary
+                span Другие наши решения для:
+
+            .others__list
+                each item in [ 'Информационная безопасность', 'Консалтинг', 'Отраслевые решения', 'Техническая поддержка', ]
+
+                    a(href="#").others__item
+                        .others__video
+                            video(width="100%" allowfullscreen="true" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop")
+                                source(src="../../media/waves_sm.mp4" type="video/mp4")
+                                //- source(src="media/main-video.webm" type="video/webm")
+                                //- source(src="media/main-video.m4v" type="video/mp4")
+                                //- source(src="media/main-video.ogv" type="video/ogg")
+                        .others__title
+                            span=item
+
+
+    // end others

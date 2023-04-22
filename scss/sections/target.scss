@@ -13,8 +13,23 @@
 
     .rotation {
         @media (min-width: 768px) {
+            width: 44.25em;
+            height: 44.25em;
+
+            background-image: url("../img/rotation.png");
+
             bottom: -23em;
             right: -23em;
+
+            font-size: 0.375em;
+
+            @media (min-width: 1366px) {
+                font-size: 0.5em;
+            }
+
+            @media (min-width: 1920px) {
+                font-size: 1em;
+            }
 
             &:before {
                 content: '';

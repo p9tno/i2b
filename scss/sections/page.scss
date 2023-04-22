@@ -1,0 +1,66 @@
+@media (min-width: 768px) {}
+@media (min-width: 1366px) {}
+@media (min-width: 1920px) {}
+
+.page {
+    position: relative;
+    padding-bottom: 0;
+
+    &__content {
+        margin-top: 1.25em;
+        @media (min-width: 768px) {}
+        @media (min-width: 1366px) {
+            margin-top: 2.5em;
+        }
+        @media (min-width: 1920px) {
+            margin-top: 3.5em;
+        }
+
+        &_flex {
+            .page__main {}
+
+            @media (min-width: 768px) {}
+            @media (min-width: 1366px) {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+
+                .page__main {
+                    flex: none;
+                    width: 52em;
+                }
+            }
+            @media (min-width: 1920px) {
+                .page__main {
+                    flex: none;
+                    width: 76.875em;
+                }
+            }
+
+        }
+    }
+
+    &__main {
+        // border: 1px solid #fff;
+        @media (min-width: 768px) {}
+        @media (min-width: 1366px) {}
+        @media (min-width: 1920px) {}
+    }
+
+    &__aside {
+        // border: 1px solid #fff;
+        margin-bottom: 1.25em;
+        @media (min-width: 768px) {}
+        @media (min-width: 1366px) {
+            margin-bottom: 0;
+            flex: none;
+            width: 18em;
+        }
+        @media (min-width: 1920px) {
+            width: 24.375em;
+        }
+    }
+
+    .page__main_company {}
+
+}

@@ -1,9 +1,9 @@
-@media (min-width: 768px) {}
-@media (min-width: 1366px) {}
-@media (min-width: 1920px) {}
-
 .others {
     overflow: hidden;
+
+    .section__title {
+        text-transform: none;
+    }
 
     &__list {
         margin-top: 1.25em;
@@ -17,8 +17,10 @@
             font-size: 1.25em;
         }
         @media (min-width: 1366px) {
+            overflow-y: visible;
             font-size: 0.8em;
             margin-top: 3em;
+            padding-bottom: 0;
 
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -54,7 +56,6 @@
 
         padding: 1.25em 1em;
 
-        // @media (min-width: 768px) {}
         @media (min-width: 1366px) {
             width: auto;
             height: auto;
@@ -114,7 +115,6 @@
             font-weight: 400;
             font-size: 0.75em;
         }
-        @media (min-width: 768px) {}
         @media (min-width: 1366px) {
             span {
                 font-weight: 400;

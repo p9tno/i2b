@@ -1,0 +1,113 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+    //- -var header_class = 'header_light'; // header_dark
+    -var video_bg = false;
+    -var contactus = true;
+    -var wrapper_class = 'wrapper_dark'; // wrapper_dark, wrapper_light
+
+
+block content
+    // begin breadcrumbs
+    .breadcrumbs.section
+        .container_center
+
+            .aioseo-breadcrumbs
+                span.aioseo-breadcrumb
+                    a(href="#") Главная
+
+                span.aioseo-breadcrumb-separator •
+
+                span.aioseo-breadcrumb
+                    a(href="#") О компании
+
+
+    // end breadcrumbs 
+
+    // begin page
+    section#page.page.section.section_first
+        .container_center
+            h1.section__title
+                span О компании
+
+            .page__content.page__content_flex
+                .page__aside
+                    .drop
+                        .drop__toggle.mobile_lg
+                            span Выберите категорию
+
+                        ul.menu
+                            li.menu-item.current-menu-item
+                                a(href="#") О компании
+                            li.menu-item
+                                a(href="#") История
+                            li.menu-item
+                                a(href="#") Вендоры
+                            li.menu-item
+                                a(href="#") Клиенты
+                            li.menu-item
+                                a(href="#") Лицензии
+                            li.menu-item
+                                a(href="#") Отзывы
+                            li.menu-item
+                                a(href="#") Проекты
+                            li.menu-item
+                                a(href="#") Вакансии
+
+
+                .page__main.page__main_company
+                    .company
+                        .section__text
+                            span Компания «Айтуби́» — системный интегратор полного цикла работ: проектирование, внедрение; сопровождение; поддержка. Компания основана в 2010 году, штаб-квартира находится в Москве. За все время существования реализовала более 200 проектов, преимущественно enterprise-уровня, более чем в 15 различных отраслях бизнеса.
+
+                        .company__row
+                            .company__title
+                                span Мы осуществляем полный цикл работ
+                            .company__grid
+
+                                .company__item
+                                    .pulse(style="--i:0;")
+                                    span Проектирование
+                                .company__item
+                                    .pulse(style="--i:1;")
+                                    span Поставка решений
+                                .company__item
+                                    .pulse(style="--i:2;")
+                                    span Интеграция
+                                .company__item
+                                    .pulse(style="--i:3;")
+                                    span Техническая поддержка 24*7
+
+                        .company__row
+                            .company__title
+                                span Ключевые направления работы
+                            ul.company__list
+                                each item in ['Консалтинг;', 'Решения по информационной безопасности (ИБ);', 'Инфраструктурные решения;', 'Техническая поддержка 24*7', ]
+                                    li=item
+
+                        .company__row
+                            .company__title
+                                span Среди большого числа предоставляемых решений, компания «Айтуби́» выделяет
+                            ul.company__list
+                                each item in ['Обеспечение сетевой и информационной безопасности;', 'Виртуализация и полный цикл внедрения частных и гибридных облаков;', 'Проектирование и внедрение сетей передачи данных;', 'Консалтинг по информационной безопасности;', 'Аудиты по требованиям регуляторов, различным стандартам и тестирования на проникновения (пентесты);', 'Комплексное построение и обеспечение IT-инфраструктуры Компании.', ]
+                                    li=item
+
+                        .company__row
+                            .company__title
+                                span По каждому из направлений, Компания «Айтуби́» обладает
+                            ul.company__list
+                                each item in ['Собственной экспертизой;', 'Сервисный центром с демо- и лабораторной зоной;', 'Технической поддержкой 24*7 с выделенными для обращений ресурсами.' ]
+                                    li=item
+
+                        .company__row
+                            .company__title
+                                span Компания «Айтуби́» имеет следующие виды лицензий и сертификатов
+                            ul.company__list
+                                each item in ['Лицензией ФСБ;', 'Лицензией ФСТЭК;', 'Сертификатом ISO 9001:2015;', 'Аккредитацией Минкомсвязи РФ.' ]
+                                    li=item
+
+        .rotation__wrap
+            .rotation
+
+    // end page

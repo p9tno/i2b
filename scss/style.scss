@@ -26,6 +26,7 @@
 @import 'core/video';
 @import 'core/collapse';
 @import 'core/tabs';
+
 @import 'core/drop';
 
 @import 'sections/ourwork';
@@ -40,6 +41,9 @@
 
 @import 'sections/single';
 @import 'sections/others';
+
+@import 'sections/page';
+@import 'page/company';
 
 @import 'vendor/modal';
 @import 'vendor/swiper';

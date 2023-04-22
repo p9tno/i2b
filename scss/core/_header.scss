@@ -1,53 +1,57 @@
 /* Header
  ----------------------------------------------------------------------------- */
 .header {
-	background-color: $color_dark_bg;
+	// background-color: $color_dark_bg;
 
-	&_light {
-		border-color: #E2E2E2;
-		// background-color: #FCFAFA;
-		background-color: $color_white;
-
-		.license__link {
-			color: $main_color;
-
-			&:hover {
-				color: $color_warning;
-			}
-		}
-
-		.header__col {
-			&:after {
-				border-color: #E2E2E2;
-			}
-		}
-
-		.header__col_logo .logo__link {
-			color: $main_color;
-		}
-
-		.toggle,
-		.toggle__button {
-			color: $main_color;
-		}
-
-		.header__col_toggle .more .menu-item a {
-			color: $main_color;
-		}
-
-		.language__item,
-		.language__label span {
-			color: $main_color;
-		}
-
-		.phone__link {
-			color: $main_color;
-
-			i {
-				color: rgba($main_color, 0.2);
-			}
-		}
+	&_dark {
+		background-color: $color_dark_bg;
 	}
+
+	// &_light {
+	// 	border-color: #E2E2E2;
+	// 	// background-color: #FCFAFA;
+	// 	background-color: $color_white;
+	//
+	// 	.license__link {
+	// 		color: $main_color;
+	//
+	// 		&:hover {
+	// 			color: $color_warning;
+	// 		}
+	// 	}
+	//
+	// 	.header__col {
+	// 		&:after {
+	// 			border-color: #E2E2E2;
+	// 		}
+	// 	}
+	//
+	// 	.header__col_logo .logo__link {
+	// 		color: $main_color;
+	// 	}
+	//
+	// 	.toggle,
+	// 	.toggle__button {
+	// 		color: $main_color;
+	// 	}
+	//
+	// 	.header__col_toggle .more .menu-item a {
+	// 		color: $main_color;
+	// 	}
+	//
+	// 	.language__item,
+	// 	.language__label span {
+	// 		color: $main_color;
+	// 	}
+	//
+	// 	.phone__link {
+	// 		color: $main_color;
+	//
+	// 		i {
+	// 			color: rgba($main_color, 0.2);
+	// 		}
+	// 	}
+	// }
 
 	&__content {
 		padding: 0 0.9375em;

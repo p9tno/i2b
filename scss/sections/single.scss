@@ -1,19 +1,12 @@
-@media (min-width: 768px) {}
-@media (min-width: 1366px) {}
-@media (min-width: 1920px) {}
-
 .single {
     border-bottom: 0.0625em solid #E2E2E2;
     padding-bottom: 0;
-    margin-bottom: 2em;
 
     &__wrap {
-        @media (min-width: 768px) {}
         @media (min-width: 1366px) {
             display: flex;
             justify-content: space-between;
         }
-        @media (min-width: 1920px) {}
     }
 
     &__main {
@@ -47,24 +40,24 @@
         }
     }
 
-    &__gallery {}
-
-    &__img {}
+    // &__gallery {}
+    //
+    // &__img {}
 
     &__feedback {
         padding-bottom: 2.8125em;
-        @media (min-width: 768px) {}
+        margin-top: 1.875em;
         @media (min-width: 1366px) {
             padding-bottom: 4em;
         }
         @media (min-width: 1920px) {
+            margin-top: 4.375em;
             padding-bottom: 6.25em;
         }
     }
 
     &__aside {
         padding: 2.5em 0;
-        @media (min-width: 768px) {}
         @media (min-width: 1366px) {
             flex: none;
             // position: sticky;
@@ -103,15 +96,11 @@
             font-size: 1.125em;
             margin-top: 1.375em;
             margin-bottom: 0.83334em;
-            //
-            // @media (min-width: 768px) {
-            //
-            // }
+
             @media (min-width: 1366px) {
                 font-weight: 400;
                 font-size: 2.25em;
             }
-            @media (min-width: 1920px) {}
 
         }
 
@@ -141,11 +130,9 @@
                 position: relative;
                 margin-bottom: 0.5em;
 
-                // @media (min-width: 768px) {}
                 @media (min-width: 1366px) {
                     margin-bottom: 0.3em;
                 }
-                @media (min-width: 1920px) {}
 
                 &:last-child {
                     margin-bottom: 0;
@@ -184,8 +171,6 @@
         }
 
         .single__gallery {
-
-            // @media (min-width: 768px) {}
             @media (min-width: 1366px) {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
@@ -376,7 +361,7 @@
 }
 
 .aside {
-    &__item {}
+    // &__item {}
 
     &__title {
         span {
@@ -384,7 +369,6 @@
             font-weight: 500;
             font-size: 1.125em;
         }
-        // @media (min-width: 768px) {}
         @media (min-width: 1366px) {
             span {
                 font-weight: 300;
@@ -405,8 +389,6 @@
 
         line-height: 1.25;
         margin-top: 1.25em;
-
-        // @media (min-width: 768px) {}
 
         @media (min-width: 1366px) {
             line-height: 1.35;

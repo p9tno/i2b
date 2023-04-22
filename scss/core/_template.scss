@@ -77,6 +77,15 @@ body {
 			}
 		}
 	}
+
+	&_dark {
+		background-color: $color_dark_bg;
+		color: $color_white;
+
+		.rotation {
+			background-image: url("../img/rotation_sm_dark.png");
+		}
+	}
 }
 
 .home_page_bg {
@@ -242,37 +251,6 @@ body {
 	}
 }
 
-// .snakeline {
-// 	a {
-// 		position: relative;
-// 		text-decoration: none;
-//
-// 		&:after {
-// 			content: '';
-// 			position: absolute;
-// 			display: inline-block;
-// 			width: 100%;
-// 			left: 0;
-// 			bottom: -0.125em;
-// 			border-bottom: 0.125em solid;
-// 			border-color: inherit;
-//
-// 			@media (min-width: 768px) {
-// 				transition: width 0.3s;
-// 			}
-// 		}
-//
-// 		@media (min-width: 768px) {
-// 			&:hover {
-// 				&:after {
-// 					width: 65%;
-// 				}
-// 			}
-// 		}
-//
-// 	}
-// }
-
 .list {
 	margin: 0;
 	padding: 0;
@@ -349,38 +327,6 @@ body {
 	}
 }
 
-// .lines {
-// 	position: relative;
-//
-// 	&__wrap {
-// 		position: absolute;
-// 		top: 0;
-// 		left: 0;
-// 		width: 100%;
-// 		height: 100%;
-// 	}
-//
-// 	&__list {
-// 		@extend .container_center;
-//
-// 		display: flex;
-// 		justify-content: space-between;
-// 		height: 100%;
-//
-// 		span {
-// 			display: block;
-// 			width: 0.0625em;
-// 			height: 100%;
-// 			background-color: rgba($color_white, 0.2);
-//
-// 			&:nth-child(2) {
-// 				margin-left: -0.0625em;
-// 			}
-// 		}
-// 	}
-//
-// }
-
 .rotation {
 	display: none;
 
@@ -390,15 +336,32 @@ body {
 			overflow: hidden;
 			width: 28.0625em;
 			height: 28.5em;
+
+			@media (min-width: 768px) {
+				bottom: -14.375em;
+				right: 0;
+				z-index: 1;
+				font-size: 0.5em;
+			}
+			@media (min-width: 1366px) {
+				font-size: 0.75em;
+			}
+			@media (min-width: 1920px) {
+				font-size: 1em;
+			}
 		}
 
 		display: block;
 		position: absolute;
+		bottom: 0;
+		right: -6.75em;
+		z-index: 1;
 
-		width: 44.25em;
-		height: 44.25em;
+		width: 28.0625em;
+		height: 28.5em;
+
 		border-radius: 100%;
-		background-image: url("../img/rotation.png");
+		background-image: url("../img/rotation_sm.png");
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -421,21 +384,8 @@ body {
 		animation-timing-function: linear;
 		animation-direction: reverse;
 
-		font-size: 0.375em;
-
-		&_sm {
-			width: 28.0625em;
-			height: 28.5em;
-			background-image: url("../img/rotation_sm.png");
-		}
 	}
 
-	@media (min-width: 1366px) {
-		font-size: 0.5em;
-	}
-	@media (min-width: 1920px) {
-		font-size: 1em;
-	}
 }
 
 @media (min-width: 768px) {
@@ -503,5 +453,5 @@ body {
 }
 
 // * {
-// 	border: 1px solid #000;
+// 	border: 1px solid red;
 // }

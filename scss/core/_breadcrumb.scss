@@ -45,3 +45,12 @@
 	}
 
 }
+
+.wrapper_dark {
+	.aioseo-breadcrumbs {
+		a,
+		span {
+			color: rgba($color_white, 0.8);
+		}
+	}
+}

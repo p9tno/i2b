@@ -2,8 +2,11 @@ block variable
     -var path = '';
     //- -var page = true;
     //- -var header_class = 'header_light';
-    -var header_class = 'header_dark';
-    -var video_bg = true;
+    //- -var header_class = 'header_dark';
+
+    -var wrapper_class = 'wrapper_dark'; // wrapper_dark, wrapper_light
+
+    -var video_bg = false;
     -var contactus = false;
 
 <!DOCTYPE html>
@@ -35,6 +38,11 @@ html(lang="en")
         //-         <div></div>
         //- end preloader
 
+        //- begin preloader
+        .preloader__wrap#preloader
+            .preloader
+        //- end preloader
+
         if video_bg
             .home_page_bg
                 video.video(width="100%" allowfullscreen="true" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop")
@@ -43,7 +51,7 @@ html(lang="en")
                     //- source(src="media/main-video.m4v" type="video/mp4")
                     //- source(src="media/main-video.ogv" type="video/ogg")
 
-        .wrapper#wrapper
+        .wrapper#wrapper(class=""+wrapper_class+"")
 
             include header.pug
 

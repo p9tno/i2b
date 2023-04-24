@@ -4,7 +4,6 @@
 
 .page {
     position: relative;
-    padding-bottom: 0;
 
     &__content {
         margin-top: 1.25em;
@@ -61,6 +60,14 @@
         }
     }
 
-    .page__main_company {}
-
 }
+
+.page_company {
+    padding-bottom: 0;
+}
+
+.page_vendors {}
+
+.page_license {}
+
+.page_reviews {}

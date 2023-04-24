@@ -1,0 +1,79 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+    //- -var header_class = 'header_light'; // header_dark
+    -var video_bg = false;
+    -var contactus = true;
+    -var wrapper_class = 'wrapper_dark'; // wrapper_dark, wrapper_light
+
+
+block content
+    // begin breadcrumbs
+    .breadcrumbs.section
+        .container_center
+
+            .aioseo-breadcrumbs
+                span.aioseo-breadcrumb
+                    a(href="#") Главная
+
+                span.aioseo-breadcrumb-separator •
+
+                span.aioseo-breadcrumb
+                    a(href="#") О компании
+
+                span.aioseo-breadcrumb-separator •
+
+                span.aioseo-breadcrumb Лицензии
+
+
+    // end breadcrumbs 
+
+    // begin page
+    section#page.page.page_firman.section.section_first
+        .container_center
+            h1.section__title
+                span Лицензии
+
+            .page__content.page__content_flex
+                .page__aside
+                    .drop
+                        .drop__toggle.mobile_lg
+                            span Выберите категорию
+
+                        ul.menu
+                            li.menu-item
+                                a(href="#") О компании
+                            li.menu-item
+                                a(href="#") История
+                            li.menu-item
+                                a(href="#") Вендоры
+                            li.menu-item
+                                a(href="#") Клиенты
+                            li.menu-item.current-menu-item
+                                a(href="#") Лицензии
+                            li.menu-item
+                                a(href="#") Отзывы
+                            li.menu-item
+                                a(href="#") Проекты
+                            li.menu-item
+                                a(href="#") Вакансии
+
+
+                .page__main
+                    .firman
+                        .firman__list
+                            each item in [{img: '1', title: 'Лицензия ФСТЭК', text: 'Лицензия ФСТЭК дает право на осуществления всех работ с ПДн.'}, {img: '2', title: 'Лицензия ФСБ', text: 'Лицензия ФСБ дает право на осуществления всех работ с ПДн.'}, {img: '3', title: 'ISO/IEC 27001', text: 'ISO/IEC 27001 дает право на осуществления всех работ с ПДн.'}, {img: '4', title: 'Аккредитация Минкомсвязи', text: 'Аккредитация Минкомсвязи дает право на осуществление электронного документаоборота.'},]
+                                .firman__item
+                                    .firman__img.img
+                                        a(href="../../img/license/license_"+item.img+".png" data-fancybox data-type="image")
+                                            img(src="../../img/license/license_"+item.img+".png" loading="lazy" alt="img")
+                                    .firman__content
+                                        .firman__title
+                                            span=item.title
+                                        .section__text
+                                            span=item.text
+
+
+
+    // end page

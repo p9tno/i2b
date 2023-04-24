@@ -1,0 +1,103 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+    //- -var header_class = 'header_light'; // header_dark
+    -var video_bg = false;
+    -var contactus = true;
+    -var wrapper_class = 'wrapper_dark'; // wrapper_dark, wrapper_light
+
+
+block content
+    // begin breadcrumbs
+    .breadcrumbs.section
+        .container_center
+
+            .aioseo-breadcrumbs
+                span.aioseo-breadcrumb
+                    a(href="#") Главная
+
+                span.aioseo-breadcrumb-separator •
+
+                span.aioseo-breadcrumb
+                    a(href="#") О компании
+
+                span.aioseo-breadcrumb-separator •
+
+                span.aioseo-breadcrumb Отзывы
+
+
+    // end breadcrumbs 
+
+    // begin page
+    section#page.page.page_reviews.section.section_first
+        .container_center
+            h1.section__title
+                span Отзывы
+
+            .page__content.page__content_flex
+                .page__aside
+                    .drop
+                        .drop__toggle.mobile_lg
+                            span Выберите категорию
+
+                        ul.menu
+                            li.menu-item
+                                a(href="#") О компании
+                            li.menu-item
+                                a(href="#") История
+                            li.menu-item
+                                a(href="#") Вендоры
+                            li.menu-item
+                                a(href="#") Клиенты
+                            li.menu-item
+                                a(href="#") Лицензии
+                            li.menu-item.current-menu-item
+                                a(href="#") Отзывы
+                            li.menu-item
+                                a(href="#") Проекты
+                            li.menu-item
+                                a(href="#") Вакансии
+
+
+                .page__main
+                    .reviews
+                        .section__text
+                            span Одной из наивысших оценок качества выполняемых нами работ являются публичные благодарности наших Клиентов!
+                        .reviews__list
+                            each item in [{img: '1', label: 'Российские железные дороги'}, {img: '2', label: 'Аэрофлот — Российские авиалинии'}, {img: '3', label: 'Публичное акционерное общество «Газпром»'}]
+
+                                .reviews__item
+                                    .reviews__img.img
+                                        a(href="../../img/reviews/reviews_"+item.img+".png" data-fancybox data-type="image")
+                                            img(src="../../img/reviews/reviews_"+item.img+".png" loading="lazy" alt="img")
+                                    .reviews__content
+                                        .reviews__title
+                                            span Разработка приложения, поставка и настройка оборудования
+                                        .reviews__main
+                                            .section__text
+                                                span За время работы Компания ООО «Айтуби» зарекомендовала себе как добросовестный поставщик. Продукция Компании ООО «Айтуби» отличается высоким качеством, отгружается в срок и соответствует всем требованиям установленным.
+
+                                            .section__text
+                                                span Заместитель начальника хозяйственного отдела <br>С. И. Вербовский
+
+
+                                        .reviews__info
+                                            .reviews__video
+                                                video(width="100%" allowfullscreen="true" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop")
+                                                    source(src="../../media/waves_sm.mp4" type="video/mp4")
+                                            .reviews__label
+                                                .reviews__logo
+                                                    img(src="../../img/reviews/reviews_logo_"+item.img+".png", alt="alt")
+                                                span=item.label
+
+
+
+
+
+
+
+        .rotation__wrap
+            .rotation
+
+    // end page

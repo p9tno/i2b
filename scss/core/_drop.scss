@@ -32,7 +32,8 @@
             }
 
             &.active {
-                border-bottom: 0.0625em solid rgba($color_white, 0);
+                // border-bottom: 0.0625em solid rgba($color_white, 0);
+                border-bottom: 0.0625em solid transparent;
 
                 &:after {
                     transform: translateY(0.125em)scale(-1);
@@ -187,6 +188,60 @@
         .menu-item {
             a {
                 font-size: 0.875em;
+            }
+        }
+    }
+
+}
+
+.wrapper_light {
+    .drop {
+        @media (max-width: 1365px) {
+            .drop__toggle {
+                border: 0.0625em solid rgba($color_cat_border, 1);
+                color: rgba($color_cat_main, 1);
+
+                &.active {
+                    border-bottom: 0.0625em solid transparent;
+                }
+            }
+
+            .menu {
+                background-color: $color_light_bg;
+                border: 0.0625em solid rgba($color_cat_border, 1);
+
+                border-top: 0.0625em solid transparent;
+
+                &:before {
+                    border-top: 0.0625em solid rgba($color_cat_border, 1);
+
+                }
+            }
+
+            .menu-item {
+                a {
+                    color: $color_cat_main;
+                }
+            }
+
+        }
+
+        @media (min-width: 1366px) {
+            .menu {
+                border: 0.0625em solid rgba($color_cat_border, 1);
+            }
+
+            .menu-item {
+                a {
+                    border-bottom: 0.0625em solid rgba($color_cat_border, 1);
+                    background-color: $color_white;
+                    color: $color_cat_main;
+
+                    &:hover {
+                        color: $color_warning;
+                        background-color: $color_white;
+                    }
+                }
             }
         }
     }

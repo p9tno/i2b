@@ -1,7 +1,7 @@
 .contactus {
     position: relative;
     overflow: hidden;
-    background-color: #252525;
+    background-color: $color_dark_bg;
     color: $color_white;
 
     .container_center {
@@ -19,7 +19,8 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        background-image: url("../../img/logo_grey.webp");
+        // background-image: url("../../img/logo_grey.webp");
+        background-image: url("../../img/logo_transparent.webp");
         font-size: 0.6em;
 
     }

@@ -1,0 +1,222 @@
+.reviews {
+    &__list {
+        border-top: 0.0625em solid rgba($color_white, 0.2);
+
+        margin-top: 1.25em;
+        padding-top: 1.25em;
+        @media (min-width: 768px) {
+            margin-top: 1.875em;
+            padding-top: 1.875em;
+        }
+        @media (min-width: 1366px) {
+            margin-top: 2.5em;
+            padding-top: 2.5em;
+        }
+        @media (min-width: 1920px) {
+            margin-top: 3.75em;
+            padding-top: 3.125em;
+        }
+    }
+
+    &__item {
+        border-bottom: 0.0625em solid rgba($color_white, 0.2);
+
+        margin-bottom: 1.25em;
+        padding-bottom: 1.25em;
+
+        @media (min-width: 768px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            margin-bottom: 1.875em;
+            padding-bottom: 1.875em;
+        }
+        @media (min-width: 1366px) {
+            margin-bottom: 2.5em;
+            padding-bottom: 2.5em;
+        }
+        @media (min-width: 1920px) {
+            margin-bottom: 3.125em;
+            padding-bottom: 3.125em;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 30.625em;
+
+        font-size: 1em;
+        margin-bottom: 1.25em;
+        @media (min-width: 768px) {
+            margin-bottom: 0;
+            font-size: 0.7em;
+            width: 17.875em;
+            height: 25.375em;
+        }
+        @media (min-width: 1366px) {
+            font-size: 0.8em;
+        }
+        @media (min-width: 1920px) {
+            font-size: 1em;
+        }
+    }
+
+    &__content {
+        @media (min-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            width: 31em;
+        }
+        @media (min-width: 1366px) {
+            width: 36em;
+        }
+        @media (min-width: 1920px) {
+            width: 55.125em;
+        }
+    }
+
+    &__title {
+        @media (min-width: 1920px) {
+            line-height: 1.4;
+        }
+
+        span {
+            font-size: 1.125em;
+            @media (min-width: 768px) {
+                font-size: 1.25em;
+            }
+            @media (min-width: 1366px) {
+                font-size: 1.625em;
+            }
+
+            @media (min-width: 1920px) {
+                font-size: 2.25em;
+            }
+        }
+    }
+
+    &__main {
+        margin: 0.625em 0 1.25em;
+
+        .section__text {
+            &:last-child {
+                margin-top: 0.625em;
+
+                span {
+                    font-weight: 400;
+                }
+            }
+        }
+
+        @media (min-width: 768px) {
+            margin: 0.75em 0 1.5em;
+        }
+        @media (min-width: 1366px) {
+            margin: 1em 0 2em;
+
+            .section__text {
+                &:last-child {
+                    margin-top: 0.75em;
+                }
+            }
+
+        }
+        @media (min-width: 1920px) {
+            margin: 1.25em 0 2.5em;
+
+            .section__text {
+                &:last-child {
+                    margin-top: 0.9375em;
+                }
+            }
+        }
+    }
+
+    &__info {
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("../../img/reviews_bg.webp");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        video {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__label {
+        position: relative;
+
+        letter-spacing: 0.035em;
+        text-transform: uppercase;
+
+        padding: 1.97em 1.97em 1.97em 10em;
+        line-height: 1.213;
+
+        span {
+            position: relative;
+            display: block;
+
+            font-weight: 400;
+            font-size: 0.875em;
+        }
+
+        font-size: 0.6em;
+
+        @media (min-width: 768px) {
+            font-size: 0.7em;
+        }
+        @media (min-width: 1366px) {
+            font-size: 0.8em;
+        }
+        @media (min-width: 1920px) {
+            font-size: 1em;
+        }
+
+        .reviews__logo {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 1em;
+
+            img {
+                width: 60%;
+                height: 60%;
+                object-fit: cover;
+            }
+            @media (min-width: 768px) {
+                img {
+                    width: 70%;
+                    height: 70%;
+                }
+            }
+            @media (min-width: 1366px) {
+                img {
+                    width: 80%;
+                    height: 80%;
+                }
+            }
+            @media (min-width: 1920px) {
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+    }
+
+}

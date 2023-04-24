@@ -235,6 +235,22 @@ $(document).ready(function() {
     }
     addDataFancybox();
 
+    $('[data-fancybox]').fancybox({
+        loop: true,
+        autoFocus: false,
+        arrows: true,
+        toolbar: true,
+        buttons: [
+           // "zoom",
+           //"share",
+           // "slideShow",
+           //"fullScreen",
+           //"download",
+           // "thumbs",
+           "close"
+        ],
+    });
+
 
     // start animate numbers
     function onVisible( selector, callback, repeat = false ) {

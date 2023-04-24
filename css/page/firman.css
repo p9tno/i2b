@@ -1,0 +1,15 @@
+.firman__title span {
+  font-weight: 500;
+  font-size: 1.125em;
+}
+@media (min-width: 1366px) {
+  .firman__title span {
+    font-weight: 400;
+    font-size: 1.5em;
+  }
+}
+@media (min-width: 1920px) {
+  .firman__title span {
+    font-size: 1.75em;
+  }
+}

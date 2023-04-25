@@ -1,0 +1,193 @@
+@media (min-width: 768px) {}
+@media (min-width: 1366px) {}
+@media (min-width: 1920px) {}
+
+.singlepage {
+    &__img {
+        height: 13.75em;
+        @media (min-width: 768px) {
+            height: 14.625em;
+        }
+        @media (min-width: 1366px) {
+            height: 23.125em;
+        }
+        @media (min-width: 1920px) {
+            height: 33.5em;
+        }
+    }
+
+    &__info {
+        padding-top: 1.875em;
+        @media (min-width: 768px) {
+            padding-top: 2.5em;
+        }
+        @media (min-width: 1366px) {
+            padding-top: 4em;
+        }
+        @media (min-width: 1920px) {
+            padding-top: 5.625em;
+        }
+
+        p,
+        ul {
+            font-weight: 300;
+            margin: 0;
+
+            font-size: 0.875em;
+
+            @media (min-width: 1366px) {
+                font-size: 1.125em;
+            }
+
+            @media (min-width: 1920px) {
+                font-size: 1.25em;
+            }
+        }
+
+        p {
+            margin-bottom: 0.625em;
+            @media (min-width: 1366px) {
+                margin-bottom: 1em;
+            }
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0.875em;
+
+            li {
+                position: relative;
+                margin-bottom: 0.5em;
+
+                @media (min-width: 1366px) {
+                    margin-bottom: 0.3em;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 0.7em;
+                    left: -0.8em;
+
+                    display: block;
+                    width: 0.125em;
+                    height: 0.125em;
+                    border-radius: 100%;
+                    background-color: $color_primary;
+                }
+            }
+        }
+
+        .singlepage__row {
+            margin-bottom: 1.25em;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            @media (min-width: 1366px) {
+                margin-bottom: 2.5em;
+            }
+            @media (min-width: 1920px) {
+                margin-bottom: 4.375em;
+            }
+
+        }
+
+        .singlepage__col {
+            &:last-child {
+                border-bottom: 0.0625em solid #E2E2E2;
+                padding-bottom: 1.25em;
+            }
+
+            @media (min-width: 1366px) {
+                &:first-child {
+                    width: 20%;
+                }
+
+                &:last-child {
+                    width: 54em;
+                    padding-bottom: 2em;
+                }
+            }
+            @media (min-width: 1920px) {
+                &:first-child {
+                    width: 25%;
+                }
+
+                &:last-child {
+                    width: 68.125em;
+                    padding-bottom: 2.5em;
+                }
+            }
+        }
+
+        .singlepage__label {
+            @media (min-width: 1366px) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__completed {
+        background-color: $color_warning;
+        color: $color_white;
+        // width: 100%;
+        // margin: 0 -1em;
+        @media (min-width: 768px) {}
+        @media (min-width: 1366px) {}
+        @media (min-width: 1920px) {}
+    }
+
+    &__results {
+        // @media (min-width: 768px) {}
+        // @media (min-width: 1366px) {}
+        // @media (min-width: 1920px) {}
+    }
+
+    &__row {
+        // @media (min-width: 768px) {}
+        @media (min-width: 1366px) {
+            display: flex;
+            justify-content: space-between;
+        }
+        // @media (min-width: 1920px) {}
+    }
+
+    &__col {}
+
+    &__label {
+        color: $color_primary;
+        margin-bottom: 0.9375em;
+        // @media (min-width: 768px) {}
+        @media (min-width: 1366px) {
+            margin-bottom: 2.5em;
+        }
+        @media (min-width: 1920px) {
+            margin-bottom: 3.75em;
+            line-height: 1.4;
+        }
+
+        span {
+            font-size: 1.125em;
+            @media (min-width: 768px) {
+                font-size: 1.25em;
+            }
+            @media (min-width: 1366px) {
+                font-size: 1.625em;
+            }
+            @media (min-width: 1920px) {
+                font-size: 2.25em;
+            }
+        }
+    }
+
+    &__content {}
+
+    &__number {}
+
+}

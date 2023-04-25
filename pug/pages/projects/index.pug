@@ -1,0 +1,82 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+    //- -var header_class = 'header_light'; // header_dark
+    -var video_bg = false;
+    -var contactus = true;
+    -var wrapper_class = 'wrapper_light'; // wrapper_dark, wrapper_light
+
+
+block content
+    // begin breadcrumbs
+    .breadcrumbs.section
+        .container_center
+
+            .aioseo-breadcrumbs
+                span.aioseo-breadcrumb
+                    a(href="#") Главная
+
+                span.aioseo-breadcrumb-separator •
+
+                span.aioseo-breadcrumb
+                    a(href="#") О компании
+
+                span.aioseo-breadcrumb-separator •
+
+                span.aioseo-breadcrumb Проекты
+
+
+    // end breadcrumbs 
+
+    // begin page
+    section#page.page.page_projects.section.section_first
+        .container_center
+            h1.section__title
+                span Вендоры
+
+            .page__content.page__content_flex
+                .page__aside
+                    .drop
+                        .drop__toggle.mobile_lg
+                            span Выберите категорию
+
+                        ul.menu
+                            li.menu-item
+                                a(href="#") О компании
+                            li.menu-item
+                                a(href="#") История
+                            li.menu-item
+                                a(href="#") Вендоры
+                            li.menu-item
+                                a(href="#") Клиенты
+                            li.menu-item
+                                a(href="#") Лицензии
+                            li.menu-item
+                                a(href="#") Отзывы
+                            li.menu-item.current-menu-item
+                                a(href="#") Проекты
+                            li.menu-item
+                                a(href="#") Вакансии
+
+
+                .page__main
+                    .section__text
+                        span В эффективной бесперебойной деятельности компании большую роль играет надежное и безопасное хранение данных. Как только масштабы деятельности предприятия перерастают возможности стандартного настольного ПК, перед руководством встает вопрос выбора подходящего решения. Наши специалисты окажут вам всю необходимую поддержку для того, чтобы ваш выбор стал лучшим для развития вашего бизнеса.
+                    .projects
+                        .projects__list
+                            each item in [{img: '1', text: 'Разработка приложения, поставка оборудования для РЖД'}, {img: '2', text: 'Установка аппаратуры для диспетчерских вышек в здании аэропорта'}, {img: '3', text: 'Установка аппаратуры учета топлива для серии АЗС по России'}, {img: '2', text: 'Установка аппаратуры для диспетчерских вышек в здании аэропорта'}, {img: '1', text: 'Разработка приложения, поставка оборудования для РЖД'}]
+
+                                a.projects__item(href="#")
+                                    .projects__img(style="background-image: url('../../img/projects/projects_"+item.img+".jpg')")
+                                        .projects__logo
+                                            img(src="../../img/projects/projects_logo_"+item.img+".png" alt="alt")
+                                    .projects__text
+                                        span=item.text
+
+
+
+        .rotation__wrap
+            .rotation
+
+    // end page

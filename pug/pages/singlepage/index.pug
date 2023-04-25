@@ -1,0 +1,154 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+    //- -var header_class = 'header_light'; // header_dark
+    -var video_bg = false;
+    -var contactus = true;
+    -var wrapper_class = 'wrapper_light'; // wrapper_dark, wrapper_light
+
+
+block content
+    // begin breadcrumbs
+    .breadcrumbs.section
+        .container_center
+            .aioseo-back.mobile
+                .aioseo-breadcrumbs
+                    a(href="#") Назад
+
+            .aioseo-breadcrumbs.desktop
+                span.aioseo-breadcrumb
+                    a(href="#") Главная
+
+                span.aioseo-breadcrumb-separator •
+
+                span.aioseo-breadcrumb
+                    a(href="#") О компании
+
+                span.aioseo-breadcrumb-separator •
+
+                span.aioseo-breadcrumb 
+                    a(href="#") Проекты
+
+                span.aioseo-breadcrumb-separator •
+
+                span.aioseo-breadcrumb Разработка приложения, поставка оборудования для РЖД
+
+    // end breadcrumbs 
+
+
+    // begin page
+    section#page.page.page_singlepage.section.section_first
+        .container_center
+            h1.section__title
+                span Разработка приложения, поставка оборудования для РЖД
+
+        .page__content
+            .singlepage
+                .container_center
+                    .singlepage__img.img
+                        img(src="../../img/singlepage.jpg", alt="alt")
+
+                .singlepage__info.section
+                    .container_center
+                        .singlepage__row
+                            .singlepage__col
+                                .singlepage__label
+                                    span О заказчике
+                            .singlepage__col
+
+                                ul
+                                    li Входит в тройку крупнейших транспортных Компаний мира (2012г.);
+                                    li Крупнейший работодатель России – 737 тыс. чел. (2018 г.);
+                                    li 5-е место в рейтинге крупнейших Компаний России (2019г.).
+
+                        .singlepage__row
+                            .singlepage__col
+                                .singlepage__label
+                                    span Проблематика
+                            .singlepage__col
+
+                                ul
+                                    li Низкая информированность пассажиров на территории вокзалов, что приводило к частому опозданию на рейсы или долгому ожиданию на перронах;
+                                    li Отсутствие онлайн навигации на территории вокзалов;
+                                    li Хаотичность пассажиропотока на вокзалах.
+
+                        .singlepage__row
+                            .singlepage__col
+                                .singlepage__label
+                                    span Задачи
+                            .singlepage__col
+
+                                p Разработка программного обеспечения для навигации на территории 26 крупнейших вокзалов России. Функционал навигации:
+                                ul
+                                    li Навигация на трехмерной карте;
+                                    li Расположение сервисов;
+                                    li Уведомления об отправке/прибытие поездов;
+                                    li Расписание отправки/прибытия поездов.
+
+                .singlepage__completed.section
+                    .container_center
+                        .singlepage__row
+                            .singlepage__col
+                                .singlepage__label
+                                    span Выполненные работы
+                                ul
+                                    each item in ['Установлено несколько тысяч датчиков на вокзалах РФ;', 'Разработано приложение для детальной навигации на вокзалах;', 'Созданы трехмерные модели всех вокзалов с использованием фото вокзалов.']
+                                        li
+                                            span=item
+
+
+                            .singlepage__col
+                                .singlepage__label
+                                    span Осуществлен следующий цикл работ
+                                ul
+                                    li
+                                        .pulse( style="--i:0;")
+                                        span Интеграция
+                                    li
+                                        .pulse( style="--i:1;")
+                                        span Поставка решений
+                                    li
+                                        .pulse( style="--i:2;")
+                                        span Проектирование
+
+
+
+
+                .singlepage__results.section
+                    .container_center
+                        .singlepage__label
+                            span Результаты
+
+                        .singlepage__content
+                            .swiper.swiper_singlepage_js
+                                .swiper-wrapper
+                                    each item in [{number: '01', text: 'Информация (в т.ч. историческая) стала доступна для пассажиров'}, {number: '02', text: 'Создана детальная навигация на территории 26 вокзалов'}, {number: '03', text: 'Увеличение рейтинга Компании среди покупателей'}, {number: '04', text: 'Случаи опозданий на рейсы сведены к минимуму'}, {number: '05', text: 'Систематизация пассажиропотока'}]
+                                        .swiper-slide
+                                            .singlepage__number
+                                                span=item.number
+                                            .section__text
+                                                span=item.text
+
+                            .swiper__dotted.singlepage_dotted_js
+
+
+
+
+
+
+
+
+
+        //- .rotation__wrap
+        //-     .rotation
+
+    // end page
+
+    // begin info
+    section#info.info.section
+        .container_center
+
+
+
+    // end info

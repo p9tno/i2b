@@ -310,9 +310,6 @@ body {
 		border-radius: 100%;
 		animation: 3s pulse infinite;
 		animation-delay: calc(0.1s * var(--i));
-
-		&:before {}
-
 	}
 }
 

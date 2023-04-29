@@ -14,8 +14,8 @@
     <div class="preloader__wrap" id="preloader">
       <div class="preloader"></div>
     </div>
-    <div class="wrapper undefined" id="wrapper">
-      <header class="header undefined">
+    <div class="wrapper wrapper_light" id="wrapper">
+      <header class="header header_light">
         <div class="header__content">
           <div class="header__row">
             <div class="header__col header__col_logo">
@@ -108,11 +108,68 @@
       <main class="main_content">
         <!-- begin breadcrumbs-->
         <div class="breadcrumbs section">
-          <div class="container_center container_center_right">
-            <div class="kama_breadcrumbs"><span><a href="#"><span>Главная</span></a></span><span class="kb_sep"></span><span class="kb_title">Контакты</span></div>
+          <div class="container_center">
+            <div class="aioseo-breadcrumbs"><span class="aioseo-breadcrumb"><a href="#">Главная</a></span><span class="aioseo-breadcrumb-separator">•</span><span class="aioseo-breadcrumb">Контакты</span></div>
           </div>
         </div>
         <!-- end breadcrumbs-->
+        <!-- begin contacts-->
+        <section class="contacts section section_first" id="contacts">
+          <div class="container_center">
+            <div class="contacts__wrap">
+              <div class="contacts__content">
+                <h1 class="section__title section__title_primary"><span>Контакты</span></h1>
+                <div class="contacts__list">
+                  <div class="contacts__item"><a href="tel:+7 (495) 222-34-69">+7 (495) 222-34-69</a></div>
+                  <div class="contacts__item"><span>Москва, ул. Академика Анохина, д.38, кор.1</span></div>
+                  <div class="contacts__item contacts__item_mail"><a href="mailto:info@it2bsns.ru">info@it2bsns.ru</a></div>
+                </div>
+                <div class="contacts__download"><a href="#">Скачать реквизиты</a></div>
+              </div>
+              <div class="contacts__map">
+                <div class="map" id="map"></div>
+              </div>
+            </div>
+          </div>
+          <div class="rotation__wrap">
+            <div class="rotation"></div>
+          </div>
+        </section>
+        <!-- end contacts-->
+        <!-- begin contactus-->
+        <section class="contactus section" id="contactus">
+          <div class="container_center">
+            <h2 class="section__title"><span>Свяжитесь с нами</span></h2>
+            <div class="contactus__content">
+              <div class="contactus__action">
+                <div class="contactus__link"><a href="tel:+7 (495) 222-34-69">+7 (495) 222-34-69</a></div>
+                <div class="contactus__link contactus__link_mail"><a href="mailto:info@it2bsns.ru">info@it2bsns.ru</a></div>
+              </div>
+              <div class="contactus__form">
+                <form class="form form_grid" action="send.php">
+                  <input type="hidden" name="subject" value="форма в футоре"/>
+                  <input type="hidden" name="notspam" value=""/>
+                  <div class="form__row form__row_required">
+                    <input type="text" name="name" required="required" placeholder="Ваше имя" autocomplete="off"/>
+                    <div class="form__invalid"><span></span></div>
+                  </div>
+                  <div class="form__row form__row_required">
+                    <input class="tel" type="text" name="tel" required="required" placeholder="Телефон" autocomplete="off" inputmode="tel"/>
+                    <div class="form__invalid"><span> </span></div>
+                  </div>
+                  <div class="form__row form__row_full">
+                    <textarea type="text" name="message" placeholder="Задайте вопрос" autocomplete="off"></textarea>
+                  </div>
+                  <div class="form__row form__row_full form__row_button form__row_mb0">
+                    <button class="btn" type="submit"><span>Отправить</span></button>
+                    <div class="form__privacy"><span>Мы надежно храним ваши данные, вот <a href="#" target="_blank">условия</a> и <a href="#" target="_blank">политика конфендициальности</a></span></div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end contactus-->
       </main>
       <footer class="footer">
         <div class="footer__row">
@@ -266,7 +323,8 @@
       <script src="../../js/slider.js"></script>
       <script src="../../js/aos.js"></script>
       <script src="../../js/fancybox.min.js"></script>
-      <script src="../../js/form.js"></script>
+      <script src="../../js/form.js"></script><script src="https://api-maps.yandex.ru/2.1/?lang=ru_ru&apikey=*7494e3e7-008f-4e03-bd72-31a4650591f7" type="text/javascript"></script>
+      <script src="../../js/map.js"></script>
       <script src="../../js/function.js"></script>
     </div>
   </body>

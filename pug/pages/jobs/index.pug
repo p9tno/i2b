@@ -1,0 +1,78 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+    //- -var header_class = 'header_light'; // header_dark
+    -var video_bg = false;
+    -var contactus = true;
+    -var wrapper_class = 'wrapper_dark'; // wrapper_dark, wrapper_light
+
+
+block content
+    // begin breadcrumbs
+    .breadcrumbs.section
+        .container_center
+
+            .aioseo-breadcrumbs
+                span.aioseo-breadcrumb
+                    a(href="#") Главная
+
+                span.aioseo-breadcrumb-separator •
+
+                span.aioseo-breadcrumb
+                    a(href="#") О компании
+
+                span.aioseo-breadcrumb-separator •
+
+                span.aioseo-breadcrumb Вакансии
+
+
+    // end breadcrumbs 
+
+    // begin page
+    section#page.page.page_jobs.section.section_first
+        .container_center
+            h1.section__title
+                span Вакансии
+
+            .page__content.page__content_flex
+                .page__aside
+                    .drop
+                        .drop__toggle.mobile_lg
+                            span Выберите категорию
+
+                        ul.menu
+                            li.menu-item
+                                a(href="#") О компании
+                            li.menu-item
+                                a(href="#") История
+                            li.menu-item
+                                a(href="#") Вендоры
+                            li.menu-item
+                                a(href="#") Клиенты
+                            li.menu-item
+                                a(href="#") Лицензии
+                            li.menu-item
+                                a(href="#") Отзывы
+                            li.menu-item
+                                a(href="#") Проекты
+                            li.menu-item.current-menu-item
+                                a(href="#") Вакансии
+
+
+                .page__main
+                    .section__text
+                        span Мы активно развиваемся. В связи с этим мы всегда заинтересованы в опытных, целеустремлённых, инициативных сотрудниках, ориентированных на работу в команде, на профессиональный и карьерный рост.
+                    .jobs
+                        .jobs__list
+                            each item in [{salary: 'з/п по договоренности', location: 'г. Москва', title: 'Контент-менеджер'}, {salary: 'з/п от 1 000 000 руб.', location: 'г. Москва', title: 'Senior UI/UX Designer'}, {salary: 'з/п от 750 000 руб.', location: 'г. Санкт-Петербург', title: 'Продуктовый дизайнер'} ]
+
+                                a.jobs__item(href="#")
+                                    .jobs__info
+                                        span=item.salary
+                                        span=item.location
+                                    .jobs__title
+                                        span=item.title
+
+
+    // end page

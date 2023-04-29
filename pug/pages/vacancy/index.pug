@@ -1,0 +1,71 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+    //- -var header_class = 'header_light'; // header_dark
+    -var video_bg = false;
+    -var contactus = true;
+    -var wrapper_class = 'wrapper_dark'; // wrapper_dark, wrapper_light
+
+
+block content
+    // begin breadcrumbs
+    .breadcrumbs.section
+        .container_center
+            .aioseo-breadcrumbs
+                span.aioseo-breadcrumb
+                    a(href="#") Главная
+
+                span.aioseo-breadcrumb-separator •
+
+                span.aioseo-breadcrumb
+                    a(href="#") О компании
+
+                span.aioseo-breadcrumb-separator •
+
+                span.aioseo-breadcrumb
+                    a(href="#") Вакансии
+
+                span.aioseo-breadcrumb-separator •
+
+                span.aioseo-breadcrumb Контент-менеджер
+
+
+    // end breadcrumbs 
+
+    // begin page
+    section#page.page.page_vacancy.section.section_first
+        .container_center
+            h1.section__title
+                span Контент-менеджер
+
+            .page__content.page__content_flex
+
+                .page__main
+                    each item in ['Обязанности:', 'Требования:', 'Преимуществом будет являться:', 'Приветствуется:', 'Личные качества:', 'Условия:', ]
+                        .company__row
+
+                            .company__title
+                                span=item
+                            ul.company__list
+                                each item in ['Подготовка контента к загрузке в товарный каталог интернет-магазина;', 'Подготовка контента к загрузке соц. сети;', 'Администрирование и модерация товарного каталога интернет-магазина (редактирование свойств, изменение структуры, привязки товаров к разделам);', 'Загрузка контента в товарный каталог;', 'Создание новых товарных разделов и редактирование существующих;', 'Создание новых текстовых разделов и редактирование существующих;', 'Техническая SEO-оптимизация страниц;', 'Техническая сборка шаблонов E-mail рассылок;', 'Редактирование и сборка E-mail уведомлений;', 'Написание товарных описаний;', 'Техническая модерация периферийных размещений контента компании (справочники, прайсовые агрегаторы).', 'Распределение и делегирование задач контент-группе', 'Контроль качества выполненения задач копирайтером и фотографом.', 'Отчетность', ]
+                                    li=item
+
+
+                .page__aside
+                    .resume.bg
+                        .resume__logo.img
+                            img(src="../../img/logo_resume.png" alt="alt")
+                        .resume__label
+                            span Интересна эта вакансия?
+                        .resume__text
+                            span Присылайте Ваше резюме на <a href="mailto:vacancy@it2bsns.ru">vacancy@it2bsns.ru</a>
+                        .resume__submit
+                            a(href="#")
+                                span Отправить резюме
+
+
+        .rotation__wrap
+            .rotation
+
+    // end page

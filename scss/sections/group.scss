@@ -1,3 +1,30 @@
+.wrapper_dark {
+    color: $color_white;
+
+    .group {
+        &__caption {
+            .section__text {
+                color: $color_white;
+            }
+
+        }
+
+        &__list {
+            border-top: 0.0625em solid rgba($color_white,0.2);
+        }
+
+        &__item {
+            color: $color_white;
+            border-bottom: 0.0625em solid rgba($color_white,0.2);
+
+            &:after {
+                border-right: 0.0625em solid rgba($color_white,0.2);
+            }
+        }
+    }
+
+}
+
 .group {
     position: relative;
 

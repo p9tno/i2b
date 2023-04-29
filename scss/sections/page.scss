@@ -40,6 +40,15 @@
     }
 
     &__main {
+        .single__content {
+            margin-top: 0;
+
+            p {
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+        }
         // border: 1px solid #fff;
         @media (min-width: 768px) {}
         @media (min-width: 1366px) {}
@@ -81,4 +90,31 @@
 
 .page_singlepage {
     padding-bottom: 0;
+}
+
+.page_jobs {}
+
+.page_vacancy {
+    .page__content_flex {
+        @media (min-width: 1366px) {
+            flex-direction: row;
+        }
+    }
+
+    .company__row {
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    .rotation__wrap {
+        @media (min-width: 768px) {
+            display: none;
+        }
+        @media (min-width: 1366px) {
+            display: block;
+        }
+        @media (min-width: 1920px) {}
+
+    }
 }

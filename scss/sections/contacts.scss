@@ -1,0 +1,50 @@
+@media (min-width: 768px) {}
+@media (min-width: 1366px) {}
+@media (min-width: 1920px) {}
+
+.contacts {
+    position: relative;
+    // padding-top: 6.25em;
+    min-height: 52em;
+
+    &__wrap {}
+
+    &__content {
+        margin-left: 65em;
+    }
+
+    &__list {}
+
+    &__item {}
+
+    &__item_mail {}
+
+    &__download {}
+
+    &__map {
+
+        @media (min-width: 1366px) {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 58.625em;
+        }
+    }
+
+}
+
+.map {
+    width: 100%;
+    overflow: hidden;
+    height: 52em;
+    border: 1px solid #000;
+}
+
+[class*="copyrights-pane"] {
+    display: none !important;
+}
+
+[class*="ground-pane"] {
+    filter: grayscale(1);
+}

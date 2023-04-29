@@ -1,0 +1,70 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+    -var header_class = 'header_light'; // header_dark
+    -var video_bg = false;
+    -var contactus = true;
+    -var wrapper_class = 'wrapper_dark'; // wrapper_dark, wrapper_light
+
+
+block content
+    // begin breadcrumbs
+    .breadcrumbs.section
+        .container_center
+            .aioseo-breadcrumbs
+                span.aioseo-breadcrumb
+                    a(href="#") Главная
+
+                span.aioseo-breadcrumb-separator •
+
+                span.aioseo-breadcrumb
+                    a(href="#") Решения
+
+                span.aioseo-breadcrumb-separator •
+
+                span.aioseo-breadcrumb Отраслевые решения
+
+
+    // end breadcrumbs 
+
+    // begin group
+    section#group.group.section.section_first
+        .container_center
+            .group__caption
+                h1.section__title
+                    span Отраслевые решения
+                .section__text
+                    span Мы уже обладаем опытом работы и продолжаем работать во всех представленных сферах. Для реализации любых задач мы обладаем необходимы сертификатами, квалифицированными кадрами и опытом работы, но для данной сферы мы выделяем следующие решения, как наиболее актуальные.
+
+            ul.cat-list.filter-cat-js
+
+                li.cat-item.filter-cat-js
+                    input(type="radio" id="term_id_1" name="cat_name" value="term_id_1" checked)
+                    label(for="term_id_1")
+                        span Ритейл, торговля
+
+                each item in [ {id: '2', label: 'Государственные организации'}, {id: '3', label: 'Банки'}, {id: '4', label: 'Промышленность'}, {id: '5', label: 'Туризм'}, {id: '6', label: 'СМИ, медиа'}, {id: '7', label: 'Здравоохранение, медицина'}, {id: '8', label: 'Страхование'}, {id: '9', label: 'Сельское хозяйство'}, {id: '10', label: 'Строительство, ЖКХ'}, {id: '11', label: 'Транспорт, логистика'}, ]
+
+                    li.cat-item.filter-cat-js
+                        input(type="radio" id="term_id_"+item.id+"" name="cat_name" value="term_id_"+item.id+"")
+                        label(for="term_id_"+item.id+"")
+                            span=item.label
+
+
+
+
+            .group__list
+                each item in ['СКУД Системы контроля и управления доступом', 'Конечные рабочие станции', 'Телефония', 'Видеоконференцсвязь ВКС', 'ИБП', 'Вендора РФ, импортозамещение', 'Колл-центры', 'Мониторинг', 'Резервное копирование', 'Высокопроизводительные кластеры СХД', 'Системы доставки приложений/контента', 'Сервера и серверные решения']
+                    a(href="#").group__item
+                        .group__content
+                            .section__text
+                                span=item
+                            .group__icon
+                                i.icon_arrow_deg
+        .rotation__wrap
+            .rotation
+
+
+
+    // end group

@@ -2,18 +2,52 @@ extends ../../layout/layout.pug
 
 block variable
     -var path = '../../';
-    //- -var page = 'bg';
+    -var header_class = 'header_light'; // header_dark
+    -var video_bg = false;
+    -var contactus = true;
+    -var wrapper_class = 'wrapper_light'; // wrapper_dark, wrapper_light
+
 
 block content
     // begin breadcrumbs
     .breadcrumbs.section
-        .container_center.container_center_right
-            .kama_breadcrumbs
-                span
-                    a(href="#")
-                        span Главная
-                span.kb_sep
+        .container_center
+            .aioseo-breadcrumbs
+                span.aioseo-breadcrumb
+                    a(href="#") Главная
 
-                span.kb_title Контакты
+                span.aioseo-breadcrumb-separator •
+
+                span.aioseo-breadcrumb Контакты
+
     // end breadcrumbs
 
+    // begin contacts
+    section#contacts.contacts.section.section_first
+        .container_center
+            .contacts__wrap
+                .contacts__content
+                    h1.section__title.section__title_primary
+                        span Контакты
+                    .contacts__list
+                        .contacts__item
+                            a(href="tel:+7 (495) 222-34-69") +7 (495) 222-34-69
+                        .contacts__item
+                            span Москва, ул. Академика Анохина, д.38, кор.1
+                        .contacts__item.contacts__item_mail
+                            a(href="mailto:info@it2bsns.ru") info@it2bsns.ru
+
+                    .contacts__download
+                        a(href="#") Скачать реквизиты
+
+                .contacts__map
+                    .map#map
+
+
+        .rotation__wrap
+            .rotation
+
+
+
+
+    // end contacts

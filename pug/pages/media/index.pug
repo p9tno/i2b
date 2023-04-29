@@ -1,0 +1,56 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+    -var header_class = 'header_light'; // header_dark
+    -var video_bg = false;
+    -var contactus = true;
+    -var wrapper_class = 'wrapper_dark'; // wrapper_dark, wrapper_light
+
+
+block content
+    // begin breadcrumbs
+    .breadcrumbs.section
+        .container_center
+            .aioseo-breadcrumbs
+                span.aioseo-breadcrumb
+                    a(href="#") Главная
+
+                span.aioseo-breadcrumb-separator •
+
+                span.aioseo-breadcrumb Медиа
+
+
+    // end breadcrumbs 
+
+    // begin media
+    section#media.media.section.section_first
+        .container_center
+            .media__caption
+                h1.section__title
+                    span Медиа
+                .section__text
+                    span В данном разделе мы рассказываем о новостях в мире IT и ИБ, а также о предстоящих мероприятиях, вебинарах и других значимых событиях.
+
+            ul.cat-list.filter-cat-js
+
+                li.cat-item.filter-cat-js
+                    input(type="radio" id="term_id_1" name="cat_name" value="term_id_1" checked)
+                    label(for="term_id_1")
+                        span Все
+
+                each item in [ {id: '2', label: 'Вебинары'}, {id: '3', label: 'Инценденты'}, {id: '4', label: 'Мероприятия'} ]
+
+                    li.cat-item.filter-cat-js
+                        input(type="radio" id="term_id_"+item.id+"" name="cat_name" value="term_id_"+item.id+"")
+                        label(for="term_id_"+item.id+"")
+                            span=item.label
+            .media__list
+                each item in [1,2,3,4,5,6,7,8,9,10,11,1]
+                    a.media__item(href="#")
+                        .media__img.img
+                            img(src="../../img/media/media_"+item+".jpg", alt="alt")
+                        .media__text
+                            span UserGate: Безопасность периметра сети
+
+    // end media

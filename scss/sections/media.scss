@@ -1,0 +1,125 @@
+.media {
+    &__caption {
+        .section__text {
+            margin-top: 1.25em;
+        }
+
+        @media (min-width: 1366px) {
+            .section__text {
+                margin-top: 3.4375em;
+            }
+        }
+        @media (min-width: 1920px) {
+            width: 72.5em;
+        }
+    }
+
+    &__list {
+        margin-top: 1.875em;
+        @media (min-width: 768px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-auto-rows: minmax(15.75em, auto);
+            grid-gap: 1em;
+        }
+        @media (min-width: 1366px) {
+            margin-top: 2.5em;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-auto-rows: minmax(16.5em, auto);
+            grid-gap: 1.25em;
+
+        }
+        @media (min-width: 1920px) {
+            margin-top: 3.75em;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-auto-rows: minmax(18em, auto);
+            grid-gap: 1.875em;
+            grid-row-gap: 2.1875em;
+        }
+    }
+
+    &__item {
+        display: block;
+        text-decoration: none;
+        color: $color_white;
+
+        margin-bottom: 1.5625em;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+        @media (min-width: 768px) {
+            margin-bottom: 0;
+        }
+
+        @media (min-width: 1366px) {
+            &:hover {
+                color: $color_warning;
+
+                .media__img {
+                    &:before {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    &__img {
+        position: relative;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($main_color, 0.5);
+            opacity: 1;
+            transition: 0.3s;
+
+        }
+
+        height: 13.75em;
+
+        @media (min-width: 1366px) {
+            height: 14.375em;
+        }
+        @media (min-width: 1920px) {
+            height: 15.25em;
+        }
+    }
+
+    &__text {
+        // min-height: 2.5em;
+        line-height: 1.25;
+        margin-top: 0.875em;
+        @media (min-width: 1366px) {
+            // min-height: 3.125em;
+            margin-top: 0.9375em;
+            // line-height: 1.35;
+        }
+        @media (min-width: 1920px) {
+            // min-height: 3.75em;
+            line-height: 1.5;
+        }
+
+        span {
+            font-size: 0.875em;
+
+            @media (min-width: 1366px) {
+                font-size: 1.125em;
+            }
+
+            @media (min-width: 1920px) {
+                font-size: 1.25em;
+            }
+        }
+    }
+
+}

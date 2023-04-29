@@ -1,0 +1,73 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+    -var header_class = 'header_light'; // header_dark
+    -var video_bg = false;
+    -var contactus = true;
+    -var wrapper_class = 'wrapper_dark'; // wrapper_dark, wrapper_light
+
+
+block content
+    // begin breadcrumbs
+    .breadcrumbs.section
+        .container_center
+            .aioseo-breadcrumbs
+                span.aioseo-breadcrumb
+                    a(href="#") Главная
+
+                span.aioseo-breadcrumb-separator •
+
+                span.aioseo-breadcrumb Оборудование
+
+
+    // end breadcrumbs 
+
+    // begin equipment
+    section#equipment.equipment.section.section_first
+        .container_center
+            .equipment__caption
+                h1.section__title
+                    span Оборудование
+                .section__text
+                    span Оборудование которое мы используем для нашей работы
+
+            ul.cat-list.filter-cat-js
+
+                li.cat-item.filter-cat-js
+                    input(type="radio" id="term_id_1" name="cat_name" value="term_id_1" checked)
+                    label(for="term_id_1")
+                        span Все оборудование
+
+                each item in [ {id: '2', label: 'IP-телефония'}, {id: '3', label: 'Коммуникации'}, {id: '4', label: 'Защитное оборудование'}, {id: '5', label: 'Сервера'} ]
+
+                    li.cat-item.filter-cat-js
+                        input(type="radio" id="term_id_"+item.id+"" name="cat_name" value="term_id_"+item.id+"")
+                        label(for="term_id_"+item.id+"")
+                            span=item.label
+            .equipment__list
+                each item in [1,2,3,4,4,3,2,1,1,2,3,4]
+
+                    .equipment__item
+                        .equipment__img_wrap
+                            .equipment__img
+                                img(src="../../img/equipment/equipment_"+item+".png" alt="alt")
+
+                        .equipment__content
+                            .equipment__label
+                                span Сервер защиты от DDoS атак
+                            p Позволяет:
+                            ul
+                                each item in ['Безопасность периметра сети в современных условиях;', 'Функционал решения UserGate;', 'Практика применения;', 'Собственные разработки в эпоху импортозамещения;', 'Новые высокопроизводительные устройства.' ]
+                                    li=item
+
+
+
+
+
+
+
+
+
+
+    // end equipment

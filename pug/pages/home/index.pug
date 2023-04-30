@@ -24,10 +24,10 @@ block content
         .ourwork__main
             .container_center
                 .ourwork__content
-                    .ourwork__tag
+                    .ourwork__tag.animate-js(data-aos="fade-right" data-aos-delay="400")
                         span >
                         span \
-                    .ourwork__label
+                    .ourwork__label.animate-js(data-aos="fade-left" data-aos-delay="400")
                         span Просто о сложном
                     .section__text
                         span Предлагаем комплексные решения в области IT и информационной безопасности, консультируем в области соблюдения требований регуляторов и стандартов, а также оказываем техническую поддержку по всем представленным направлениям.
@@ -42,25 +42,25 @@ block content
                         span Ключевыми направлениями нашей работы являются оказание услуг и поставка товаров как в области IT-технологий, так и в области информационной безопасности. Кроме того – это консалтинг в области соблюдения требований регуляторов и стандартов, а также техническая поддержка по всем представленным направлениям.
 
                 .ourwork__list
-                    .ourwork__label
+                    .ourwork__label(data-aos="fade-up")
                         span Что мы можем для вас сделать:
                     ul.list
-                        li
+                        li(data-aos="fade-up" data-aos-delay="100")
                             .pulse( style="--i:0;")
                             span Повысть эффективность IT инфраструктуры
-                        li
+                        li(data-aos="fade-up" data-aos-delay="200")
                             .pulse( style="--i:1;")
                             span Предотвратить хищение ваших денег и денег клиентов
-                        li
+                        li(data-aos="fade-up" data-aos-delay="300")
                             .pulse( style="--i:2;")
                             span Обеспечить конфендициальность данных
-                        li
+                        li(data-aos="fade-up" data-aos-delay="400")
                             .pulse( style="--i:3;")
                             span Привести в соответствие с законами РФ вашу работу
-                        li
+                        li(data-aos="fade-up" data-aos-delay="500")
                             .pulse( style="--i:4;")
                             span Увеличить вашу прибыль
-                        li
+                        li(data-aos="fade-up" data-aos-delay="600")
                             .pulse( style="--i:5;")
                             span Совместно опередить ваших конкурентов
 
@@ -78,9 +78,9 @@ block content
 
         .container_center
             .principle__caption
-                h2.section__title
+                h2.section__title(data-aos="fade-right")
                     span ПРИНЦИПЫ айтуби
-                .section__text
+                .section__text(data-aos="fade-left")
                     span Наша Команда в первую очередь — это высококвалифицированные IT-специалисты, а не просто «хорошие».
             .principle__list.counter-wrap
                 each item in ['Непрерывно следим за развитием IT-рынка', 'Обладаем широкой линейкой продуктов, услуг и сервисов.', 'Непрерывно обучаем наш персонал новым технологиям.', 'Пристально следим за графиком загрузки наших инженеров.' ]
@@ -102,9 +102,13 @@ block content
                     h2.section__title
                         span ЦЕЛИ НАШЕЙ<br> КОМПАНИИ
                     ul.list
-                        each item in ['Защитить ваши ценности', 'Преумножить ваши достижения', 'Обеспечить ваше безопасное будущее', ]
-                            li
-                                span!=item
+
+                        li
+                            span Защитить ваши ценности
+                        li
+                            span Преумножить ваши достижения
+                        li
+                            span Обеспечить ваше безопасное будущее
 
                 .target__right
                     .target__label
@@ -120,11 +124,11 @@ block content
 
         .system__top
             .container_center
-                h2.section__title
+                h2.section__title(data-aos="fade-up")
                     span системный интегратор<br> полного цикла
             .system__list
-                each item in [ {deley: '0', text: 'Проектирование'}, {deley: '1', text: 'Поставка решений'}, {deley: '2', text: 'Интеграция'}, {deley: '3', text: 'Тех. поддержка 24/7'},]
-                    .system__item
+                each item in [ {deley: '0', aosdelay: '800', text: 'Проектирование'}, {deley: '1', aosdelay: '600', text: 'Поставка решений'}, {deley: '2', aosdelay: '400', text: 'Интеграция'}, {deley: '3', aosdelay: '200', text: 'Тех. поддержка 24/7'},]
+                    .system__item(data-aos="fade-down" data-aos-delay=""+item.aosdelay+"")
                         .pulse( style="--i:"+item.deley+";")
                         .system__text
                             span=item.text
@@ -172,7 +176,7 @@ block content
     // begin business
     section#business.business.section
         .container_center
-            h2.section__title
+            h2.section__title(data-aos="fade-up")
                 span Работаем во всех сферах бизнеса
             .business__content
                 .swiper.swiper_business_js

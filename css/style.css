@@ -6880,14 +6880,25 @@ body {
   }
 }
 .equipment__content {
-  padding: 1.875em 1.875em 2.25em;
+  padding: 1em;
+}
+@media (min-width: 768px) {
+  .equipment__content {
+    padding: 1.875em 1.875em 2.25em;
+  }
 }
 .equipment__content p,
 .equipment__content ul {
   font-weight: 300;
-  font-size: 1em;
+  font-size: 1.125em;
   color: rgba(255, 255, 255, 0.6);
   margin: 0.9375em 0;
+}
+@media (min-width: 768px) {
+  .equipment__content p,
+.equipment__content ul {
+    font-size: 1em;
+  }
 }
 .equipment__content ul {
   list-style: none;
@@ -7103,49 +7114,81 @@ body {
     width: 27.5em;
   }
 }
-
+.modal input:not([type]),
+.modal input[type=date],
+.modal input[type=email],
+.modal input[type=number],
+.modal input[type=password],
+.modal input[type=search],
+.modal input[type=tel],
+.modal input[type=text],
+.modal input[type=url],
+.modal textarea {
+  -webkit-box-shadow: 0 0 0 1000px #1A1A1A inset;
+  -webkit-text-fill-color: #ffffff !important;
+}
+.join .modal-dialog,
+.webinar .modal-dialog,
 .write .modal-dialog {
   width: 22em;
 }
 @media (min-width: 768px) {
-  .write .modal-dialog {
+  .join .modal-dialog,
+.webinar .modal-dialog,
+.write .modal-dialog {
     width: 40em;
   }
 }
 @media (min-width: 1366px) {
-  .write .modal-dialog {
+  .join .modal-dialog,
+.webinar .modal-dialog,
+.write .modal-dialog {
     width: 70em;
   }
 }
 @media (min-width: 1920px) {
-  .write .modal-dialog {
+  .join .modal-dialog,
+.webinar .modal-dialog,
+.write .modal-dialog {
     width: 103.125em;
   }
 }
+.join .modal-close,
+.webinar .modal-close,
 .write .modal-close {
   width: 2.25em;
   height: 2.25em;
 }
+.join .modal-content,
+.webinar .modal-content,
 .write .modal-content {
   position: relative;
   overflow: hidden;
   padding: 3em 1.25em 4em;
 }
 @media (min-width: 768px) {
-  .write .modal-content {
+  .join .modal-content,
+.webinar .modal-content,
+.write .modal-content {
     padding: 3em 1.75em;
   }
 }
 @media (min-width: 1366px) {
-  .write .modal-content {
+  .join .modal-content,
+.webinar .modal-content,
+.write .modal-content {
     padding: 4.25em 8em 8em 4em;
   }
 }
 @media (min-width: 1920px) {
-  .write .modal-content {
+  .join .modal-content,
+.webinar .modal-content,
+.write .modal-content {
     padding: 6.25em 14.0625em 12.5em 5em;
   }
 }
+.join .modal-content:after,
+.webinar .modal-content:after,
 .write .modal-content:after {
   content: "";
   position: absolute;
@@ -7160,63 +7203,85 @@ body {
   font-size: 0.5em;
 }
 @media (min-width: 768px) {
-  .write .modal-content:after {
+  .join .modal-content:after,
+.webinar .modal-content:after,
+.write .modal-content:after {
     top: 11em;
     right: -13em;
     font-size: 0.75em;
   }
 }
 @media (min-width: 1366px) {
-  .write .modal-content:after {
+  .join .modal-content:after,
+.webinar .modal-content:after,
+.write .modal-content:after {
     top: 14em;
     right: -5em;
     font-size: 0.875em;
   }
 }
 @media (min-width: 1920px) {
-  .write .modal-content:after {
+  .join .modal-content:after,
+.webinar .modal-content:after,
+.write .modal-content:after {
     top: 18em;
     right: -1em;
     font-size: 1.04em;
   }
 }
+.join .modal-wrap,
+.webinar .modal-wrap,
 .write .modal-wrap {
   position: relative;
   z-index: 1;
   margin-top: 2em;
 }
 @media (min-width: 1366px) {
-  .write .modal-wrap {
+  .join .modal-wrap,
+.webinar .modal-wrap,
+.write .modal-wrap {
     margin-top: 4.25em;
   }
 }
 @media (min-width: 1920px) {
-  .write .modal-wrap {
+  .join .modal-wrap,
+.webinar .modal-wrap,
+.write .modal-wrap {
     margin-top: 6.25em;
   }
 }
 @media (min-width: 768px) {
-  .write .modal-form {
+  .join .modal-form,
+.webinar .modal-form,
+.write .modal-form {
     width: 25.875em;
   }
 }
 @media (min-width: 1366px) {
-  .write .modal-form {
+  .join .modal-form,
+.webinar .modal-form,
+.write .modal-form {
     width: 40.75em;
   }
 }
 @media (min-width: 1920px) {
-  .write .modal-form {
+  .join .modal-form,
+.webinar .modal-form,
+.write .modal-form {
     width: 59.375em;
   }
 }
+.join .modal-button,
+.webinar .modal-button,
 .write .modal-button {
   position: absolute;
   bottom: -2em;
   left: 0;
 }
 @media (min-width: 768px) {
-  .write .modal-button {
+  .join .modal-button,
+.webinar .modal-button,
+.write .modal-button {
     bottom: auto;
     left: auto;
     right: 0;
@@ -7225,21 +7290,86 @@ body {
   }
 }
 @media (min-width: 1920px) {
-  .write .form__row {
+  .join .form__row,
+.webinar .form__row,
+.write .form__row {
     margin: 0 1.5625em 3.125em;
   }
 }
+.join .form__privacy,
+.webinar .form__privacy,
 .write .form__privacy {
   width: 11.5em;
   margin-top: 1em;
   margin-left: auto;
 }
 @media (min-width: 768px) {
-  .write .form__privacy {
+  .join .form__privacy,
+.webinar .form__privacy,
+.write .form__privacy {
     margin-left: 0;
     margin-top: 0;
     width: 100%;
   }
+}
+
+.webinar .modal-wrap {
+  margin-top: 2em;
+}
+@media (min-width: 1366px) {
+  .webinar .modal-wrap {
+    margin-top: 2.5em;
+  }
+}
+@media (min-width: 1920px) {
+  .webinar .modal-wrap {
+    margin-top: 3.75em;
+  }
+}
+.webinar .section__text {
+  margin-top: 0.9375em;
+}
+@media (min-width: 1366px) {
+  .webinar .section__text {
+    margin-top: 1.25em;
+  }
+}
+@media (min-width: 1920px) {
+  .webinar .section__text {
+    margin-top: 1.875em;
+  }
+}
+
+.join .modal-dialog {
+  width: 22em;
+}
+@media (min-width: 768px) {
+  .join .modal-dialog {
+    width: 44em;
+  }
+}
+@media (min-width: 1366px) {
+  .join .modal-dialog {
+    width: 70em;
+  }
+}
+@media (min-width: 1920px) {
+  .join .modal-dialog {
+    width: 85em;
+  }
+}
+@media (min-width: 768px) {
+  .join .modal-form {
+    width: 25.875em;
+  }
+}
+@media (min-width: 1366px) {
+  .join .modal-form {
+    width: 35em;
+  }
+}
+.join .form__row {
+  width: 100%;
 }
 
 .message .modal-content {

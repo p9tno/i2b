@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+
+    // $('.form').disableAutoFill();
+
     function submitForm() {
 
         let modal_success = $('#success');
@@ -30,7 +33,7 @@ $(document).ready(function() {
         // }
         // validName();
 
-        // $('[name=name]').bind("change keyup input click", function() { this.value = this.value.replace(/[^а-яА-Я\s]/g, ''); });
+        $('[name=name]').bind("change keyup input click", function() { this.value = this.value.replace(/[^а-яА-Я\s]/g, ''); });
 
 
         $('[type=submit]').on('click tab', function (e) {
@@ -40,7 +43,7 @@ $(document).ready(function() {
             let notspam = form.find('[name="notspam"]');
             notspam.val('Not spam');
             let fields = form.find('[required]');
-            let field_name = form.find('[name=name]');
+            // let field_name = form.find('[name=name]');
             let required_rows = form.find('.form__row_required');
             let url = form.attr('action');
             let formData = form.serialize();
@@ -48,7 +51,7 @@ $(document).ready(function() {
             let empty = 0;
 
             let message_empty_field = 'Поле не может быть пустым';
-            let message_valid_name = 'Имя не может состоять из цифр, символов и латиницы';
+            // let message_valid_name = 'Имя не может состоять из цифр, символов и латиницы';
 
             fields.each(function (index, el) {
                 if ($(this).val() === '') {
@@ -58,21 +61,36 @@ $(document).ready(function() {
 
                     empty++;
 
-                } else if (!field_name.val().match('^[а-яА-Я]{3,16}$')) {
-
-                    field_name.addClass('invalid');
-                    field_name.parent().addClass('invalid');
-                    field_name.siblings('.form__invalid').find('span').html(message_valid_name);
-
-                    empty++;
-
                 } else {
                     $(this).removeClass('invalid');
                     $(this).parent().removeClass('invalid');
                     $(this).siblings('.form__invalid').find('span').html('');
-
                 }
             });
+
+            // fields.each(function (index, el) {
+            //     if ($(this).val() === '') {
+            //         $(this).addClass('invalid');
+            //         $(this).parent().addClass('invalid');
+            //         $(this).siblings('.form__invalid').find('span').html(message_empty_field);
+            //
+            //         empty++;
+            //
+            //     } else if (!field_name.val().match('^[а-яА-Я]{3,16}$')) {
+            //
+            //         field_name.addClass('invalid');
+            //         field_name.parent().addClass('invalid');
+            //         field_name.siblings('.form__invalid').find('span').html(message_valid_name);
+            //
+            //         empty++;
+            //
+            //     } else {
+            //         $(this).removeClass('invalid');
+            //         $(this).parent().removeClass('invalid');
+            //         $(this).siblings('.form__invalid').find('span').html('');
+            //
+            //     }
+            // });
 
             setTimeout(function () {
                 fields.removeClass('invalid');

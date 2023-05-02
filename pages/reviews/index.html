@@ -297,26 +297,6 @@
           <div class="footer__content"><a class="footer__link" href="#">Политика конфендициальности</a><span>All rights reserved © ООО «АЙТУБИ» 2010-<script type="text/javascript">document.write(new Date().getFullYear());</script></span></div>
         </div>
       </footer>
-      <!-- Begin Modal modalVideo-->
-      <div class="modal fade modalVideo" id="modalVideo">
-        <div class="modal-dialog">
-          <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
-            <div class="modal-body"> 
-              <div class="modalVideo__wraper"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End modal modalVideo-->
-      <!-- Begin Modal info-->
-      <div class="modal fade info" id="info">
-        <div class="modal-dialog">
-          <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
-            <div class="form__message"></div>
-          </div>
-        </div>
-      </div>
-      <!-- End modal info-->
       <!-- Begin Modal success-->
       <div class="modal fade success message" id="success">
         <div class="modal-dialog">
@@ -387,6 +367,80 @@
         </div>
       </div>
       <!-- End modal write-->
+      <!-- Begin Modal webinar-->
+      <div class="modal fade webinar" id="webinar">
+        <div class="modal-dialog">
+          <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+            <div class="modal-body">
+              <div class="section__title"><span>Запись на вебинар</span></div>
+              <div class="section__text"><span>Заполните форму, наш менеджер свяжется с вами и запишет вас для участия в вебинаре</span></div>
+              <div class="modal-wrap">
+                <div class="modal-form">
+                  <form class="form form_grid" action="send.php">
+                    <input type="hidden" name="subject" value="форма в футоре"/>
+                    <input type="hidden" name="notspam" value=""/>
+                    <div class="form__row form__row_required">
+                      <input type="text" name="name" required="required" placeholder="Ваше имя" autocomplete="off"/>
+                      <div class="form__invalid"><span></span></div>
+                    </div>
+                    <div class="form__row form__row_required">
+                      <input class="tel" type="text" name="tel" required="required" placeholder="Телефон" autocomplete="off" inputmode="tel"/>
+                      <div class="form__invalid"><span> </span></div>
+                    </div>
+                    <div class="form__row form__row_full">
+                      <textarea type="text" name="message" placeholder="Задайте вопрос по вебинару" autocomplete="off"></textarea>
+                    </div>
+                    <div class="form__row form__row_full form__row_mb0">
+                      <div class="form__privacy"><span>Мы надежно храним ваши данные, вот <a href="#" target="_blank">условия</a> и <a href="#" target="_blank">политика конфендициальности</a></span></div>
+                    </div>
+                    <div class="modal-button">
+                      <button class="btn" type="submit"><span>Отправить </span></button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End modal webinar-->
+      <!-- Begin Modal join-->
+      <div class="modal fade join" id="join">
+        <div class="modal-dialog">
+          <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+            <div class="modal-body">
+              <div class="section__title"><span>Присоединиться к команде I2B</span></div>
+              <div class="modal-wrap">
+                <div class="modal-form">
+                  <form class="form form_grid" action="send.php">
+                    <input type="hidden" name="subject" value="форма в футоре"/>
+                    <input type="hidden" name="notspam" value=""/>
+                    <div class="form__row form__row_required">
+                      <input type="text" name="name" required="required" placeholder="Ваше имя" autocomplete="off"/>
+                      <div class="form__invalid"><span></span></div>
+                    </div>
+                    <div class="form__row form__row_required">
+                      <input class="tel" type="text" name="tel" required="required" placeholder="Телефон" autocomplete="off" inputmode="tel"/>
+                      <div class="form__invalid"><span> </span></div>
+                    </div>
+                    <div class="form__row form__row_required">
+                      <input type="email" name="email" required="required" placeholder="Email" autocomplete="off"/>
+                      <div class="form__invalid"><span> </span></div>
+                    </div>
+                    <div class="form__row form__row_full form__row_mb0">
+                      <div class="form__privacy"><span>Мы надежно храним ваши данные, вот <a href="#" target="_blank">условия</a> и <a href="#" target="_blank">политика конфендициальности</a></span></div>
+                    </div>
+                    <div class="modal-button">
+                      <button class="btn" type="submit"><span>Отправить </span></button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End modal join-->
       <script src="../../js/jquery.js"></script>
       <script src="../../js/jquery.maskedinput.min.js"></script>
       <script src="../../js/modal.js"></script>

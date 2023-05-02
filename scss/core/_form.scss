@@ -49,6 +49,18 @@
 	}
 
 	&__row {
+		// margin-bottom: 1.875em;
+		//
+		// @media (min-width: 768px) {
+		// 	margin-bottom: 1.875em;
+		// }
+		// @media (min-width: 1366px) {
+		// 	margin-bottom: 1.875em;
+		// }
+		// @media (min-width: 1920px) {
+		// 	margin-bottom: 1.875em;
+		// }
+
 		input:not([type]),
 		input[type=date],
 		input[type=email],
@@ -217,7 +229,7 @@
 		}
 
 		// @media (min-width: 768px) {
-		// 	-webkit-box-shadow: 0 0 0 1000px #252525 inset;
+		// 	-webkit-box-shadow: 0 0 0 1000px $main_color inset;
 		// 	-webkit-text-fill-color: $color_white !important;
 		// }
 

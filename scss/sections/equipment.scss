@@ -88,15 +88,20 @@
     }
 
     &__content {
-        padding: 1.875em 1.875em 2.25em;
+        padding: 1em;
+        @media (min-width: 768px) {
+            padding: 1.875em 1.875em 2.25em;
+        }
 
         p,
         ul {
             font-weight: 300;
-
-            font-size: 1em;
+            font-size: 1.125em;
             color: rgba($color_white, 0.6);
             margin: 0.9375em 0;
+            @media (min-width: 768px) {
+                font-size: 1em;
+            }
         }
 
         ul {

@@ -194,8 +194,27 @@
         }
     }
 
+    input:not([type]),
+    input[type=date],
+    input[type=email],
+    input[type=number],
+    input[type=password],
+    input[type=search],
+    input[type=tel],
+    input[type=text],
+    input[type=url],
+    textarea {
+        -webkit-box-shadow: 0 0 0 1000px $main_color inset;
+        -webkit-text-fill-color: $color_white !important;
+
+    }
+
+    @media (min-width: 768px) {}
+
 }
 
+.join,
+.webinar,
 .write {
     .modal-dialog {
         width: 22em;
@@ -314,6 +333,62 @@
             width: 100%;
 
         }
+    }
+
+}
+
+.webinar {
+    .modal-wrap {
+
+        margin-top: 2em;
+        @media (min-width: 1366px) {
+            margin-top: 2.5em;
+        }
+        @media (min-width: 1920px) {
+            margin-top: 3.75em;
+        }
+    }
+
+    .section__text {
+        margin-top: 0.9375em;
+        @media (min-width: 768px) {}
+        @media (min-width: 1366px) {
+            margin-top: 1.25em;
+        }
+        @media (min-width: 1920px) {
+            margin-top: 1.875em;
+        }
+    }
+}
+
+.join {
+    .modal-dialog {
+        width: 22em;
+        @media (min-width: 768px) {
+            width: 44em;
+        }
+        @media (min-width: 1366px) {
+            width: 70em;
+        }
+        @media (min-width: 1920px) {
+            width: 85em;
+        }
+    }
+
+    .modal-form {
+        @media (min-width: 768px) {
+            width: 25.875em;
+        }
+        @media (min-width: 1366px) {
+            width: 35em;
+        }
+
+    }
+
+    // .form_grid {}
+
+    .form__row {
+        width: 100%;
     }
 
 }

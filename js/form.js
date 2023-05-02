@@ -40,6 +40,7 @@ $(document).ready(function() {
             let notspam = form.find('[name="notspam"]');
             notspam.val('Not spam');
             let fields = form.find('[required]');
+            let field_name = form.find('[name=name]');
             let required_rows = form.find('.form__row_required');
             let url = form.attr('action');
             let formData = form.serialize();
@@ -57,11 +58,11 @@ $(document).ready(function() {
 
                     empty++;
 
-                } else if (!$('[name=name]').val().match('^[а-яА-Я]{3,16}$')) {
+                } else if (!field_name.val().match('^[а-яА-Я]{3,16}$')) {
 
-                    $('[name=name]').addClass('invalid');
-                    $('[name=name]').parent().addClass('invalid');
-                    $('[name=name]').siblings('.form__invalid').find('span').html(message_valid_name);
+                    field_name.addClass('invalid');
+                    field_name.parent().addClass('invalid');
+                    field_name.siblings('.form__invalid').find('span').html(message_valid_name);
 
                     empty++;
 

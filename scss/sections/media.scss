@@ -123,3 +123,124 @@
     }
 
 }
+
+// start single
+.media {
+    &__feedback {
+        margin-top: 0.9375em;
+        @media (min-width: 768px) {
+            margin-top: 2.5em;
+        }
+        @media (min-width: 1366px) {
+            margin-top: 3.125em;
+        }
+        @media (min-width: 1920px) {
+            margin-top: 3.75em;
+        }
+
+        .feedback {
+            &__label {
+                width: 13em;
+                font-size: 1em;
+
+                span {
+                    font-size: 0.875em;
+                }
+                @media (min-width: 768px) {
+                    width: auto;
+                }
+                @media (min-width: 1366px) {
+                    span {
+                        font-size: 1.125em;
+                    }
+                }
+            }
+
+            &__button {
+                top: 56%;
+                width: 14em;
+                height: 14em;
+
+                span {
+                    left: 26%;
+                    width: 8em;
+                }
+
+                @media (min-width: 768px) {
+                    span {
+                        left: 46%;
+                        display: inline;
+                        width: auto;
+                    }
+                }
+                @media (min-width: 1366px) {
+                    right: -13em;
+
+                    width: 44em;
+                    height: 44em;
+
+                    span {
+                        left: 40%;
+                    }
+
+                    &:after {
+                        width: 44em;
+                        height: 44em;
+                    }
+
+                }
+            }
+
+            @media (min-width: 1366px) {
+                &:hover {
+                    .feedback__button {
+                        &:after {
+                            width: 106em;
+                            height: 106em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .single__content {
+        margin-top: 0;
+        color: rgba($color_white, 0.8);
+        @media (min-width: 1366px) {
+            width: 56em;
+        }
+        @media (min-width: 1920px) {
+            width: 62.5em;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: rgba($color_white, 1);
+            font-weight: 400;
+            font-size: 1.125em;
+            margin-top: 1.75em;
+            margin-bottom: 0.875em;
+
+            @media (min-width: 1366px) {
+                font-size: 1.75em;
+            }
+
+        }
+
+        ul {
+            li {
+                &:before {
+
+                    background-color: rgba($color_white, 0.8);
+                }
+            }
+        }
+
+    }
+}
+// end single

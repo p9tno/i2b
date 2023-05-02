@@ -1,6 +1,5 @@
 .single {
     border-bottom: 0.0625em solid #E2E2E2;
-    padding-bottom: 0;
 
     &__wrap {
         @media (min-width: 1366px) {
@@ -153,6 +152,10 @@
             }
         }
 
+        a {
+            color: $color_warning;
+        }
+
         .single__img {
             margin: 1.875em 0;
             width: 100%;
@@ -190,170 +193,6 @@
                 grid-template-columns: repeat(2, 1fr);
                 grid-gap: 1.875em;
                 grid-auto-rows: 17.8125em;
-            }
-        }
-    }
-
-}
-
-.feedback {
-    position: relative;
-    overflow: hidden;
-    display: block;
-    text-decoration: none;
-    color: $color_white;
-    padding: 1.125em 1em;
-
-    @media (min-width: 768px) {
-        padding: 1.8em 2em;
-    }
-    @media (min-width: 1366px) {
-        padding: 2.0254em 1.5em;
-    }
-    @media (min-width: 1920px) {
-        padding: 2.388em 3.125em;
-    }
-
-    &__content {
-        position: relative;
-        z-index: 1;
-    }
-
-    &__video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url("../../img/feedback_bg.webp");
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-
-        video {
-            display: block;
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-        }
-    }
-
-    &__label {
-        width: 17.5em;
-
-        span {
-            font-size: 1.125em;
-        }
-        @media (min-width: 768px) {
-            width: auto;
-        }
-        @media (min-width: 1366px) {
-            font-size: 0.75em;
-
-            span {
-                font-size: 1.75em;
-            }
-        }
-        @media (min-width: 1920px) {
-            font-size: 1em;
-        }
-    }
-
-    &__button {
-        position: absolute;
-        top: 56%;
-        right: -8em;
-        transform: translate(0,-50%);
-
-        width: 14em;
-        height: 14em;
-        border-radius: 100%;
-
-        letter-spacing: 0.035em;
-        text-transform: uppercase;
-        background-color: $color_warning;
-
-        span {
-            position: absolute;
-            top: 50%;
-            left: 27%;
-            display: block;
-            width: 8em;
-            transform: translate(-50%,-50%);
-            font-size: 0.8125em;
-            text-align: center;
-            z-index: 1;
-            line-height: 1.4;
-        }
-
-        @media (min-width: 768px) {
-            right: -4em;
-
-            span {
-                left: 46%;
-                display: inline;
-                width: auto;
-            }
-        }
-        @media (min-width: 1366px) {
-            top: 60%;
-            right: -20em;
-
-            width: 35.125em;
-            height: 35.125em;
-
-            background-color: transparent;
-            transition: right 0.7s, transform 0.7s;
-
-            font-size: 0.75em;
-
-            span {
-                position: absolute;
-                top: 50%;
-                left: 25%;
-                font-size: 1.25em;
-                text-align: left;
-                z-index: 1;
-                transition: left 0.7s;
-            }
-
-            &:after {
-                content: '';
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-
-                display: block;
-                width: 35.125em;
-                height: 35.125em;
-                border-radius: 100%;
-
-                background-color: $color_warning;
-                transition: width 0.7s, height 0.7s;
-            }
-
-        }
-        @media (min-width: 1920px) {
-            font-size: 1em;
-        }
-
-    }
-
-    @media (min-width: 1366px) {
-        &:hover {
-            .feedback__button {
-                right: 50%;
-                transform: translate(50%,-50%);
-
-                span {
-                    left: 50%;
-                }
-
-                &:after {
-                    width: 60em;
-                    height: 60em;
-                }
             }
         }
     }

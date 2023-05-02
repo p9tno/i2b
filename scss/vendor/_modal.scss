@@ -391,6 +391,25 @@
         width: 100%;
     }
 
+    // input:not([type]),
+    // input[type=date],
+    // input[type=email],
+    // input[type=number],
+    // input[type=password],
+    // input[type=search],
+    // input[type=tel],
+    // input[type=text],
+    // input[type=url],
+    // textarea {
+    //     -webkit-box-shadow: 0 0 0 1000px $main_color inset;
+    //     -webkit-text-fill-color: $color_white !important;
+    // }
+
+    // @media (min-width: 768px) {
+    // 	-webkit-box-shadow: 0 0 0 1000px $main_color inset;
+    // 	-webkit-text-fill-color: $color_white !important;
+    // }
+
 }
 
 .message {

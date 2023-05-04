@@ -7044,6 +7044,91 @@ body {
   font-size: 1.25em;
 }
 
+#notfound {
+  position: relative;
+  height: 100vh;
+}
+
+#notfound .notfound {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.notfound {
+  max-width: 32.5em;
+  width: 100%;
+  line-height: 1.4;
+  font-size: 0.5em;
+}
+@media (min-width: 768px) {
+  .notfound {
+    font-size: 0.7em;
+  }
+}
+@media (min-width: 1366px) {
+  .notfound {
+    font-size: 0.8em;
+  }
+}
+@media (min-width: 1920px) {
+  .notfound {
+    font-size: 1em;
+  }
+}
+
+.notfound > div:first-child {
+  padding-left: 12.5em;
+  padding-top: 0.75em;
+  height: 10.625em;
+  margin-bottom: 1.25em;
+}
+
+.notfound .notfound-404 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10.625em;
+  height: 10.625em;
+  background: #E55000;
+  border-radius: 0.4375em;
+  box-shadow: 0 0 0 0.625em #E55000 inset, 0 0 0 1.25em #ffffff inset;
+}
+
+.notfound .notfound-404 i {
+  color: #ffffff;
+  font-size: 7.375em;
+  font-style: normal;
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  height: 3.75em;
+  line-height: 3.75em;
+}
+
+.notfound h1 {
+  font-size: 4.25em;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.notfound p {
+  font-size: 1.25em;
+  font-weight: 400;
+  margin-top: 0.3125em;
+}
+
+.notfound a {
+  color: #E55000;
+  text-decoration: none;
+}
+
 .modal {
   display: none;
   overflow: auto;

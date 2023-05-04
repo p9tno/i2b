@@ -49,18 +49,6 @@
 	}
 
 	&__row {
-		// margin-bottom: 1.875em;
-		//
-		// @media (min-width: 768px) {
-		// 	margin-bottom: 1.875em;
-		// }
-		// @media (min-width: 1366px) {
-		// 	margin-bottom: 1.875em;
-		// }
-		// @media (min-width: 1920px) {
-		// 	margin-bottom: 1.875em;
-		// }
-
 		input:not([type]),
 		input[type=date],
 		input[type=email],
@@ -240,9 +228,5 @@
 	textarea {
 		resize: vertical;
 		min-height: 4em;
-
-		@media (min-width: 768px) {}
-		@media (min-width: 1366px) {}
-		@media (min-width: 1920px) {}
 	}
 }

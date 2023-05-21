@@ -58,7 +58,7 @@ block content
                             .pulse( style="--i:3;")
                             span Привести в соответствие с законами РФ вашу работу
                         li(data-aos="fade-up" data-aos-delay="500")
-                            .pulse( style="--i:4;")
+                            .pulse( style="--i:4;") 
                             span Увеличить вашу прибыль
                         li(data-aos="fade-up" data-aos-delay="600")
                             .pulse( style="--i:5;")
@@ -173,6 +173,37 @@ block content
 
     // end system
 
+    // begin news
+    section#news.news.section
+        .container_center
+            .news__caption
+                h2.section__title
+                    span Новости
+
+                .news__arrows
+                    i.icon_arrow_left
+                    i.icon_arrow_right
+
+            .news__slider       
+                .swiper.swiper_news_js
+                    .swiper-wrapper
+                        each item in ['', '', '','', '', '','', '', '','', '', '', ]
+                            .swiper-slide
+                                a.news__content(href="#")
+                                    .news__date
+                                        span 25/01/2023
+                                    .news__title
+                                        span Данные клиентов puma выставлены на продажу
+                                    .news__excerpt
+                                        span Компания допустила масштабную утечку данных, теперь они выставлены на продажу.
+                                    .news__arrow
+                                        i.icon_arrow_right
+
+
+            .swiper__dotted.news_dotted_js.mobile_lg
+
+    // end news
+
     // begin business
     section#business.business.section
         .container_center
@@ -192,25 +223,3 @@ block content
                 .swiper__dotted.business_dotted_js
 
     // end business
-
-
-
-
-
-
-    //- // begin tabsPreview
-    //- section#tabsPreview.tabsPreview.section
-    //-     .container_center
-    //-         h2.section__title tabs Preview
-    //-         .tabsPreview__content
-    //-             .tabs__wrapper
-    //-                 .tabs
-    //-                     .tab Вкладка 1
-    //-                     .tab Вкладка 2
-    //-                     .tab Вкладка 3
-    //-                 .tabs__content
-    //-                     .tab__item Содержимое 1
-    //-                     .tab__item Содержимое 2
-    //-                     .tab__item Содержимое 3
-    //- 
-    //- // end tabsPreview

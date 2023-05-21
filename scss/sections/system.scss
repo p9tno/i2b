@@ -259,6 +259,7 @@
     }
 
     &__bottom {
+        overflow: hidden;
         background-color: $color_white;
         margin-top: -12.5em;
         @media (min-width: 768px) {

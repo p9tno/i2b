@@ -1,0 +1,297 @@
+.news {
+    background-color: $color_white;
+    overflow: hidden;
+
+    &__caption {
+        @media (min-width: 1366px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        @media (min-width: 1920px) {}
+    }
+
+    &__arrows {
+        display: none;
+        @media (min-width: 1366px) {
+            display: flex;
+            align-items: center;
+
+            i {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                width: 7.25em;
+                height: 7em;
+
+                border: 1px solid;
+                border-color: rgba($color_black , 0.2);
+                cursor: pointer;
+                transition: 0.3s;
+
+                &:last-child {
+                    margin-left: 1.875em;
+                }
+
+                &:before {
+                    font-size: 1.75em;
+                    color: $color_black;
+                    transition: 0.3s;
+                    font-weight: 100;
+                }
+
+                &:hover {
+                    border-color: rgba($color_black , 1);
+                }
+
+                &.swiper-button-disabled {
+                    border-color: rgba($color_black , 0.1);
+                    // pointer-events: none;
+                    cursor: not-allowed;
+
+                    &:before {
+                        color: rgba($color_black , 0.4);
+                    }
+                }
+            }
+
+            font-size: 0.45em;
+        }
+        @media (min-width: 1366px) {
+            font-size: 0.5604em;
+
+            i {
+                &:before {
+                    font-size: 1.25em;
+
+                }
+            }
+
+        }
+        @media (min-width: 1920px) {
+            font-size: 1em;
+
+            i {
+                &:before {
+                    font-size: 1em;
+                }
+            }
+
+        }
+
+    }
+
+    &__slider {
+        margin-top: 1.625em;
+        width: 34.8125em;
+        @media (min-width: 768px) {
+            margin-top: 1.875em;
+            width: 54.9375em;
+        }
+        @media (min-width: 1366px) {
+            margin-top: 2.125em;
+            width: 100%;
+        }
+        @media (min-width: 1920px) {}
+    }
+
+    &__content {
+        position: relative;
+
+        display: block;
+        border: 0.0625em solid $color_cat_border;
+        background-color: $color_white;
+
+        text-decoration: none;
+
+        min-height: 13.5em;
+        padding: 3.5em 0.9375em;
+
+        @media (min-width: 768px) {
+            min-height: 14.375em;
+            padding: 3.5em 0.9375em 4em;
+        }
+        @media (min-width: 1366px) {
+            min-height: 15.5em;
+            padding: 4.25em 1.25em 4.75em;
+        }
+        @media (min-width: 1920px) {
+            min-height: 16.875em;
+
+            padding: 4em 1.875em 5em;
+        }
+
+    }
+
+    &__date {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border: 0.0625em solid $color_cat_border;
+        border-top: 0;
+        border-left: 0;
+
+        width: 6.25em;
+        height: 2.25em;
+
+        @media (min-width: 1366px) {
+            width: 7.375em;
+        }
+        @media (min-width: 1920px) {}
+
+        span {
+            font-weight: 300;
+            color: $color_primary;
+
+            font-size: 0.75em;
+            @media (min-width: 768px) {
+                font-size: 0.75em;
+            }
+            @media (min-width: 1366px) {
+                font-size: 0.875em;
+            }
+            @media (min-width: 1920px) {}
+        }
+    }
+
+    &__title {
+        color: $color_cat_main;
+        line-height: 1.125;
+        min-height: 2.25em;
+
+        span {
+            font-weight: 500;
+            font-size: 1em;
+            @media (min-width: 768px) {}
+            @media (min-width: 1366px) {
+                font-size: 1.375em;
+            }
+            @media (min-width: 1920px) {
+                font-size: 1.5em;
+            }
+        }
+    }
+
+    &__excerpt {
+        color: $color_primary;
+
+        line-height: 1.25;
+        min-height: 3.75em;
+        margin-top: 0.375em;
+
+        @media (min-width: 768px) {
+            margin-top: 0.5em;
+        }
+
+        @media (min-width: 1366px) {
+            min-height: 2.5em;
+            margin-top: 0.75em;
+        }
+        @media (min-width: 1920px) {
+            line-height: 1.5;
+            min-height: 3em;
+            margin-top: 1em;
+        }
+
+        span {
+            font-weight: 300;
+            font-size: 0.875em;
+            @media (min-width: 1920px) {
+                font-size: 1em;
+            }
+        }
+    }
+
+    &__arrow {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border: 0.0625em solid $color_cat_border;
+        border-bottom: 0;
+        border-right: 0;
+
+        color: $color_warning;
+
+        width: 3.625em;
+        height: 2.875em;
+
+        @media (min-width: 768px) {
+            width: 4.125em;
+            height: 3.25em;
+        }
+
+    }
+
+}
+
+.newspage {
+    &__grid {
+        @media (min-width: 768px) {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-gap: 1.125em;
+        }
+        @media (min-width: 1366px) {
+            margin-top: 2.5em;
+            grid-template-columns: repeat(3,1fr);
+            grid-gap: 1.25em;
+        }
+        @media (min-width: 1920px) {
+            margin-top: 3.75em;
+            grid-template-columns: repeat(4,1fr);
+            grid-gap: 1.875em;
+        }
+    }
+
+    .news__content {
+        margin-bottom: 1em;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+        @media (min-width: 768px) {
+            margin-bottom: 0;
+        }
+    }
+
+    .cat-item {
+        label {
+            color: rgba($color_cat_main, 0.6);
+            border-color: rgba($color_cat_border, 1);
+        }
+
+        &:hover {
+            label {
+                color: rgba($color_cat_main, 1);
+                border-color: rgba($color_cat_border, 1);
+                background-color: $color_white;
+
+            }
+        }
+
+        input {
+            &:checked ~ label {
+                color: $color_white;
+                border-color: $color_warning;
+                background-color: $color_warning;
+
+            }
+        }
+    }
+
+}
+
+@media (min-width: 768px) {}
+@media (min-width: 1366px) {}
+@media (min-width: 1920px) {}

@@ -73,6 +73,11 @@
             width: 18.125em;
         }
 
+        &_full {
+            margin-top: 0;
+            width: 100%;
+        }
+
     }
 
     &__title {
@@ -96,6 +101,98 @@
         margin-top: 0.5em;
         @media (min-width: 1920px) {
             margin-top: 0.9375em;
+        }
+    }
+
+    &__more {
+        position: relative;
+        width: fit-content;
+        margin-top: 0.75em;
+        cursor: pointer;
+        color: rgba($color_white, 0.6);
+
+        &:hover {
+            .firman__desc {
+
+                opacity: 1;
+                transform: scale(1);
+                @media (min-width: 1366px) {
+                    transform: translateY(-50%)scale(1);
+                }
+            }
+
+            .firman__number {
+                color: $color_warning;
+            }
+
+        }
+
+    }
+
+    &__number {
+        transition: 0.3s;
+
+        span {
+            font-weight: 300;
+            font-size: 1.125em;
+        }
+        @media (min-width: 1366px) {
+            span {
+                font-size: 1.125em;
+            }
+        }
+        @media (min-width: 1920px) {
+            span {
+                font-size: 1.5em;
+            }
+        }
+    }
+
+    &__desc {
+        position: fixed;
+        bottom: 2em;
+        left: 0;
+        width: 100%;
+
+        transform: scale(0);
+        z-index: 1;
+
+        padding: 1em;
+
+        border: 0.0625em solid rgba($color_white, 0.2);
+        background-color: $main_color;
+        opacity: 0;
+        transition: 0.3s;
+
+        line-height: 1.25;
+
+        @media (min-width: 1366px) {
+            bottom: auto;
+            position: absolute;
+
+            top: 50%;
+            left: 105%;
+            transform: translateY(-50%)scale(0);
+
+            line-height: 1.35;
+            width: 24em;
+        }
+        @media (min-width: 1920px) {
+            line-height: 1.5;
+            width: 30em;
+        }
+
+        span {
+            font-weight: 300;
+            font-size: 1em;
+
+            @media (min-width: 1366px) {
+                font-size: 1.125em;
+            }
+
+            @media (min-width: 1920px) {
+                font-size: 1.25em;
+            }
         }
     }
 }
